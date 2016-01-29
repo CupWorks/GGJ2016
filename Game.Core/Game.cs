@@ -37,7 +37,9 @@ namespace Game.Core
                 select action)
             {
                 PerformAction(action);
+                return;
             }
+            Output.WriteLine("You can't do that here ... sucker", OutputType.Warning);
         }
 
         public void Start()

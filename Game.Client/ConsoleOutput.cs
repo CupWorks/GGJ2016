@@ -27,6 +27,8 @@ namespace Game.Client
                     return ConsoleColor.White;
                 case OutputType.Action:
                     return ConsoleColor.Green;
+                case OutputType.Warning:
+                    return ConsoleColor.Yellow;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }

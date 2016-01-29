@@ -4,6 +4,7 @@ namespace Game.Core
     {
         System,
         Normal,
-        Action
+        Action,
+        Warning
     }
 }
