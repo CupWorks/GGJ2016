@@ -37,6 +37,7 @@
     <Compile Include="Configuration\Action.cs" />
     <Compile Include="Configuration\Command.cs" />
     <Compile Include="Configuration\ConfigurationContainer.cs" />
+    <Compile Include="Configuration\IConfiguration.cs" />
     <Compile Include="Configuration\StoryStep.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IInput.cs" />

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace Game.Core.Configuration
 {
-    public class StoryStep
+    public class StoryStep : IConfiguration
     {
         [XmlAttribute]
         public string Key { get; set; }

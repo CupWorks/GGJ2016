@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using Game.Core.Configuration;
 
 namespace Game.Core
@@ -9,6 +10,8 @@ namespace Game.Core
         private IOutput Output { get; set; }
         private ConfigurationContainer<Command> CommandContainer { get; set; }
         private ConfigurationContainer<StoryStep> StoryStepContainer { get; set; }
+
+        private string CurrentStoryStepKey { get; set; }
 
         public bool IsRunning { get; set; } = false;
 
@@ -25,13 +28,39 @@ namespace Game.Core
 
         private void InputOnOnTextReceived(string text)
         {
-            Output.Write("... " + text, OutputType.Normal);
+            var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
+            foreach (var action in 
+                from action 
+                in storyStep.CommandActionList
+                let command = CommandContainer.Get(action.Command)
+                where command.WordList.Contains(text.Trim().ToLower())
+                select action)
+            {
+                PerformAction(action);
+            }
         }
 
         public void Start()
         {
             IsRunning = true;
-            Output.Write("Start game \\o/", OutputType.System);
+            Output.WriteLine("Start game \\o/", OutputType.System);
+            UpdateStoryStep("GAME_START");
+        }
+
+        private void UpdateStoryStep(string key)
+        {
+            var storyStep = StoryStepContainer.Get(key);
+            Output.WriteLine(storyStep.Text, OutputType.Normal);
+            CurrentStoryStepKey = key;
+        }
+
+        private void PerformAction(Action action)
+        {
+            Output.WriteLine(action.Text, OutputType.Action);
+
+            if (string.IsNullOrEmpty(action.NextStep)) return;
+
+            UpdateStoryStep(action.NextStep);
         }
     }
 }

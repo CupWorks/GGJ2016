@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <ArrayOfCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Command Key="TEMP">
-    <Word>temp</Word>
-    <Word>other temp</Word>
+  <Command Key="NEXT">
+    <Word>next</Word>
+    <Word>continue</Word>
+    <Word>go on</Word>
+    <Word>going on</Word>
+  </Command>
+  <Command Key="NUT">
+    <Word>nut</Word>
   </Command>
   <Command Key="SIT">
     <Word>temp</Word>

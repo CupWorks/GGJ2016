@@ -1,12 +1,15 @@
 <?xml version="1.0"?>
 <ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <StoryStep Key="Step01">
-    <Text>Foo BAAAAR!</Text>
-    <Action Command="SIT">
-      <Text>... da da dam</Text>
+  <StoryStep Key="GAME_START">
+    <Text>In a galaxy far far away ...</Text>
+    <Action Command="NEXT" NextStep="GAME_END">
+      <Text>Darth Vader is Luke's father</Text>
     </Action>
-    <Action Command="TEMP" NextStep="Step03">
-      <Text>... da da dum</Text>
+    <Action Command="NUT">
+      <Text>Heil Hörnchen!</Text>
     </Action>
+  </StoryStep>
+  <StoryStep Key="GAME_END">
+    <Text>... The END ...</Text>
   </StoryStep>
 </ArrayOfStoryStep>

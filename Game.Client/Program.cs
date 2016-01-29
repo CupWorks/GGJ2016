@@ -11,7 +11,8 @@ namespace Game.Client
             var storyStepsFileStream = new FileStream("StorySteps.xml", FileMode.Open);
 
             var input = new ConsoleInput();
-            var game = new Core.Game(input,
+            var game = new Core.Game(
+                input,
                 new ConsoleOutput(),
                 commandsFileStream,
                 storyStepsFileStream);
@@ -19,6 +20,7 @@ namespace Game.Client
 
             do
             {
+                Console.Write("> ");
                 input.Read(Console.ReadLine());
             } while (game.IsRunning);
 

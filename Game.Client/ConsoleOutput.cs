@@ -7,20 +7,29 @@ namespace Game.Client
     {
         public void Write(string text, OutputType type)
         {
+            Console.ForegroundColor = GetColor(type);
+            Console.Write(text);
+            Console.ResetColor();
+        }
+
+        public void WriteLine(string text, OutputType type)
+        {
+            Write(text + "\n", type);
+        }
+
+        private ConsoleColor GetColor(OutputType type)
+        {
             switch (type)
             {
                 case OutputType.System:
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    break;
+                    return ConsoleColor.Cyan;
                 case OutputType.Normal:
-                    Console.ForegroundColor = ConsoleColor.White;
-                    break;
+                    return ConsoleColor.White;
+                case OutputType.Action:
+                    return ConsoleColor.Green;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
-
-            Console.WriteLine(text);
-            Console.ResetColor();
         }
     }
 }
