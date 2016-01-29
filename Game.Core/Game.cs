@@ -1,11 +1,18 @@
-﻿using System.IO;
-using System.Linq;
+﻿using System.Collections.Generic;
+using System.IO;
 using Game.Core.Configuration;
 
 namespace Game.Core
 {
     public class Game
     {
+        private List<string> DefaultInputWarnings { get; } = new List<string>
+        {
+                "You can't do that here",
+                "Learn to play",
+                "I am you father ... Luke"
+        };
+
         private IInput Input { get; set; }
         private IOutput Output { get; set; }
         private ConfigurationContainer<Command> CommandContainer { get; set; }
@@ -29,17 +36,16 @@ namespace Game.Core
         private void InputOnOnTextReceived(string text)
         {
             var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
-            foreach (var action in 
-                from action 
-                in storyStep.CommandActionList
-                let command = CommandContainer.Get(action.Command)
-                where command.WordList.Contains(text.Trim().ToLower())
-                select action)
+            foreach (var action in storyStep.ActionList)
             {
-                PerformAction(action);
-                return;
+                var command = CommandContainer.Get(action.Command);
+                if (command.WordList.Contains(text.Trim().ToLower()))
+                {
+                    PerformAction(action);
+                    return;
+                }
             }
-            Output.WriteLine("You can't do that here ... sucker", OutputType.Warning);
+            Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
         }
 
         public void Start()
