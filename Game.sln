@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Console", "Game.Console\Game.Console.csproj", "{A91802A0-FC35-41DF-866C-5899C02BDC55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Core", "Game.Core\Game.Core.csproj", "{C72E1102-FE22-4F30-93DF-62EA9B8D289F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Client", "Game.Client\Game.Client.csproj", "{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A91802A0-FC35-41DF-866C-5899C02BDC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A91802A0-FC35-41DF-866C-5899C02BDC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A91802A0-FC35-41DF-866C-5899C02BDC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A91802A0-FC35-41DF-866C-5899C02BDC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72E1102-FE22-4F30-93DF-62EA9B8D289F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72E1102-FE22-4F30-93DF-62EA9B8D289F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72E1102-FE22-4F30-93DF-62EA9B8D289F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72E1102-FE22-4F30-93DF-62EA9B8D289F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
