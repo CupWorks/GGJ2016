@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Game.Core.Configuration;
+using Action = Game.Core.Configuration.Action;
 
 namespace Game.Core
 {
@@ -13,10 +15,11 @@ namespace Game.Core
                 "I am you father ... Luke"
         };
 
-        private IInput Input { get; set; }
-        private IOutput Output { get; set; }
-        private ConfigurationContainer<Command> CommandContainer { get; set; }
-        private ConfigurationContainer<StoryStep> StoryStepContainer { get; set; }
+        private IInput Input { get; }
+        private IOutput Output { get; }
+        private ConfigurationContainer<Command> CommandContainer { get; }
+        private IEnumerable<Command> DefaultCommands { get; set; } 
+        private ConfigurationContainer<StoryStep> StoryStepContainer { get; }
 
         private string CurrentStoryStepKey { get; set; }
 
@@ -29,12 +32,24 @@ namespace Game.Core
             Output = output;
             CommandContainer = new ConfigurationContainer<Command>(commandsStream);
             CommandContainer.ReadFromStream();
+            DefaultCommands = CommandContainer.Get(c => c.IsDefault);
             StoryStepContainer = new ConfigurationContainer<StoryStep>(storyStepsStream);
             StoryStepContainer.ReadFromStream();
         }
 
         private void InputOnOnTextReceived(string text)
         {
+            //check for default command
+            foreach (var defaultCommand in DefaultCommands)
+            {
+                if (defaultCommand.WordList.Contains(text.Trim().ToLower()))
+                {
+                    PerformDefault(defaultCommand.Key);
+                    return;
+                }
+            }
+
+            //check for action
             var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
             foreach (var action in storyStep.ActionList)
             {
@@ -45,6 +60,8 @@ namespace Game.Core
                     return;
                 }
             }
+
+            //write waring text
             Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
         }
 
@@ -69,6 +86,18 @@ namespace Game.Core
             if (string.IsNullOrEmpty(action.NextStep)) return;
 
             UpdateStoryStep(action.NextStep);
+        }
+
+        private void PerformDefault(string key)
+        {
+            switch (key)
+            {
+                case "DEFAULT_EXIT":
+                    IsRunning = false;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(key), key, null);
+            }
         }
     }
 }

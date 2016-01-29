@@ -26,8 +26,6 @@ namespace Game.Client
 
             commandsFileStream.Close();
             storyStepsFileStream.Close();
-
-            Console.ReadKey(false);
         }
     }
 }
