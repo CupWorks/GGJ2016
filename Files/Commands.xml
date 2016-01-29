@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ArrayOfCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Command Key="TEMP">
+    <Word>temp</Word>
+    <Word>other temp</Word>
+  </Command>
+  <Command Key="SIT">
+    <Word>temp</Word>
+    <Word>other temp</Word>
+  </Command>
+</ArrayOfCommand>

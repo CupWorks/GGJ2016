@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <StoryStep Key="Step01">
+    <Text>Foo BAAAAR!</Text>
+    <Action Command="SIT">
+      <Text>... da da dam</Text>
+    </Action>
+    <Action Command="TEMP" NextStep="Step03">
+      <Text>... da da dum</Text>
+    </Action>
+  </StoryStep>
+</ArrayOfStoryStep>

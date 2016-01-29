@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Core", "Game.Core\Game
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Client", "Game.Client\Game.Client.csproj", "{9FF003F3-B75C-45D1-95EE-CE58AD959B0A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{3AF07970-5C0F-44BB-89D9-F61FB0BE34A8}"
+	ProjectSection(SolutionItems) = preProject
+		Files\Commands.xml = Files\Commands.xml
+		Files\StorySteps.xml = Files\StorySteps.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
