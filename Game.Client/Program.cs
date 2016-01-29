@@ -17,11 +17,18 @@ namespace Game.Client
                 commandsFileStream,
                 storyStepsFileStream);
             game.Start();
+			var windowHeight = 30;
+			var windowWidth = 80;
 
             do
             {
                 Console.Write("> ");
                 input.Read(Console.ReadLine());
+				if (Console.WindowHeight != windowHeight || Console.WindowWidth != windowWidth)
+				{
+					Console.WriteLine("Resseting to {0} x {1}", windowWidth, windowHeight);
+					Console.SetWindowSize(windowWidth, windowHeight);
+				}
             } while (game.IsRunning);
 
             commandsFileStream.Close();
