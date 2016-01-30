@@ -76,24 +76,14 @@ namespace Game.Core
         private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
-            Output.WriteLine(FilterText(storyStep.Text), OutputType.Normal);
+            Output.WriteLine(CleanText(storyStep.Text), OutputType.Normal);
             CurrentStoryStepKey = key;
-        }
-
-        private string FilterText(string text)
-        {
-            return text
-                .Replace("\t", "")
-                .Replace("\n", "")
-                .Replace("{br}", "\n");
         }
 
         private void PerformAction(Action action)
         {
-            Output.WriteLine(action.Text, OutputType.Action);
-
+            Output.WriteLine(CleanText(action.Text), OutputType.Action);
             if (string.IsNullOrEmpty(action.NextStep)) return;
-
             UpdateStoryStep(action.NextStep);
         }
 
@@ -107,6 +97,14 @@ namespace Game.Core
                 default:
                     throw new ArgumentOutOfRangeException(nameof(key), key, null);
             }
+        }
+
+        private string CleanText(string text)
+        {
+            return text
+                .Replace("\t", "")
+                .Replace("\n", "")
+                .Replace("{br}", "\n");
         }
     }
 }
