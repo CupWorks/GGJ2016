@@ -255,6 +255,8 @@ MonoBehaviour:
   GameOutput: {fileID: 48543505}
   HistoryOutput: {fileID: 1999957835}
   UserInput: {fileID: 1562879001}
+  BackgroundAudioSource: {fileID: 1289584012}
+  EffectAudioSource: {fileID: 628313861}
 --- !u!4 &175171973
 Transform:
   m_ObjectHideFlags: 0
@@ -553,7 +555,7 @@ GameObject:
   - 4: {fileID: 628313862}
   - 82: {fileID: 628313863}
   m_Layer: 0
-  m_Name: SoundSource
+  m_Name: EffectAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

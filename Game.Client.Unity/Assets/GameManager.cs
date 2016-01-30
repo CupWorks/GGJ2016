@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject HistoryOutput;
     public GameObject UserInput;
 
+    public GameObject BackgroundAudioSource;
+    public GameObject EffectAudioSource;
+
     private ConfigurationContainer<Audio> AudioContainer { get; set; }
     private ConfigurationContainer<Command> CommandContainer { get; set; }
     private IEnumerable<Command> DefaultCommands { get; set; }
@@ -54,6 +57,13 @@ public class GameManager : MonoBehaviour
 
 	protected void ProcessInput(string input)
 	{
+        if (input == "play")
+        {
+            PlayLoop("blind");
+        } else if (input == "plays")
+        {
+            PlaySound("testsound");
+        }
 		GameOutput.GetComponent<Text>().text += input + "\n";
 	}
 
@@ -63,5 +73,24 @@ public class GameManager : MonoBehaviour
             .Replace("\t", "")
             .Replace("\n", "")
             .Replace("{br}", "\n");
+    }
+
+    private void PlaySound(string key)
+    {
+        PlayAudio(key, EffectAudioSource);
+    }
+
+    private void PlayLoop(string key)
+    {
+        PlayAudio(key, BackgroundAudioSource);
+    }
+
+    private void PlayAudio(string key, GameObject audioSourceObject)
+    {
+        var audioResource = AudioContainer.Get(key);
+        AudioClip audioFile = Resources.Load(audioResource.File, typeof(AudioClip)) as AudioClip;
+        AudioSource audioSource = audioSourceObject.GetComponent<AudioSource>();
+        audioSource.clip = audioFile;
+        audioSource.Play();
     }
 }
