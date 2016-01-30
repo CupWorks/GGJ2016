@@ -81,6 +81,10 @@ namespace Game.Core
             await Task.Delay(storyStep.Delay);
             Output.WriteLine(CleanText(storyStep.Text), OutputType.Normal);
             CurrentStoryStepKey = key;
+            if (!string.IsNullOrEmpty(storyStep.NextStep))
+            {
+                UpdateStoryStep(storyStep.NextStep);
+            }
             Input.Request();
         }
 
