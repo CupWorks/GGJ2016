@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
     
-
+	public GameObject gameOutput;
+    public GameObject historyOutput;
+    public GameObject userInput;
 	// Use this for initialization
 	public void Start () {
 	
@@ -17,12 +20,18 @@ public class GameManager : MonoBehaviour {
 
 	public void GetInput (string Input)
 	{
-        GameObject historyLog = GameObject.FindWithTag("HistoryLog");
-        string tempLog = historyLog.GetComponent<Text>().text;
+        string tempLog = historyOutput.GetComponent<Text>().text;
         tempLog += Input + "\n";
-        historyLog.GetComponent<Text>().text = tempLog;
+        historyOutput.GetComponent<Text>().text = tempLog;
 
-        GameObject userInput = GameObject.FindWithTag("UserInput");
-        userInput.GetComponent<Text>().text = "";
+        InputField userInputField = userInput.GetComponent<InputField>();
+        userInputField.text = "";
+        EventSystem.current.SetSelectedGameObject(userInputField.gameObject, null);
+        PointerEventData emptyData = new PointerEventData(EventSystem.current);
+        userInputField.OnPointerClick(emptyData);
+
+
+
+        gameOutput.GetComponent<Text>().text = Input + "\n";
 	}
 }
