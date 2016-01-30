@@ -5,9 +5,8 @@ namespace Game.Client
 {
     public class Program
     {
-
-		private const int windowHeight = 30;
-		private const int windowWidth  = 80;
+		private const int WindowHeight = 30;
+		private const int WindowWidth  = 80;
 
         private static void Main(string[] args)
         {
@@ -38,9 +37,9 @@ namespace Game.Client
 
 		static void CheckWindowSize()
 		{
-			if (Console.WindowHeight != windowHeight || Console.WindowWidth != windowWidth)
+			if (Console.WindowHeight != WindowHeight || Console.WindowWidth != WindowWidth)
 			{
-				Console.SetWindowSize(windowWidth, windowHeight);
+				Console.SetWindowSize(WindowWidth, WindowHeight);
 			}
 		}
     }

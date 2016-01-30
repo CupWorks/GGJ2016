@@ -5,13 +5,11 @@ namespace Game.Client
 {
     public class SoundManager : ISoundManager
     {
-        private SoundPlayer EffectPlayer;
-        private SoundPlayer BackgroundPlayer;
+        private SoundPlayer EffectPlayer { get; } = new SoundPlayer();
+        private SoundPlayer BackgroundPlayer { get; } = new SoundPlayer();
 
         public SoundManager()
         {
-            EffectPlayer = new SoundPlayer();
-            BackgroundPlayer = new SoundPlayer();
         }
 
         public void PlaySound(string soundFile)

@@ -17,9 +17,9 @@ namespace Game.Core
 
         private IInput Input { get; }
         private IOutput Output { get; }
-        private ISoundManager SoundManager { get; set; }
+        private ISoundManager SoundManager { get; }
         private ConfigurationContainer<Command> CommandContainer { get; }
-        private IEnumerable<Command> DefaultCommands { get; set; } 
+        private IEnumerable<Command> DefaultCommands { get; } 
         private ConfigurationContainer<StoryStep> StoryStepContainer { get; }
 
         private string CurrentStoryStepKey { get; set; }
@@ -70,7 +70,6 @@ namespace Game.Core
         public void Start()
         {
             IsRunning = true;
-            Output.WriteLine("Start game \\o/", OutputType.System);
             UpdateStoryStep("GAME_START");
         }
 
