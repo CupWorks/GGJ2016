@@ -10,6 +10,7 @@ namespace Game.Client
 
         private static void Main(string[] args)
         {
+            CheckWindowSize();
             var commandsFileStream = new FileStream("Files/Commands.xml", FileMode.Open);
             var storyStepsFileStream = new FileStream("Files/StorySteps.xml", FileMode.Open);
 
@@ -21,12 +22,8 @@ namespace Game.Client
                 commandsFileStream,
                 storyStepsFileStream);
             game.Start();
-
-			CheckWindowSize();
             do
             {
-                Console.Write("> ");
-                input.Read(Console.ReadLine());
 				CheckWindowSize();
             } while (game.IsRunning);
 

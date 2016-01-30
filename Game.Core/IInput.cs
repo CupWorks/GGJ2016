@@ -5,6 +5,6 @@
     public interface IInput
     {
         event InputEvent OnTextReceived;
-        void Read(string text);
+        void Request();
     }
 }

@@ -22,7 +22,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
-  <StoryStep Key="0">
+  <StoryStep Key="0" Delay="1500">
       <Text>You hear a loud crashing sound from somewhere outside your room. Never before has anything happened after you performed the ritual. 
 			You are curious, but at the same time scared, because you have never left your safe environment before.</Text>
     <Action Command="LOOK" NextStep="1">

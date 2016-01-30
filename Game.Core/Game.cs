@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 using Game.Core.Configuration;
 using Action = Game.Core.Configuration.Action;
 
@@ -65,6 +66,7 @@ namespace Game.Core
 
             //write waring text
             Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
+            Input.Request();
         }
 
         public void Start()
@@ -73,18 +75,26 @@ namespace Game.Core
             UpdateStoryStep("GAME_START");
         }
 
-        private void UpdateStoryStep(string key)
+        private async void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
+            await Task.Delay(storyStep.Delay);
             Output.WriteLine(CleanText(storyStep.Text), OutputType.Normal);
             CurrentStoryStepKey = key;
+            Input.Request();
         }
 
         private void PerformAction(Action action)
         {
             Output.WriteLine(CleanText(action.Text), OutputType.Action);
-            if (string.IsNullOrEmpty(action.NextStep)) return;
-            UpdateStoryStep(action.NextStep);
+            if (string.IsNullOrEmpty(action.NextStep))
+            {
+                Input.Request();
+            }
+            else
+            {
+                UpdateStoryStep(action.NextStep);
+            }
         }
 
         private void PerformDefaultCommand(string key)

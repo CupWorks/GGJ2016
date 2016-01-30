@@ -1,14 +1,15 @@
-﻿using Game.Core;
+﻿using System;
+using Game.Core;
 
 namespace Game.Client
 {
     public class ConsoleInput : IInput
     {
         public event InputEvent OnTextReceived;
-
-        public void Read(string text)
+        public void Request()
         {
-            OnTextReceived?.Invoke(text);
+            Console.Write("> ");
+            OnTextReceived?.Invoke(Console.ReadLine());
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Game.Core.Configuration
     public class Command : IConfiguration
     {
         [XmlAttribute]
-        public string Key { get; set; }
+        public string Key { get; set; } = "";
         [XmlAttribute]
         public bool IsDefault { get; set; }
         [XmlElement("Word")]
