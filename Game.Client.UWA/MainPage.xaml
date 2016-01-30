@@ -12,7 +12,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <RichTextBlock Grid.Row="1" Name="RichTextBlock" />
+        <RichTextBlock Grid.Row="0" Name="RichTextBlock" />
         <TextBox Grid.Row="1" Name="TextBox" />
     </Grid>
 </Page>

@@ -1,7 +1,14 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using Windows.ApplicationModel;
 using Windows.Storage;
+using Windows.System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Documents;
+using Windows.UI.Xaml.Input;
 using Game.Core;
 
 
@@ -11,12 +18,16 @@ namespace Game.Client.UWA
     {
         public DefaultInput(TextBox textBox)
         {
-            textBox.TextChanged += (sender, args) =>
-            {
-                var text = (sender as TextBox)?.Text;
-                if (string.IsNullOrEmpty(text)) return;
-                Read(text);
-            };
+            textBox.KeyDown += OnKeyDown;
+        }
+
+        private void OnKeyDown(object sender, KeyRoutedEventArgs keyRoutedEventArgs)
+        {
+            if (keyRoutedEventArgs.Key != VirtualKey.Enter) return;
+            var textBox = sender as TextBox;
+            if (textBox == null) return;
+            Read(textBox.Text);
+            textBox.Text = "";
         }
 
         public event InputEvent OnTextReceived;
@@ -43,6 +54,7 @@ namespace Game.Client.UWA
         public void WriteLine(string text, OutputType type)
         {
             Paragraph.Inlines.Add(new Run { Text = text });
+            Paragraph.Inlines.Add(new LineBreak());
         }
     }
 
@@ -67,15 +79,24 @@ namespace Game.Client.UWA
         public MainPage()
         {
             InitializeComponent();
+            TextBox.IsEnabled = false;
+            Loaded += OnLoaded;
+        }
 
+        private async void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+        {
             Input = new DefaultInput(TextBox);
             Output = new DefaultOutput(RichTextBlock);
             SoundManager = new SoundManager();
 
-            var local = ApplicationData.Current.LocalFolder;
-            var folders = local.GetFoldersAsync().GetResults();
+            var filesFolder = await Package.Current.InstalledLocation.GetFolderAsync("Files");
+            var commandsStream = await filesFolder.OpenStreamForReadAsync("Commands.xml");
+            var storyStepsStream = await filesFolder.OpenStreamForReadAsync("StorySteps.xml");
 
-            Game = new Core.Game(Input, Output, SoundManager, null, null);
+            Game = new Core.Game(Input, Output, SoundManager, commandsStream, storyStepsStream);
+            Game.Start();
+
+            TextBox.IsEnabled = true;
         }
     }
 }
