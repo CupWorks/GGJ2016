@@ -13,12 +13,7 @@
 			ever forget it.{br}
 			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
     <Action Command="LEAVE">
-<<<<<<< HEAD
       <Text>You have no reason to leave the room.</Text>
-=======
-      <Text>You have no reason to leave the hut.</Text>
-      <Sound>Files/testsound.wav</Sound>
->>>>>>> origin/master
     </Action>
 	<Action Command="LOOK">
 	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
