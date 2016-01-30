@@ -87,6 +87,12 @@ namespace Game.Core
         private void PerformAction(Action action)
         {
             Output.WriteLine(CleanText(action.Text), OutputType.Action);
+
+            if (!string.IsNullOrEmpty(action.Sound))
+            {
+                SoundManager.PlaySound(action.Sound);
+            }
+
             if (string.IsNullOrEmpty(action.NextStep))
             {
                 Input.Request();
