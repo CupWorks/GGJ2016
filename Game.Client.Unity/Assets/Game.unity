@@ -249,12 +249,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 175171971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf8e660a62c18e3409193b59b6a779c6, type: 3}
+  m_Script: {fileID: 11500000, guid: 5981a7300e599d145a34865cd2f18bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOutput: {fileID: 48543505}
-  HistoryOutput: {fileID: 1999957835}
-  UserInput: {fileID: 1562879001}
+  gameOutput: {fileID: 48543505}
+  historyOutput: {fileID: 1999957835}
+  userInput: {fileID: 1562879001}
 --- !u!4 &175171973
 Transform:
   m_ObjectHideFlags: 0
