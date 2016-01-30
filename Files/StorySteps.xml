@@ -419,9 +419,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
-    <Text>STORY STEP 13 n sw</Text>
+    <Text>You venture deeper into the djungle on a narrow trail.{br}
+			You can hear water in the distance to the south.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 13 n sw</Text>
+	  <Text>You venture deeper into the djungle on a narrow trail.{br}
+			You can hear water in the distance to the south.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10">
       <Text>You follow the trail north</Text>
@@ -432,9 +434,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 13.1 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13.1">
-    <Text>STORY STEP 13.1 n sw</Text>
+    <Text>You venture deeper into the djungle on a narrow trail.{br}
+			You can hear water in the distance to the south.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 13.1 n sw</Text>
+	  <Text>You venture deeper into the djungle on a narrow trail.{br}
+			In the distance you can hear water to the south.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10.1">
       <Text>You follow the trail north</Text>
@@ -551,13 +555,15 @@
   <StoryStep Key="16a">
     <Text>On a small podium lies an object you have never seen before.{br}
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
-			You breathe out, only now realizing you’ve been holding your breath. Only now{br}
-			you notice some writing beneath the object which reads "Ocarina".</Text>
+			You breathe out, only now realizing you’ve been holding your breath. Some{br}
+			writing beneath the object catches your eye. On closer examination you can read{br}
+			it: "Ocarina".</Text>
 	<Action Command="LOOK">
 	  <Text>On a small podium lies an object you have never seen before.{br}
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
-			You breathe out, only now realizing you’ve been holding your breath. Only now{br}
-			you notice some writing beneath the object which reads "Ocarina".</Text>
+			You breathe out, only now realizing you’ve been holding your breath. Some{br}
+			writing beneath the object catches your eye. On closer examination you can read{br}
+			it: "Ocarina".</Text>
     </Action>
     <Action Command="LEAVE">
       <Text>You don't want to leave just yet.</Text>
