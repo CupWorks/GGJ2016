@@ -9,5 +9,6 @@ namespace Game.Core.Configuration
         [XmlAttribute]
         public string NextStep { get; set; } = "";
         public string Text { get; set; } = "";
+        public string Sound { get; set; } = "";
     }
 }

@@ -18,10 +18,20 @@ namespace Game.Client
             EffectPlayer.Play();
         }
 
+        public void StopSound()
+        {
+            EffectPlayer.Stop();
+        }
+
         public void PlayLoop(string soundFile)
         {
             BackgroundPlayer.SoundLocation = soundFile;
             BackgroundPlayer.PlayLooping();
+        }
+
+        public void StopLoop()
+        {
+            BackgroundPlayer.Stop();
         }
     }
 }
