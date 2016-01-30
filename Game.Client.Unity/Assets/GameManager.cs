@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
+    
 
 	// Use this for initialization
 	public void Start () {
@@ -15,6 +17,9 @@ public class GameManager : MonoBehaviour {
 
 	public void GetInput (string Input)
 	{
-		Debug.Log (Input);
+        GameObject historyLog = GameObject.FindWithTag("HistoryLog");
+        string tempLog = historyLog.GetComponent<Text>().text;
+        tempLog += Input + "\n";
+        historyLog.GetComponent<Text>().text = tempLog;
 	}
 }
