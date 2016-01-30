@@ -58,4 +58,10 @@
     <Word>examine</Word>
 	<Word>see</Word>
   </Command>
+  <Command Key="EXAMINE_BOX">
+    <Word>look at box</Word>
+    <Word>examine box</Word>
+    <Word>examine object</Word>
+    <Word>look at object</Word>
+  </Command>
 </ArrayOfCommand>
