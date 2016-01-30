@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+  <!-- Version .1 jeweils nach Fund der Ocarina, * Raum ändert sich durch Fund der Ocarina-->
 <ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ######################### GAME START ######################### -->
   <StoryStep Key="GAME_START">
@@ -37,6 +38,16 @@
       <Text>You leave the hut.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 1.1 - Zurückkommen in die Hütte ######################### -->
+  <StoryStep Key="1.1">
+    <Text>You are in a primitive hut, with an anchient machine on a desk.</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 1.1 leave</Text>
+    </Action>
+    <Action Command="LEAVE" NextStep="2.1">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
   <StoryStep Key="2">
     <Text>STORY STEP 2 w n ne sw</Text>
@@ -56,6 +67,25 @@
       <Text>You follow the narrow path southwest.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 2.1 - Vor der Hütte ######################### -->
+  <StoryStep Key="2.1">
+    <Text>STORY STEP 2.1 w n ne sw</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 2.1 w n ne sw</Text>
+    </Action>
+    <Action Command="WEST" NextStep="1.1">
+      <Text>You return to the hut.</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="3.1">
+      <Text>You follow the narrow path north.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="9.1">
+      <Text>You follow the narrow path into the djungle.</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="7.1">
+      <Text>You follow the narrow path southwest.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3">
     <Text>STORY STEP 3 s nw</Text>
@@ -66,6 +96,19 @@
       <Text>You follow the narrow path south.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="4">
+      <Text>You follow the narrow path northwest.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 3.1 - Weg nordöstlich der Hütte ######################### -->
+  <StoryStep Key="3.1">
+    <Text>STORY STEP 3.1 s nw</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 3.1 s nw </Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="2.1">
+      <Text>You follow the narrow path south.</Text>
+    </Action>
+    <Action Command="NORTHWEST" NextStep="4.1">
       <Text>You follow the narrow path northwest.</Text>
     </Action>
   </StoryStep>
@@ -82,6 +125,19 @@
       <Text>You follow the narrow path southwest.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 4.1 - Weg nördlich der Hütte######################### -->
+  <StoryStep Key="4.1">
+    <Text>STORY STEP 4.1 se sw</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 4.1 se sw</Text>
+    </Action>
+    <Action Command="SOUTHEAST" NextStep="3.1">
+      <Text>You follow the narrow past southeast.</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="5.1">
+      <Text>You follow the narrow path southwest.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5">
     <Text>STORY STEP 5 ne s</Text>
@@ -95,6 +151,19 @@
       <Text>You follow the narrow path south behind the hut.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 5.1 - Weg nordwestlich der Hütte ######################### -->
+  <StoryStep Key="5.1">
+    <Text>STORY STEP 5.1 ne s</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 5.1 ne s</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="4.1">
+      <Text>You follow the narrow path northeast.</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="6.1">
+      <Text>You follow the narrow path south behind the hut.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
   <StoryStep Key="6">
     <Text>STORY STEP 6 n se</Text>
@@ -105,6 +174,19 @@
       <Text>You follow the narrow path north.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="7">
+      <Text>You follow the narrow path southeast.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
+  <StoryStep Key="6.1">
+    <Text>STORY STEP 6.1 n se</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 6.1 n se</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="5.1">
+      <Text>You follow the narrow path north.</Text>
+    </Action>
+    <Action Command="SOUTHEAST" NextStep="7.1">
       <Text>You follow the narrow path southeast.</Text>
     </Action>
   </StoryStep>
@@ -124,6 +206,22 @@
       <Text>You follow the narrow path northeast in front of the hut.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 7.1 - Weg südlich der Hütte ######################### -->
+  <StoryStep Key="7.1">
+    <Text>STORY STEP 7.1 s ne nw</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 7.1 s ne nw</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="8.1">
+      <Text>You walk into the djungle.</Text>
+    </Action>
+    <Action Command="NORTHWEST" NextStep="6.1">
+      <Text>You follow the narrow path northwest behind the hut.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="2.1">
+      <Text>You follow the narrow path northeast in front of the hut.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 8 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="8">
     <Text>STORY STEP 8 n</Text>
@@ -131,6 +229,16 @@
 	  <Text>STORY STEP 8 n</Text>
     </Action>
     <Action Command="NORTH" NextStep="7">
+      <Text>You go back north to the path around the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 8.1 - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="8.1">
+    <Text>STORY STEP 8.1 n</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 8.1 n</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="7.1">
       <Text>You go back north to the path around the hut.</Text>
     </Action>
   </StoryStep>
@@ -144,6 +252,19 @@
       <Text>You go back to the narrow path in front of your hut.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="10">
+      <Text>You follow the trail deeper into the djungle.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 9.1 - Weg in den Dschungel 1 ######################### -->
+  <StoryStep Key="9.1">
+    <Text>STORY STEP 9.1 sw se</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 9.1 sw se</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="2.1">
+      <Text>You go back to the narrow path in front of your hut.</Text>
+    </Action>
+    <Action Command="SOUTHEAST" NextStep="10.1">
       <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
@@ -163,6 +284,22 @@
       <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 10.1 - Weg in den Dschungel 2 ######################### -->
+  <StoryStep Key="10.1">
+    <Text>STORY STEP 10.1 nw e s</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 10.1 nw e s</Text>
+    </Action>
+    <Action Command="NORTHWEST" NextStep="9.1">
+      <Text>You follow the trail northwest.</Text>
+    </Action>
+    <Action Command="EAST" NextStep="11.1">
+      <Text>You follow the trail deeper into the djungle.</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="13.1">
+      <Text>You follow the trail deeper into the djungle.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 11 - Weg in den Dschungel 3 ######################### -->
   <StoryStep Key="11">
     <Text>STORY STEP 11 w n</Text>
@@ -176,6 +313,19 @@
       <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 11.1 - Weg in den Dschungel 3 ######################### -->
+  <StoryStep Key="11.1">
+    <Text>STORY STEP 11.1 w n</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 11.1 w n</Text>
+    </Action>
+    <Action Command="WEST" NextStep="10.1">
+      <Text>You follow the trail west.</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="12.1">
+      <Text>You follow the trail deeper into the djungle.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 12 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="12">
     <Text>STORY STEP 12 s</Text>
@@ -185,7 +335,17 @@
     <Action Command="SOUTH" NextStep="11">
       <Text>You return back on the trail south.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="19">
+  </StoryStep>
+  <!-- ######################### STORY STEP 12.1* - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="12.1">
+    <Text>STORY STEP 12.1 s</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 12.1 s</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="11.1">
+      <Text>You return back on the trail south.</Text>
+    </Action>
+	<Action Command="SEQUENCE" NextStep="19.1">
 	  <Text>You wake up.</Text>
     </Action>
   </StoryStep>
@@ -202,6 +362,19 @@
       <Text>You follow sound of water.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 13.1 - Weg zum Wasserfall ######################### -->
+  <StoryStep Key="13.1">
+    <Text>STORY STEP 13.1 n sw</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 13.1 n sw</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="10.1">
+      <Text>You follow the trail north</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="14.1">
+      <Text>You follow sound of water.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
   <StoryStep Key="14">
     <Text>STORY STEP 14 ne sw e</Text>
@@ -215,6 +388,22 @@
       <Text>You go down to the lake.</Text>
     </Action>
 	    <Action Command="EAST" NextStep="15">
+      <Text>You sneak behind the waterfall.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 14.1 - Wasserfall ######################### -->
+  <StoryStep Key="14.1">
+    <Text>STORY STEP 14.1 ne sw e</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 14.1 ne sw e</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="13.1">
+      <Text>You return to the trail northeast.</Text>
+    </Action>
+	    <Action Command="SOUTHWEST" NextStep="17.1">
+      <Text>You go down to the lake.</Text>
+    </Action>
+	    <Action Command="EAST" NextStep="15.1">
       <Text>You sneak behind the waterfall.</Text>
     </Action>
   </StoryStep>
@@ -244,6 +433,16 @@
       <Text>You leave the cave.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 15.1* - Höhle ######################### -->
+  <StoryStep Key="15.1">
+    <Text>STORY STEP 15.1 w</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 15.1 w</Text>
+    </Action>
+	<Action Command="WEST" NextStep="14.1">
+	  <Text>You leave the waterfall cave.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
   <StoryStep Key="16">
     <Text>STORY STEP 16 w</Text>
@@ -267,6 +466,19 @@
       <Text>You go back to the waterfall.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 17.1 - Unten am See ######################### -->
+  <StoryStep Key="17.1">
+    <Text>STORY STEP 17.1 s ne</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 17.1 s ne</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="18.1">
+      <Text>You walk deeper into the djungle.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="14.1">
+      <Text>You go back to the waterfall.</Text>
+    </Action>
+  </StoryStep>
   <!-- ######################### STORY STEP 18 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18">
     <Text>STORY STEP 18 n</Text>
@@ -274,6 +486,16 @@
 	  <Text>STORY STEP 18 n</Text>
     </Action>
     <Action Command="NORTH" NextStep="17">
+      <Text>You go back to the lake.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 18.1 - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="18.1">
+    <Text>STORY STEP 18.1 n</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 18.1 n</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="17.1">
       <Text>You go back to the lake.</Text>
     </Action>
   </StoryStep>
