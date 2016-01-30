@@ -4,12 +4,16 @@ using Source.Configuration;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Action = System.Action;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject GameOutput;
     public GameObject HistoryOutput;
     public GameObject UserInput;
+
+    private Action _timerAction;
+    private float _currentTimer = 0.0f;
 
     private ConfigurationContainer<Audio> AudioContainer { get; set; }
     private ConfigurationContainer<Command> CommandContainer { get; set; }
@@ -35,6 +39,30 @@ public class GameManager : MonoBehaviour
         {
             StoryStepContainer = new ConfigurationContainer<StoryStep>(new StringReader(storyStepsData.text));
         }
+
+        StartTimer(10000, () => Debug.Log("Foo"));
+    }
+
+    protected void Update()
+    {
+        if (_currentTimer <= 0.0f)
+        {
+            if (_timerAction != null)
+            {
+                _timerAction.Invoke();
+                _timerAction = null;
+            }
+        }
+        else
+        {
+            _currentTimer -= Time.deltaTime;
+        }
+    }
+
+    private void StartTimer(int milliseconds, Action action)
+    {
+        _currentTimer = milliseconds / 1000.0f;
+        _timerAction = action;
     }
 
     public void GetInput(string input)
