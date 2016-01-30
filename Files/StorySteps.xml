@@ -21,7 +21,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
-  <StoryStep> Key="0">
+  <StoryStep Key="0">
       <Text>
 	  </Text>
   </StoryStep>
