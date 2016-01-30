@@ -32,6 +32,66 @@
 			Never before has anything happened after you performed the ritual. You are {br}
 			curious, but at the same time scared, because you have never left your safe {br}
 			environment before.</Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
+    <Text Delay="1500">
+      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+      Never before has anything happened after you performed the ritual. You are {br}
+      curious, but at the same time scared, because you have never left your safe {br}
+      environment before.
+    </Text>
     <Action Command="LOOK" NextStep="19">
 	  <Text>Unsure of yourself, you look around.</Text>
     </Action>
