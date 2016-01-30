@@ -341,7 +341,7 @@
 			the jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="2">
-      <Text>You go back to the narrow path in front of your hut.</Text>
+      <Text>You return to your hut.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="10">
       <Text>You follow the trail deeper into the jungle.</Text>
@@ -358,7 +358,7 @@
 			the jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="2.1">
-      <Text>You go back to the narrow path in front of your hut.</Text>
+      <Text>You return to your hut.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="10.1">
       <Text>You follow the trail deeper into the jungle.</Text>
@@ -366,13 +366,13 @@
   </StoryStep>
   <!-- ######################### STORY STEP 10 - Weg in den Dschungel 2 ######################### -->
   <StoryStep Key="10">
-    <Text>You venture deeper into the jungle on a narrow trail.{br}
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
 			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+			follow the trail or go back to the northwest.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the jungle on a narrow trail.{br}
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
 			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+			follow the trail or go back to the northwest.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="9">
       <Text>You follow the trail northwest.</Text>
@@ -386,13 +386,13 @@
   </StoryStep>
   <!-- ######################### STORY STEP 10.1 - Weg in den Dschungel 2 ######################### -->
   <StoryStep Key="10.1">
-    <Text>You venture deeper into the jungle on a narrow trail.{br}
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
 			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+			follow the trail or go back to the northwest.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the jungle on a narrow trail.{br}
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
 			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+			follow the trail or go back to the northwest.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="9.1">
       <Text>You follow the trail northwest.</Text>
@@ -406,9 +406,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 11 - Weg zur Lichtung######################### -->
   <StoryStep Key="11">
-    <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+    <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye.</Text>
 	<Action Command="LOOK">
-	  <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+	  <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye.</Text>
     </Action>
     <Action Command="WEST" NextStep="10">
       <Text>You follow the path back to the trail in the west.</Text>
@@ -419,9 +425,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 11.1 - Weg zur Lichtung ######################### -->
   <StoryStep Key="11.1">
-    <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+    <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
 	<Action Command="LOOK">
-	  <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+	  <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
     </Action>
     <Action Command="WEST" NextStep="10.1">
       <Text>You follow the path back to the trail in the west.</Text>
@@ -432,25 +444,50 @@
   </StoryStep>
   <!-- ######################### STORY STEP 12 - Lichtung im Dschungel ######################### -->
   <StoryStep Key="12">
-    <Text>STORY STEP 12 s</Text>
+    <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 12 s</Text>
+	  <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="11">
       <Text>You return back on the trail south.</Text>
     </Action>
+    <Action Command="SIT">
+      <Text>Climbing onto the stone, you feel a sense of serenity. But something is not yet{br}
+			right, so you get up again, anxious that you might have disturbed the holiness{br}
+			of the place. But you promise yourself to come back.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 12.1* - Lichtung im Dschungel ######################### -->
   <StoryStep Key="12.1">
-    <Text>STORY STEP 12.1 s</Text>
+    <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 12.1 s</Text>
+	  <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
     </Action>
-    <Action Command="SOUTH" NextStep="11.1">
-      <Text>You return back on the trail south.</Text>
+    <Action Command="SOUTH">
+      <Text>You want to leave the clearing, but an unexplicable urge to sit down prevents{br}
+			you from stepping away.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="19">
-	  <Text>You wake up.</Text>
+    <Action Command="SIT">
+      <Text>Climbing onto the stone, you feel a sense of serenity. You feel like raising the{br}
+			Ocarina to your lips and playing it.</Text>
+    </Action>
+	<Action Command="PLAY" NextStep="19">
+	  <Text>Calmly you raise the Ocarina to your mouth and start playing it. The melody{br}
+			sounds strange and familiar at the same time. Your eyelids are getting heavier{br}
+			with each note leaving your beautiful instrument, until you finally close your{br}
+			eyes...</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
@@ -485,9 +522,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
   <StoryStep Key="14">
-    <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
+    <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
 	<Action Command="LOOK">
-	  <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
+	  <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="13">
       <Text>You return to the trail northeast.</Text>
@@ -501,9 +540,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 14.1 - Wasserfall ######################### -->
   <StoryStep Key="14.1">
-    <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path leading from the southwest to the northeast.</Text>
+    <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path{br}
+			leading from the southwest to the northeast.</Text>
 	<Action Command="LOOK">
-	  <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path leading from the southwest to the northeast.</Text>
+	  <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path{br}
+			leading from the southwest to the northeast.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="13.1">
       <Text>You return to the trail northeast.</Text>
@@ -532,8 +573,8 @@
     <Action Command="WEST">
       <Text>You are too intrigued by the buttons on the podium to leave just yet.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="15a">
-	  <Text>A formerly hidden tunnel opens to the east.</Text>
+	<Action Command="PUSH" NextStep="15a">
+	  <Text>You push the buttons that make sounds.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15a - Höhle mit geöffneter Tür. ######################### -->
@@ -573,11 +614,11 @@
   <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
   <StoryStep Key="16">
     <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
 			a small island in the center of the cave.</Text>
 	<Action Command="LOOK">
 	  <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
 			a small island in the center of the cave.</Text>
     </Action>
     <Action Command="WEST">
@@ -604,7 +645,7 @@
     <Action Command="LEAVE">
       <Text>You don't want to leave just yet.</Text>
     </Action>
-    <Action Command="SEQUENCE" NextStep="16.1">
+    <Action Command="TAKE" NextStep="16.1">
       <Text>You take the Ocarina and carefully walk back.</Text>
     </Action>
   </StoryStep>
@@ -627,9 +668,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 17 - Unten am See ######################### -->
   <StoryStep Key="17">
-    <Text>STORY STEP 17 s ne</Text>
+    <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the northeast you can head back up to the top of the{br}
+			waterfall or you can explore the path in the south.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 17 s ne</Text>
+	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the northeast you can head back up to the top of the{br}
+			waterfall or you can explore the path in the south.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18">
       <Text>You walk deeper into the jungle.</Text>
@@ -640,9 +687,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 17.1 - Unten am See ######################### -->
   <StoryStep Key="17.1">
-    <Text>STORY STEP 17.1 s ne</Text>
+    <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the northeast you can head back up to the top of the{br}
+			waterfall or you can explore the path in the south.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 17.1 s ne</Text>
+	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the northeast you can head back up to the top of the{br}
+			waterfall or you can explore the path in the south.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18.1">
       <Text>You walk deeper into the jungle.</Text>
@@ -681,10 +734,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
   <StoryStep Key="19">
+	<Text Delay="1500">You wake up.</Text>
     <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
 			Standing up almost exhausted you. There are cables attached to you.{br}
 			Confused and disorientated you pull out one cable after the other.{br}{br}</Text>
-	<Text Delay="4000">This sound.{br}{br}
+	<Text Delay="4500">This sound.{br}{br}
 			You freeze in your movement.{br}</Text>
 	<Text Delay="2500">You move your head to get a better look at the source of this familiar sound.{br}{br}</Text>
 	<Text Delay="2500">There it is. An ancient machine on a desk.{br}</Text>
@@ -697,13 +751,14 @@
 			Without much thought the ritual pops up in your mind: 4 8 15 16 23 42</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="GAME_END">
-	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.</Text>
+	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.{br}
+			The screen goes blank and the you read the words:</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP GAME_END - Logfile ######################### -->
   <StoryStep Key="GAME_END">
-    <Text Delay="1500">Logfile{br}{br}
-			It took long to get the test subjects.{br}
+	<Text>Logfile{br}{br}</Text>
+    <Text Delay="1500">It took long to get the test subjects.{br}
 			Finally, we can start with this important experiment.{br}
 			[Missing data / corrupted data]{br}</Text>
     <Text Delay="3500">Half of the test subjects already left the simulation.{br}

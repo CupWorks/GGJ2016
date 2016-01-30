@@ -8,13 +8,15 @@
   <Command Key="LEAVE">
     <Word>leave</Word>
     <Word>leave hut</Word>
-    <Word>get up</Word>
-    <Word>stand up</Word>
-    <Word>leave seat</Word>
+    <Word>open door</Word>
   </Command>
   <Command Key="ISLAND">
-    <Word></Word>
-    <Word></Word>
+    <Word>go to island</Word>
+    <Word>walk to the island</Word>
+	<Word>east</Word>
+	<Word>move</Word>
+	<Word>move to island</Word>
+	<Word>island</Word>
   </Command>
   <Command Key="SEQUENCE">
     <Word>4 8 15 16 23 42</Word>
@@ -63,5 +65,31 @@
     <Word>examine box</Word>
     <Word>examine object</Word>
     <Word>look at object</Word>
+  </Command>
+  <Command Key="PLAY">
+    <Word>play</Word>
+    <Word>play music</Word>
+    <Word>play ocarina</Word>
+    <Word>play flute</Word>
+	<Word>play instrument</Word>
+  </Command>
+  <Command Key="TAKE">
+    <Word>take</Word>
+    <Word>take instrument</Word>
+    <Word>take ocarina</Word>
+    <Word>take flute</Word>
+  </Command>
+  <Command Key="SIT">
+    <Word>sit</Word>
+    <Word>sit down</Word>
+    <Word>sit on rock</Word>
+    <Word>take a seat</Word>
+  </Command>
+  <Command Key="PUSH">
+    <Word>push buttons</Word>
+    <Word>push button</Word>
+    <Word>push</Word>
+    <Word>buttons</Word>
+	<Word> button</Word>
   </Command>
 </ArrayOfCommand>
