@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{3AF07970
 	ProjectSection(SolutionItems) = preProject
 		Files\Commands.xml = Files\Commands.xml
 		Files\StorySteps.xml = Files\StorySteps.xml
+		testsound.wav = testsound.wav
 	EndProjectSection
 EndProject
 Global

@@ -14,6 +14,7 @@ namespace Game.Client
             var game = new Core.Game(
                 input,
                 new ConsoleOutput(),
+                new SoundManager(),
                 commandsFileStream,
                 storyStepsFileStream);
             game.Start();

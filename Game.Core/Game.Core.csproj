@@ -42,6 +42,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="IInput.cs" />
     <Compile Include="IOutput.cs" />
+    <Compile Include="ISoundManager.cs" />
     <Compile Include="OutputType.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

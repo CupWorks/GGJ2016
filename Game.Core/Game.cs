@@ -8,6 +8,7 @@ namespace Game.Core
     {
         private IInput Input { get; set; }
         private IOutput Output { get; set; }
+        private ISoundManager SoundManager { get; set; }
         private ConfigurationContainer<Command> CommandContainer { get; set; }
         private ConfigurationContainer<StoryStep> StoryStepContainer { get; set; }
 
@@ -15,11 +16,12 @@ namespace Game.Core
 
         public bool IsRunning { get; set; } = false;
 
-        public Game(IInput input, IOutput output, Stream commandsStream, Stream storyStepsStream)
+        public Game(IInput input, IOutput output, ISoundManager soundManager, Stream commandsStream, Stream storyStepsStream)
         {
             Input = input;
             Input.OnTextReceived += InputOnOnTextReceived;
             Output = output;
+            SoundManager = soundManager;
             CommandContainer = new ConfigurationContainer<Command>(commandsStream);
             CommandContainer.ReadFromStream();
             StoryStepContainer = new ConfigurationContainer<StoryStep>(storyStepsStream);
