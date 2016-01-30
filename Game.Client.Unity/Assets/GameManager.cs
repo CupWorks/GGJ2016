@@ -49,7 +49,11 @@ public class GameManager : MonoBehaviour
         PointerEventData emptyData = new PointerEventData(EventSystem.current);
         userInputField.OnPointerClick(emptyData);
 
-        GameOutput.GetComponent<Text>().text = input + "\n";
-    }
+        ProccessInput (Input);
+	}
 
+	protected void ProccessInput(string Input)
+	{
+		GameOutput.GetComponent<Text>().text += Input + "\n";
+	}
 }
