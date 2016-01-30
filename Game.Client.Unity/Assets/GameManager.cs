@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using Source.Configuration;
 using UnityEngine;
@@ -114,8 +115,8 @@ public class GameManager : MonoBehaviour
 
 	private void PerformAction(Source.Configuration.Action action)
 	{
-		DisplayTextBlocks(action.Text);
-		if (!string.IsNullOrEmpty(action.Sound))
+        StartCoroutine("DisplayTextBlocks", action.Text);
+        if (!string.IsNullOrEmpty(action.Sound))
 		{
 			var audioFile = AudioContainer.Get(CleanText(action.Sound));
             if ("sound" == audioFile.Type)
@@ -137,22 +138,25 @@ public class GameManager : MonoBehaviour
 	private void UpdateStoryStep(string key)
 	{
 		var storyStep = StoryStepContainer.Get(key);
-		DisplayTextBlocks(storyStep.Text);
-		CurrentStoryStepKey = key;
+        StartCoroutine("DisplayTextBlocks", storyStep.Text);
+        CurrentStoryStepKey = key;
 		if (!string.IsNullOrEmpty(storyStep.NextStep))
 		{
 			UpdateStoryStep(storyStep.NextStep);
 		}
 	}
 
-	private void DisplayTextBlocks(IEnumerable<TextBlock> textBlocks)
+	private IEnumerator DisplayTextBlocks(IEnumerable<TextBlock> textBlocks)
 	{
-		foreach (var textBlock in textBlocks)
-		{
-			GameOutput.GetComponent<Text> ().text += CleanText(textBlock.Content);
-			GameOutput.GetComponent<Text> ().text += "\n";
-		}
-	}
+        //Block input
+        foreach (var textBlock in textBlocks)
+        {
+            GameOutput.GetComponent<Text>().text += CleanText(textBlock.Content);
+            GameOutput.GetComponent<Text>().text += "\n";
+            yield return new WaitForSeconds(1.0f);
+        }
+        //unblock input
+    }
 
     private string CleanText(string text)
     {
