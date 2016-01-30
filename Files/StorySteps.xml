@@ -5,54 +5,76 @@
   <StoryStep Key="GAME_START">
     <Text>You wake up.{br}
 			It's a day like every other day. {br}
-			You'll get up, get ready and perform the ritual, like hundreds of your ancestors before you.{br}
-			You stretch and yawn until you shake your remaining sleepiness and a little while later you sit down in front of the ancient machine. 
-			A little piece of browned parchment above the screen reminds you of your task, as if you could ever forget it.{br}
+			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
+			before you.{br}
+			You stretch and yawn until you shake your remaining sleepiness and a little{br}
+			while later you sit down in front of the ancient machine. A little piece of{br}
+			browned parchment above the screen reminds you of your task, as if you could{br}
+			ever forget it.{br}
 			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
     <Action Command="LEAVE">
-      <Text>You have no reason to leave the hut.</Text>
+      <Text>You have no reason to leave the room.</Text>
     </Action>
 	<Action Command="LOOK">
-	  <Text>You are in a primitive hut, with an anchient machine on a desk.{br}
+	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+			little sink and your bed.{br}
 			Go and do your duty, enter the sequence.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="20">
       <Text>Nothing happens. {br}
-			Satisfied you get up from your seat, having performed the ritual like countless times before.</Text>
+			Satisfied you get up from your seat, having performed the ritual like countless{br}
+			times before.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
   <StoryStep Key="0" Delay="1500">
-      <Text>You hear a loud crashing sound from somewhere outside your room. Never before has anything happened after you performed the ritual. 
-			You are curious, but at the same time scared, because you have never left your safe environment before.</Text>
+      <Text>Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+			Never before has anything happened after you performed the ritual. You are {br}
+			curious, but at the same time scared, because you have never left your safe {br}
+			environment before.</Text>
     <Action Command="LOOK" NextStep="1">
+	  <Text>Unsure of yourself, you look around.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 1 - Zurückkommen in die Hütte ######################### -->
+  <!-- ######################### STORY STEP 1 - Hütte nach Satellitenabsturz ######################### -->
   <StoryStep Key="1">
-    <Text>You are in a primitive hut, with an anchient machine on a desk.</Text>
+    <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+			little sink	and your bed.{br}
+			You can leave the room to go outside.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 1 leave</Text>
+	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+			little sink	and your bed.{br}
+			You can leave the room to go outside.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2">
-      <Text>You leave the hut.</Text>
+      <Text>You leave the room.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 1.1 - Zurückkommen in die Hütte ######################### -->
+  <!-- ######################### STORY STEP 1.1 - Hütte nach Satellitenabsturz ######################### -->
   <StoryStep Key="1.1">
-    <Text>You are in a primitive hut, with an anchient machine on a desk.</Text>
+    <Text>You are in a simple room, with nothing but an anchient machine on a desk, a little sink{br}
+			and your bed.{br}
+			You can leave the room to go outside.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 1.1 leave</Text>
+	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a little sink{br}
+			and your bed.{br}
+			You can leave the room to go outside.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2.1">
-      <Text>You leave the hut.</Text>
+      <Text>You leave the room.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
   <StoryStep Key="2">
-    <Text>STORY STEP 2 w n ne sw</Text>
+    <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing djungle. A little path leads around {br}
+			your hut and you can see a trail into the djungle to the northeast. To the west{br}
+			you can enter your room again.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 2 w n ne sw</Text>
+	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing djungle. A little path leads around {br}
+			your hut and you can see a trail into the djungle to the northeast. To the west{br}
+			you can enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1">
       <Text>You return to the hut.</Text>
@@ -69,9 +91,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 2.1 - Vor der Hütte ######################### -->
   <StoryStep Key="2.1">
-    <Text>STORY STEP 2.1 w n ne sw</Text>
+    <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing djungle. A little path leads around {br}
+			your hut and you can see a trail into the djungle to the northeast. To the west{br}
+			you can enter your room again.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 2.1 w n ne sw</Text>
+	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing djungle. A little path leads around {br}
+			your hut and you can see a trail into the djungle to the northeast. To the west{br}
+			you can enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1.1">
       <Text>You return to the hut.</Text>
@@ -88,9 +116,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3">
-    <Text>STORY STEP 3 s nw</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 3 s nw </Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2">
       <Text>You follow the narrow path south.</Text>
@@ -101,9 +129,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 3.1 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3.1">
-    <Text>STORY STEP 3.1 s nw</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 3.1 s nw </Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2.1">
       <Text>You follow the narrow path south.</Text>
@@ -114,9 +142,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4">
-    <Text>STORY STEP 4 se sw</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 4 se sw</Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3">
       <Text>You follow the narrow past southeast.</Text>
@@ -127,9 +155,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4.1 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4.1">
-    <Text>STORY STEP 4.1 se sw</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 4.1 se sw</Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3.1">
       <Text>You follow the narrow past southeast.</Text>
@@ -140,9 +168,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5">
-    <Text>STORY STEP 5 ne s</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 5 ne s</Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4">
       <Text>You follow the narrow path northeast.</Text>
@@ -153,9 +181,9 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5.1 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5.1">
-    <Text>STORY STEP 5.1 ne s</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 5.1 ne s</Text>
+	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4.1">
       <Text>You follow the narrow path northeast.</Text>
@@ -166,7 +194,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
   <StoryStep Key="6">
-    <Text>STORY STEP 6 n se</Text>
+    <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a box{br}
+			with flat appendages made of metal and plastic. The whole ground is covered with{br}
+			debris.</Text>
 	<Action Command="LOOK">
 	  <Text>STORY STEP 6 n se</Text>
     </Action>
@@ -538,20 +569,20 @@
   <!-- ######################### STORY STEP 20.1 - Logfile ######################### -->
   <StoryStep Key="20.1" Delay="1500" NextStep="20.2">
     <Text>Logfile{br}{br}
-			It took long to get the Test-Subjects.{br}
-			Finally we can start with this important Experiment.{br}
+			It took long to get the test subjects.{br}
+			Finally, we can start with this important experiment.{br}
 			[Missing data / corrupted data]{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.2 - Logfile ######################### -->
   <StoryStep Key="20.2" Delay="1500" NextStep="20.3">
-    <Text>Half of the Test-Subjects already left the Simulation.{br}
+    <Text>Half of the test subjects already left the simulation.{br}
 			We need to find a way to encourage them to stay longer.{br}
 			[Missing data / corrupted data]{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.3 - Logfile ######################### -->
   <StoryStep Key="20.3" Delay="1500" NextStep="20.4">
-    <Text>With this new Simulation we extended the time spend in the simulated world significantly.{br}
-			Most of the Test-Subject reacted very well to the changed Situation.{br}
+    <Text>With this new simulation we extended the time spent in the simulated world significantly.{br}
+			Most of the test subjects reacted very well to the changed situation.{br}
 			[Missing data / corrupted data]{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.4 - Logfile ######################### -->
@@ -561,14 +592,14 @@
   </StoryStep>
   <!-- ######################### STORY STEP 20.5 - Logfile ######################### -->
   <StoryStep Key="20.5" Delay="1500" NextStep="20.6">
-    <Text>We started with the second Test Group.{br}
+    <Text>We started with the second test group.{br}
 			[Missing data / corrupted data]{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.6 - Logfile ######################### -->
   <StoryStep Key="20.6" Delay="1500" NextStep="20.7">
-    <Text>The Experiment is a huge success. {br}
+    <Text>The experiment is a huge success. {br}
 			We will extend the runtime. {br}
-			Some of the systems need adjustments for the new Situation.{br}
+			Some of the systems need adjustments for the new situation.{br}
 			[Missing data / corrupted data]{br}
 			Systems check: Found 3 Errors{br}</Text>
   </StoryStep>
