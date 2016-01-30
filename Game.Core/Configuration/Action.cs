@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Game.Core.Configuration
 {
@@ -8,7 +9,8 @@ namespace Game.Core.Configuration
         public string Command { get; set; } = "";
         [XmlAttribute]
         public string NextStep { get; set; } = "";
-        public string Text { get; set; } = "";
+        [XmlElement("Text")]
+        public List<TextBlock> Text { get; set; } = new List<TextBlock>();
         public string Sound { get; set; } = "";
     }
 }

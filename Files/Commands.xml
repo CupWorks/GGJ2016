@@ -12,6 +12,10 @@
     <Word>stand up</Word>
     <Word>leave seat</Word>
   </Command>
+  <Command Key="ISLAND">
+    <Word></Word>
+    <Word></Word>
+  </Command>
   <Command Key="SEQUENCE">
     <Word>4 8 15 16 23 42</Word>
     <Word>sequence</Word>

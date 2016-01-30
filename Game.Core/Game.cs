@@ -78,11 +78,10 @@ namespace Game.Core
             UpdateStoryStep("GAME_START");
         }
 
-        private async void UpdateStoryStep(string key)
+        private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
-            await Task.Delay(storyStep.Delay);
-            Output.WriteLine(CleanText(storyStep.Text), OutputType.Normal);
+            DisplayTextBlocks(storyStep.Text, OutputType.Normal);
             CurrentStoryStepKey = key;
             if (!string.IsNullOrEmpty(storyStep.NextStep))
             {
@@ -93,8 +92,7 @@ namespace Game.Core
 
         private void PerformAction(Action action)
         {
-            Output.WriteLine(CleanText(action.Text), OutputType.Action);
-
+            DisplayTextBlocks(action.Text, OutputType.Action);
             if (!string.IsNullOrEmpty(action.Sound))
             {
                 var audioFile = AudioContainer.Get(CleanText(action.Sound));
@@ -115,6 +113,18 @@ namespace Game.Core
             {
                 UpdateStoryStep(action.NextStep);
             }
+        }
+
+        private void DisplayTextBlocks(IEnumerable<TextBlock> textBlocks, OutputType type)
+        {
+            Task.Run(async delegate
+            {
+                foreach (var textBlock in textBlocks)
+                {
+                    await Task.Delay(textBlock.Delay);
+                    Output.WriteLine(CleanText(textBlock.Content), type);
+                }
+            }).Wait();
         }
 
         private void PerformDefaultCommand(string key)

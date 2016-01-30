@@ -10,14 +10,19 @@
                Width="{Binding ActualWidth, ElementName=RootCanvas}"
                Height="{Binding ActualHeight, ElementName=RootCanvas}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <RichTextBlock Grid.Row="0" Name="RichTextBlock" />
-        <TextBox Grid.Row="1" Name="TextBox" />
-        <CommandBar Grid.Row="2">
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <CommandBar Grid.Row="0"  Grid.ColumnSpan="2">
+            <AppBarButton Icon="Refresh" Label="History" />
         </CommandBar>
-   </Grid>
+        <RichTextBlock Margin="10" Grid.Row="1" Grid.Column="0" Name="RichTextBlock" />
+        <TextBox Margin="10" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="TextBox" />
+        <ListBox Grid.Row="1" Grid.Column="1" Name="HistoryListBox" />
+    </Grid>
 </Page>
