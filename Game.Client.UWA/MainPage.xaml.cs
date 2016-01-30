@@ -16,24 +16,28 @@ namespace Game.Client.UWA
 {
     public class DefaultInput : IInput
     {
+        private TextBox TextBox { get; }
+
+        public event InputEvent OnTextReceived;
+
         public DefaultInput(TextBox textBox)
         {
-            textBox.KeyDown += OnKeyDown;
+            TextBox = textBox;
+            TextBox.KeyDown += OnKeyDown;
         }
 
         private void OnKeyDown(object sender, KeyRoutedEventArgs keyRoutedEventArgs)
         {
             if (keyRoutedEventArgs.Key != VirtualKey.Enter) return;
-            var textBox = sender as TextBox;
-            if (textBox == null) return;
-            Read(textBox.Text);
-            textBox.Text = "";
+
+            OnTextReceived?.Invoke(TextBox.Text);
+            TextBox.Text = "";
+            TextBox.IsEnabled = false;
         }
 
-        public event InputEvent OnTextReceived;
-        public void Read(string text)
+        public void Request()
         {
-            OnTextReceived?.Invoke(text);
+            TextBox.IsEnabled = true;
         }
     }
 
