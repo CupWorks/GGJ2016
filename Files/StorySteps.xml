@@ -20,19 +20,19 @@
 			little sink and your bed.{br}
 			Go and do your duty, enter the sequence.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="20">
+	<Action Command="SEQUENCE" NextStep="0">
       <Text>Nothing happens. {br}
 			Satisfied you get up from your seat, having performed the ritual like countless{br}
 			times before.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
-  <StoryStep Key="0" Delay="1500">
-      <Text>Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+  <StoryStep Key="0">
+      <Text Delay="1500">Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
 			Never before has anything happened after you performed the ritual. You are {br}
 			curious, but at the same time scared, because you have never left your safe {br}
 			environment before.</Text>
-    <Action Command="LOOK" NextStep="1">
+    <Action Command="LOOK" NextStep="20">
 	  <Text>Unsure of yourself, you look around.</Text>
     </Action>
   </StoryStep>
@@ -629,77 +629,59 @@
       <Text>You go back to the lake.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 19 - VR-Maschine Erde ######################### -->
+  <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
   <StoryStep Key="19">
-    <Text>STORY STEP 19 leave</Text>
+    <Text Delay="1500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
+			Standing up almost exhausted you. There are cables attached to you.{br}
+			Confused and disorientated you pull out one cable after the other.{br}{br}
+			This sound.{br}{br}
+			You freeze in your movement.{br}
+			You move your head to get a better look at the source of this familiar sound.{br}{br}
+			There it is. An ancient machine on a desk.{br}
+			Your hand twitches.</Text>
 	<Action Command="LOOK">
 	  <Text>STORY STEP 19 leave</Text>
     </Action>
-    <Action Command="LEAVE" NextStep="20">
-      <Text>You get up from the seat.</Text>
+	<Action Command="SEQUENCE" NextStep="GAME_END">
+	  <Text>STORY STEP 19 leave</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 20 - Experimentlabor mit PC ######################### -->
-  <StoryStep Key="20">
     <Text>STORY STEP 20 sequence</Text>
 	<Action Command="LOOK">
 	  <Text>STORY STEP 20 sequence</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="20.1">
+	<Action Command="SEQUENCE" NextStep="GAME_END">
 	  <Text>DESCRIPTION</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 20.1 - Logfile ######################### -->
-  <StoryStep Key="20.1" Delay="1500" NextStep="20.2">
-    <Text>Logfile{br}{br}
+  <!-- ######################### STORY STEP GAME_END - Logfile ######################### -->
+  <StoryStep Key="GAME_END">
+    <Text Delay="1500">Logfile{br}{br}
 			It took long to get the test subjects.{br}
 			Finally, we can start with this important experiment.{br}
 			[Missing data / corrupted data]{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.2 - Logfile ######################### -->
-  <StoryStep Key="20.2" Delay="1500" NextStep="20.3">
-    <Text>Half of the test subjects already left the simulation.{br}
+    <Text Delay="3500">Half of the test subjects already left the simulation.{br}
 			We need to find a way to encourage them to stay longer.{br}
 			[Missing data / corrupted data]{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.3 - Logfile ######################### -->
-  <StoryStep Key="20.3" Delay="1500" NextStep="20.4">
-    <Text>With this new simulation we extended the time spent in the simulated world significantly.{br}
+    <Text Delay="3500">With this new simulation we extended the time spent in the simulated world significantly.{br}
 			Most of the test subjects reacted very well to the changed situation.{br}
 			[Missing data / corrupted data]{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.4 - Logfile ######################### -->
-  <StoryStep Key="20.4" Delay="1500" NextStep="20.5">
-    <Text>Systems check: Found 0 Errors{br}
+    <Text Delay="3500">Systems check: Found 0 Errors{br}
 			[Missing data / corrupted data]{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.5 - Logfile ######################### -->
-  <StoryStep Key="20.5" Delay="1500" NextStep="20.6">
-    <Text>We started with the second test group.{br}
+    <Text Delay="3500">We started with the second test group.{br}
 			[Missing data / corrupted data]{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.6 - Logfile ######################### -->
-  <StoryStep Key="20.6" Delay="1500" NextStep="20.7">
-    <Text>The experiment is a huge success. {br}
+    <Text Delay="3500">The experiment is a huge success. {br}
 			We will extend the runtime. {br}
 			Some of the systems need adjustments for the new situation.{br}
 			[Missing data / corrupted data]{br}
 			Systems check: Found 3 Errors{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.7 - Logfile ######################### -->
-  <StoryStep Key="20.7" Delay="2000" NextStep="20.8">
-    <Text>Systems check: Found 46 Errors{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.8 - Logfile ######################### -->
-  <StoryStep Key="20.8" Delay="2000" NextStep="20.9">
-    <Text>Systems check: Found 367 Errors{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP 20.9 - Logfile ######################### -->
-  <StoryStep Key="20.9" Delay="2000" NextStep="GAME_END">
-    <Text>Systems check: CRITICAL!{br}</Text>
-  </StoryStep>
-  <!-- ######################### STORY STEP GAME END ######################### -->
-  <StoryStep Key="GAME_END" Delay="3000">
-    <Text>You want to wake up again...</Text>
+    <Text Delay="3500">Systems check: Found 46 Errors{br}</Text>
+    <Text Delay="3500">Systems check: Found 367 Errors{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>	
+    <Text Delay="4000">You want to wake up again...</Text>
   </StoryStep>
 </ArrayOfStoryStep>
