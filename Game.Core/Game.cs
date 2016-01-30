@@ -76,8 +76,16 @@ namespace Game.Core
         private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
-            Output.WriteLine(storyStep.Text, OutputType.Normal);
+            Output.WriteLine(FilterText(storyStep.Text), OutputType.Normal);
             CurrentStoryStepKey = key;
+        }
+
+        private string FilterText(string text)
+        {
+            return text
+                .Replace("\t", "")
+                .Replace("\n", "")
+                .Replace("{br}", "\n");
         }
 
         private void PerformAction(Action action)

@@ -5,8 +5,8 @@ namespace Game.Client
 {
     public class Program
     {
-		private const int WindowHeight = 30;
-		private const int WindowWidth  = 80;
+		private const int WindowHeight = 50;
+		private const int WindowWidth  = 100;
 
         private static void Main(string[] args)
         {
@@ -22,8 +22,7 @@ namespace Game.Client
                 storyStepsFileStream);
             game.Start();
 
-			CheckWindowSize ();
-
+			CheckWindowSize();
             do
             {
                 Console.Write("> ");
@@ -35,12 +34,12 @@ namespace Game.Client
             storyStepsFileStream.Close();
         }
 
-		static void CheckWindowSize()
+		private static void CheckWindowSize()
 		{
-			if (Console.WindowHeight != WindowHeight || Console.WindowWidth != WindowWidth)
-			{
-				Console.SetWindowSize(WindowWidth, WindowHeight);
-			}
+		    if (Console.WindowHeight == WindowHeight && Console.WindowWidth == WindowWidth) return;
+
+            Console.SetBufferSize(WindowWidth, WindowWidth + 200);
+            Console.SetWindowSize(WindowWidth, WindowHeight);
 		}
     }
 }

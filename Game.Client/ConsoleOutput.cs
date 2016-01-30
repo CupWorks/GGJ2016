@@ -14,7 +14,9 @@ namespace Game.Client
 
         public void WriteLine(string text, OutputType type)
         {
-            Write(text + "\n", type);
+            Console.ForegroundColor = GetColor(type);
+            Console.WriteLine(text);
+            Console.ResetColor();
         }
 
         private ConsoleColor GetColor(OutputType type)
