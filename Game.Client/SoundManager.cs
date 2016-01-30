@@ -1,12 +1,14 @@
-﻿using System.Media;
+﻿using IrrKlang;
 using Game.Core;
+
 
 namespace Game.Client
 {
     public class SoundManager : ISoundManager
     {
-        private SoundPlayer EffectPlayer { get; } = new SoundPlayer();
-        private SoundPlayer BackgroundPlayer { get; } = new SoundPlayer();
+        private ISoundEngine SoundEngine { get; } = new ISoundEngine();
+        private ISound CurrentEffect { get; set; }
+        private ISound CurrentBackground { get; set; }
 
         public SoundManager()
         {
@@ -14,24 +16,22 @@ namespace Game.Client
 
         public void PlaySound(string soundFile)
         {
-            EffectPlayer.SoundLocation = soundFile;
-            EffectPlayer.Play();
+            CurrentEffect = SoundEngine.Play2D(soundFile, false);
         }
 
         public void StopSound()
         {
-            EffectPlayer.Stop();
+            CurrentEffect.Stop();
         }
 
         public void PlayLoop(string soundFile)
         {
-            BackgroundPlayer.SoundLocation = soundFile;
-            BackgroundPlayer.PlayLooping();
+            CurrentBackground = SoundEngine.Play2D(soundFile, true);
         }
 
         public void StopLoop()
         {
-            BackgroundPlayer.Stop();
+            CurrentBackground.Stop();
         }
     }
 }
