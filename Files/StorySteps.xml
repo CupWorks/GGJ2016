@@ -16,7 +16,7 @@
 	  <Text>You are in a primitive hut, with an anchient machine on a desk.{br}
 			Go and do your duty, enter the sequence.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="0">
+	<Action Command="SEQUENCE" NextStep="20">
       <Text>Nothing happens. {br}
 			Satisfied you get up from your seat, having performed the ritual like countless times before.</Text>
     </Action>
@@ -536,7 +536,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 20.1 - Logfile ######################### -->
-  <StoryStep Key="20.1" NextStep="20.2">
+  <StoryStep Key="20.1" Delay="1500" NextStep="20.2">
     <Text>Logfile{br}{br}
 			It took long to get the Test-Subjects.{br}
 			Finally we can start with this important Experiment.{br}
@@ -570,22 +570,22 @@
 			We will extend the runtime. {br}
 			Some of the systems need adjustments for the new Situation.{br}
 			[Missing data / corrupted data]{br}
-			Systems check: Found 0 Errors</Text>
+			Systems check: Found 3 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.7 - Logfile ######################### -->
-  <StoryStep Key="20.7" Delay="1500" NextStep="20.8">
-    <Text>Systems check: Found 3 Errors{br}</Text>
+  <StoryStep Key="20.7" Delay="2000" NextStep="20.8">
+    <Text>Systems check: Found 14 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.8 - Logfile ######################### -->
-  <StoryStep Key="20.8" Delay="1500" NextStep="20.9">
+  <StoryStep Key="20.8" Delay="2000" NextStep="20.9">
     <Text>Systems check: Found 46 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.9 - Logfile ######################### -->
-  <StoryStep Key="20.9" Delay="1500" NextStep="GAME_END">
+  <StoryStep Key="20.9" Delay="2000" NextStep="GAME_END">
     <Text>Systems check: Found 138 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP GAME END ######################### -->
-  <StoryStep Key="GAME_END" Delay="2000">
-    <Text>You want to wake up again.</Text>
+  <StoryStep Key="GAME_END" Delay="3000">
+    <Text>You want to wake up again...</Text>
   </StoryStep>
 </ArrayOfStoryStep>
