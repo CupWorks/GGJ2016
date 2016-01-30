@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Game.Core.Configuration;
 using Action = Game.Core.Configuration.Action;
@@ -78,11 +79,13 @@ namespace Game.Core
             UpdateStoryStep("GAME_START");
         }
 
-        private async void UpdateStoryStep(string key)
+        private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
-            await Task.Delay(storyStep.Delay);
-            Output.WriteLine(CleanText(storyStep.Text), OutputType.Normal);
+            foreach (var textBlock in storyStep.Text)
+            {
+                Output.WriteLine(CleanText(textBlock.Content), OutputType.Normal);
+            }
             CurrentStoryStepKey = key;
             if (!string.IsNullOrEmpty(storyStep.NextStep))
             {
