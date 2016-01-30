@@ -105,4 +105,7 @@
     <Word>east</Word>
 	<Word>explore tunnel</Word>
   </Command>
+  <Command Key="ENTER">
+	<Word></Word>
+  </Command>
 </ArrayOfCommand>

@@ -3,6 +3,47 @@
 <ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ######################### GAME START ######################### -->
   <StoryStep Key="GAME_START">
+	<Text>             ____________________________________________________{br}
+            /                                                    \{br}
+           |    _____________________________________________     |{br}
+           |   |                                             |    |{br}
+           |   |  \> _                                       |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |              D E T A C H E D                |    |{br}
+           |   |                                             |    |{br}
+           |   |            - a NaN NUTS game -              |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |_____________________________________________|    |{br}
+           |                                                      |{br}
+            \_____________________________________________________/{br}
+                   \_______________________________________/{br}
+                _______________________________________________{br}
+             _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_{br}
+          _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_{br}
+       _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_{br}
+    _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_{br}
+ _-'.-.-.-.-.-. .---.-. .-----------------------------. .-.---. .---.-.-.-.`-_{br}
+:-----------------------------------------------------------------------------:{br}
+`---._.-----------------------------------------------------------------._.---'{br}
+	</Text>
+	<Text>Basic instructions:{br}
+			Move around using geographic directions like "north" / "n",	"south" / "s",{br}
+			"northeast" / "ne".{br}
+			Use "look" to look around.{br}
+			Pay attention to your surroundings and try to keep orientated.{br}
+			Other commands should be easy to find.{br}{br}
+			Press "Enter" to start game.</Text> 
+	<Action Command="ENTER" NextStep="00">
+	</Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 00 - Spielbeginn ######################### -->
+  <StoryStep Key="00">
     <Text>You wake up.{br}
 			It's a day like every other day. {br}
 			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
@@ -492,11 +533,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
-    <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the southwest you can hear water.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the southwest you can hear water.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			southwest. In the distance to the southwest you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10">
       <Text>You follow the trail north</Text>
@@ -507,11 +548,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 13.1 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13.1">
-    <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the southwest you can hear water.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the southwest you can hear water.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10.1">
       <Text>You follow the trail north</Text>
