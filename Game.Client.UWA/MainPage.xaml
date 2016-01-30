@@ -4,11 +4,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:uwa="using:Game.Client.UWA"
     mc:Ignorable="d">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-               Width="{Binding ActualWidth, ElementName=RootCanvas}"
-               Height="{Binding ActualHeight, ElementName=RootCanvas}">
+    <Grid x:Name="RootGrid"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+        Width="{Binding ActualWidth, ElementName=RootCanvas}"
+        Height="{Binding ActualHeight, ElementName=RootCanvas}">
+        <Grid.Resources>
+            <Style x:Key="ListBoxItemStyle" TargetType="ListBoxItem">
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+            </Style>
+        </Grid.Resources>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -16,13 +23,21 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <CommandBar Grid.Row="0"  Grid.ColumnSpan="2">
-            <AppBarButton Icon="Refresh" Label="History" />
+            <AppBarButton Icon="Refresh" Label="History" Click="HistoryOnClick" />
         </CommandBar>
-        <RichTextBlock Margin="10" Grid.Row="1" Grid.Column="0" Name="RichTextBlock" />
+        <ScrollViewer Grid.Row="1" Grid.Column="0">
+            <RichTextBlock Margin="10" Name="RichTextBlock" />
+        </ScrollViewer>
         <TextBox Margin="10" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="TextBox" />
-        <ListBox Grid.Row="1" Grid.Column="1" Name="HistoryListBox" />
+        <ListBox Grid.Row="1" Grid.Column="1" Name="HistoryListBox" ItemContainerStyle="{StaticResource ListBoxItemStyle}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" Tapped="HistoryItemOnTapped" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>

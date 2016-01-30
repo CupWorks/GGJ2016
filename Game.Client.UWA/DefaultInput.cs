@@ -1,4 +1,5 @@
 using System;
+using System.Collections.ObjectModel;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
@@ -12,6 +13,7 @@ namespace Game.Client.UWA
         private TextBox TextBox { get; }
 
         public event InputEvent OnTextReceived;
+        public ObservableCollection<string> LastCommands { get; set; } = new ObservableCollection<string>();
 
         public DefaultInput(TextBox textBox)
         {
@@ -24,7 +26,17 @@ namespace Game.Client.UWA
             if (keyRoutedEventArgs.Key != VirtualKey.Enter) return;
 
             OnTextReceived?.Invoke(TextBox.Text);
+            if (!LastCommands.Contains(TextBox.Text))
+            {
+                LastCommands.Add(TextBox.Text);
+            }
             TextBox.Text = "";
+            TextBox.IsEnabled = false;
+        }
+
+        public void Push(string text)
+        {
+            OnTextReceived?.Invoke(text);
             TextBox.IsEnabled = false;
         }
 
