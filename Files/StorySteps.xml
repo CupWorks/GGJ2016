@@ -22,211 +22,301 @@
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
   <StoryStep Key="0">
-      <Text>
-	  </Text>
+      <Text>You hear a loud crashing sound from somewhere outside your room. Never before has anything happened after you performed the ritual. 
+			You are curious, but at the same time scared, because you have never left your safe environment before.</Text>
+    <Action Command="LOOK" NextStep="1">
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 1 - Zurückkommen in die Hütte ######################### -->
   <StoryStep Key="1">
     <Text>You are in a primitive hut, with an anchient machine on a desk.</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 1 leave</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
+    <Action Command="LEAVE" NextStep="2">
       <Text>You leave the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
   <StoryStep Key="2">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 2 w n ne sw</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 2 w n ne sw</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="WEST" NextStep="1">
+      <Text>You return to the hut.</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="3">
+      <Text>You follow the narrow path north.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="9">
+      <Text>You follow the narrow path into the djungle.</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="7">
+      <Text>You follow the narrow path southwest.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 3 s nw</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 3 s nw </Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTH" NextStep="2">
+      <Text>You follow the narrow path south.</Text>
+    </Action>
+    <Action Command="NORTHWEST" NextStep="4">
+      <Text>You follow the narrow path northwest.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 4 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 4 se sw</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 4 se sw</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTHEAST" NextStep="3">
+      <Text>You follow the narrow past southeast.</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="5">
+      <Text>You follow the narrow path southwest.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 5 ne s</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 5 ne s</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTHEAST" NextStep="4">
+      <Text>You follow the narrow path northeast.</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="6">
+      <Text>You follow the narrow path south behind the hut.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten ######################### -->
+  <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
   <StoryStep Key="6">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 6 n se</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 6 n se</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTH" NextStep="5">
+      <Text>You follow the narrow path north.</Text>
+    </Action>
+    <Action Command="SOUTHEAST" NextStep="7">
+      <Text>You follow the narrow path southeast.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 7 - Weg südlich der Hütte ######################### -->
   <StoryStep Key="7">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 7 s ne nw</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 7 s ne nw</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTH" NextStep="8">
+      <Text>You walk into the djungle.</Text>
+    </Action>
+    <Action Command="NORTHWEST" NextStep="6">
+      <Text>You follow the narrow path northwest behind the hut.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="2">
+      <Text>You follow the narrow path northeast in front of the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 8 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="8">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 8 n</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 8 n</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTH" NextStep="7">
+      <Text>You go back north to the path around the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 9 - Weg in den Dschungel 1 ######################### -->
   <StoryStep Key="9">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 9 sw se</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 9 sw se</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTHWEST" NextStep="2">
+      <Text>You go back to the narrow path in front of your hut.</Text>
+    </Action>
+    <Action Command="SOUTHEAST" NextStep="10">
+      <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 10 - Weg in den Dschungel 2 ######################### -->
   <StoryStep Key="10">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 10 nw e s</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 10 nw e s</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTHWEST" NextStep="9">
+      <Text>You follow the trail northwest.</Text>
+    </Action>
+    <Action Command="EAST" NextStep="11">
+      <Text>You follow the trail deeper into the djungle.</Text>
+    </Action>
+    <Action Command="SOUTH" NextStep="13">
+      <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 11 - Weg in den Dschungel 3 ######################### -->
   <StoryStep Key="11">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 11 w n</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 11 w n</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="WEST" NextStep="10">
+      <Text>You follow the trail west.</Text>
+    </Action>
+    <Action Command="NORTH" NextStep="12">
+      <Text>You follow the trail deeper into the djungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 12 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="12">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 12 s</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 12 s</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTH" NextStep="11">
+      <Text>You return back on the trail south.</Text>
+    </Action>
+	<Action Command="SEQUENCE" NextStep="19">
+	  <Text>You wake up.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 13 n sw</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 13 n sw</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTH" NextStep="10">
+      <Text>You follow the trail north</Text>
+    </Action>
+    <Action Command="SOUTHWEST" NextStep="14">
+      <Text>You follow sound of water.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
   <StoryStep Key="14">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 14 ne sw e</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 14 ne sw e</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTHEAST" NextStep="13">
+      <Text>You return to the trail northeast.</Text>
+    </Action>
+	    <Action Command="SOUTHWEST" NextStep="17">
+      <Text>You go down to the lake.</Text>
+    </Action>
+	    <Action Command="EAST" NextStep="15">
+      <Text>You sneak behind the waterfall.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15 - Höhle ######################### -->
   <StoryStep Key="15">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 15 w</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 15 w</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="WEST">
+      <Text>You are too intrigued by the buttons on the podium to leave just yet.</Text>
+    </Action>
+	<Action Command="SEQUENCE" NextStep="15a">
+	  <Text>Sequence</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 15a - Höhle mit geöffneter Tür. ######################### -->
+  <StoryStep Key="15a">
+    <Text>STORY STEP 15a e</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 15a e</Text>
+    </Action>
+    <Action Command="EAST" NextStep="16">
+      <Text>You enter the room.</Text>
+    </Action>
+	<Action Command="WEST" NextStep="14">
+      <Text>You leave the cave.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
   <StoryStep Key="16">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 16 w</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 16 w</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="WEST" NextStep="15a">
+      <Text>You leave the room.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 17 - Unten am See ######################### -->
   <StoryStep Key="17">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 17 s ne</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 17 s ne</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="SOUTH" NextStep="18">
+      <Text>You walk deeper into the djungle.</Text>
+    </Action>
+    <Action Command="NORTHEAST" NextStep="14">
+      <Text>You go back to the waterfall.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 18 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 18 n</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 18 n</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="NORTH" NextStep="17">
+      <Text>You go back to the lake.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 19 - VR-Maschine Erde ######################### -->
   <StoryStep Key="19">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 19 leave</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 19 leave</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+    <Action Command="LEAVE" NextStep="20">
+      <Text>You get up from the seat.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 20 - Experimentlabor mit PC ######################### -->
   <StoryStep Key="20">
-    <Text>DESCRIPTION</Text>
+    <Text>STORY STEP 20 sequence</Text>
 	<Action Command="LOOK">
-	  <Text>DESCRIPTION</Text>
+	  <Text>STORY STEP 20 sequence</Text>
     </Action>
-    <Action Command="EAST" NextStep="2">
-      <Text>You leave the hut.</Text>
+	<Action Command="SEQUENCE" NextStep="GAME_END">
+	  <Text>DESCRIPTION</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP GAME END - Logfile ######################### -->
   <StoryStep Key="GAME_END">
-    <Text>... The END ...</Text>
+    <Text>Logfile
+
+It took long to get the Test-Subjects. Finally we can start with this important Experiment.
+[Missing data / corrupted data]
+Half of the Test-Subjects already left the Simulation. We need to find a way to encourage them to stay longer.
+[Missing data / corrupted data]
+With this new Simulation we extended the time spend in the simulated World significantly. Most of the Test-Subject reacted very well to the changed Situation.
+[Missing data / corrupted data]
+Systems check: Found 0 Errors
+[Missing data / corrupted data]
+We started with the second Test Group.
+[Missing data / corrupted data]
+The Experiment is a huge success. We will extend the runtime. Some of the System need adjustments for the new Situation.
+[Missing data / corrupted data]
+Systems check: Found 0 Errors
+
+
+
+You want to wake up again.</Text>
   </StoryStep>
 </ArrayOfStoryStep>

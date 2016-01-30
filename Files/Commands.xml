@@ -5,20 +5,52 @@
     <Word>quit</Word>
     <Word>flip table</Word>
   </Command>
-  <Command Key="NEXT">
-    <Word>next</Word>
-    <Word>continue</Word>
-    <Word>go on</Word>
-    <Word>going on</Word>
-  </Command>
-  <Command Key="NUT">
-    <Word>nut</Word>
+  <Command Key="LEAVE">
+    <Word>leave</Word>
+    <Word>leave hut</Word>
+    <Word>get up</Word>
+    <Word>stand up</Word>
+    <Word>leave seat</Word>
   </Command>
   <Command Key="SEQUENCE">
     <Word>4 8 15 16 23 42</Word>
+    <Word>sequence</Word>
   </Command>
-  <Command Key="SIT">
-    <Word>temp</Word>
-    <Word>other temp</Word>
+  <Command Key="NORTH">
+    <Word>n</Word>
+	<Word>north</Word>
+  </Command>
+  <Command Key="NORTHEAST">
+    <Word>northeast</Word>
+    <Word>ne</Word>
+  </Command>
+  <Command Key="EAST">
+    <Word>east</Word>
+    <Word>e</Word>
+  </Command>
+  <Command Key="SOUTHEAST">
+    <Word>southeast</Word>
+    <Word>se</Word>
+  </Command>
+  <Command Key="SOUTH">
+    <Word>south</Word>
+    <Word>s</Word>
+  </Command>
+  <Command Key="SOUTHWEST">
+    <Word>southwest</Word>
+    <Word>sw</Word>
+  </Command>
+  <Command Key="WEST">
+    <Word>west</Word>
+    <Word>w</Word>
+  </Command>
+  <Command Key="NORTHWEST">
+    <Word>northwest</Word>
+    <Word>nw</Word>
+  </Command>
+  <Command Key="LOOK">
+    <Word>look around</Word>
+    <Word>look</Word>
+    <Word>examine</Word>
   </Command>
 </ArrayOfCommand>
