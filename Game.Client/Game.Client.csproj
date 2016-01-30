@@ -61,15 +61,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\Files\Commands.xml">
-      <Link>Commands.xml</Link>
+      <Link>Files\Commands.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Files\StorySteps.xml">
-      <Link>StorySteps.xml</Link>
+      <Link>Files\StorySteps.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Files\testsound.wav">
-      <Link>testsound.wav</Link>
+      <Link>Files\testsound.wav</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -8,6 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock>Fooooooooo</TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <RichTextBlock Grid.Row="1" Name="RichTextBlock" />
+        <TextBox Grid.Row="1" Name="TextBox" />
     </Grid>
 </Page>

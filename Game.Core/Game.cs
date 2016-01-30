@@ -12,7 +12,7 @@ namespace Game.Core
         {
                 "You can't do that here",
                 "Learn to play",
-                "I am you father ... Luke"
+                "I am your father ... Luke"
         };
 
         private IInput Input { get; }
@@ -46,7 +46,7 @@ namespace Game.Core
             {
                 if (defaultCommand.WordList.Contains(text.Trim().ToLower()))
                 {
-                    PerformDefault(defaultCommand.Key);
+                    PerformDefaultCommand(defaultCommand.Key);
                     return;
                 }
             }
@@ -89,7 +89,7 @@ namespace Game.Core
             UpdateStoryStep(action.NextStep);
         }
 
-        private void PerformDefault(string key)
+        private void PerformDefaultCommand(string key)
         {
             switch (key)
             {

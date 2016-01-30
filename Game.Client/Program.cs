@@ -10,8 +10,8 @@ namespace Game.Client
 
         private static void Main(string[] args)
         {
-            var commandsFileStream = new FileStream("Commands.xml", FileMode.Open);
-            var storyStepsFileStream = new FileStream("StorySteps.xml", FileMode.Open);
+            var commandsFileStream = new FileStream("Files/Commands.xml", FileMode.Open);
+            var storyStepsFileStream = new FileStream("Files/StorySteps.xml", FileMode.Open);
 
             var input = new ConsoleInput();
             var game = new Core.Game(
