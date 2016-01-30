@@ -97,10 +97,19 @@ public class GameManager : MonoBehaviour
 				//PerformDefaultCommand(defaultCommand.Key);
 				return;
 			}
-		}
+        }
 
-		//check for action
-		var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
+        if (input == "play")
+        {
+            PlayLoop("blind");
+        }
+        else if (input == "plays")
+        {
+            PlaySound("testsound");
+        }
+
+        //check for action
+        var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
 		foreach (var action in storyStep.ActionList)
 		{
 			var command = CommandContainer.Get(action.Command);
@@ -125,14 +134,6 @@ public class GameManager : MonoBehaviour
 			{
 				//SoundManager.PlayLoop(audioFile.File);
 			}
-            if (input == "play")
-            {
-                PlayLoop("blind");
-            }
-            else if (input == "plays")
-            {
-                PlaySound("testsound");
-            }
         }
 
 		if (!string.IsNullOrEmpty(action.NextStep))
