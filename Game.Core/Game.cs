@@ -1,16 +1,26 @@
-﻿using System.IO;
-using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using Game.Core.Configuration;
+using Action = Game.Core.Configuration.Action;
 
 namespace Game.Core
 {
     public class Game
     {
-        private IInput Input { get; set; }
-        private IOutput Output { get; set; }
+        private List<string> DefaultInputWarnings { get; } = new List<string>
+        {
+                "You can't do that here",
+                "Learn to play",
+                "I am you father ... Luke"
+        };
+
+        private IInput Input { get; }
+        private IOutput Output { get; }
         private ISoundManager SoundManager { get; set; }
-        private ConfigurationContainer<Command> CommandContainer { get; set; }
-        private ConfigurationContainer<StoryStep> StoryStepContainer { get; set; }
+        private ConfigurationContainer<Command> CommandContainer { get; }
+        private IEnumerable<Command> DefaultCommands { get; set; } 
+        private ConfigurationContainer<StoryStep> StoryStepContainer { get; }
 
         private string CurrentStoryStepKey { get; set; }
 
@@ -24,24 +34,37 @@ namespace Game.Core
             SoundManager = soundManager;
             CommandContainer = new ConfigurationContainer<Command>(commandsStream);
             CommandContainer.ReadFromStream();
+            DefaultCommands = CommandContainer.Get(c => c.IsDefault);
             StoryStepContainer = new ConfigurationContainer<StoryStep>(storyStepsStream);
             StoryStepContainer.ReadFromStream();
         }
 
         private void InputOnOnTextReceived(string text)
         {
-            var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
-            foreach (var action in 
-                from action 
-                in storyStep.CommandActionList
-                let command = CommandContainer.Get(action.Command)
-                where command.WordList.Contains(text.Trim().ToLower())
-                select action)
+            //check for default command
+            foreach (var defaultCommand in DefaultCommands)
             {
-                PerformAction(action);
-                return;
+                if (defaultCommand.WordList.Contains(text.Trim().ToLower()))
+                {
+                    PerformDefault(defaultCommand.Key);
+                    return;
+                }
             }
-            Output.WriteLine("You can't do that here ... sucker", OutputType.Warning);
+
+            //check for action
+            var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
+            foreach (var action in storyStep.ActionList)
+            {
+                var command = CommandContainer.Get(action.Command);
+                if (command.WordList.Contains(text.Trim().ToLower()))
+                {
+                    PerformAction(action);
+                    return;
+                }
+            }
+
+            //write waring text
+            Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
         }
 
         public void Start()
@@ -65,6 +88,18 @@ namespace Game.Core
             if (string.IsNullOrEmpty(action.NextStep)) return;
 
             UpdateStoryStep(action.NextStep);
+        }
+
+        private void PerformDefault(string key)
+        {
+            switch (key)
+            {
+                case "DEFAULT_EXIT":
+                    IsRunning = false;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(key), key, null);
+            }
         }
     }
 }

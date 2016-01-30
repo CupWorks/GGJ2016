@@ -5,6 +5,10 @@ namespace Game.Client
 {
     public class Program
     {
+
+		private const int windowHeight = 30;
+		private const int windowWidth  = 80;
+
         private static void Main(string[] args)
         {
             var commandsFileStream = new FileStream("Commands.xml", FileMode.Open);
@@ -19,16 +23,25 @@ namespace Game.Client
                 storyStepsFileStream);
             game.Start();
 
+			CheckWindowSize ();
+
             do
             {
                 Console.Write("> ");
                 input.Read(Console.ReadLine());
+				CheckWindowSize();
             } while (game.IsRunning);
 
             commandsFileStream.Close();
             storyStepsFileStream.Close();
-
-            Console.ReadKey(false);
         }
+
+		static void CheckWindowSize()
+		{
+			if (Console.WindowHeight != windowHeight || Console.WindowWidth != windowWidth)
+			{
+				Console.SetWindowSize(windowWidth, windowHeight);
+			}
+		}
     }
 }

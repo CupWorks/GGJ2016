@@ -7,6 +7,8 @@ namespace Game.Core.Configuration
     {
         [XmlAttribute]
         public string Key { get; set; }
+        [XmlAttribute]
+        public bool IsDefault { get; set; }
         [XmlElement("Word")]
         public List<string> WordList { get; set; } = new List<string>();
     }

@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <ArrayOfCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Command Key="DEFAULT_EXIT" IsDefault="true">
+    <Word>exit</Word>
+    <Word>quit</Word>
+    <Word>flip table</Word>
+  </Command>
   <Command Key="NEXT">
     <Word>next</Word>
     <Word>continue</Word>
