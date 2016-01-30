@@ -406,12 +406,12 @@
   </StoryStep>
   <!-- ######################### STORY STEP 11 - Weg zur Lichtung######################### -->
   <StoryStep Key="11">
-    <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+    <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
 			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
 			strange feeling encroaches upon you, as if there is more to it than meets the{br}
 			eye.</Text>
 	<Action Command="LOOK">
-	  <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+	  <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
 			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
 			strange feeling encroaches upon you, as if there is more to it than meets the{br}
 			eye.</Text>
@@ -425,12 +425,12 @@
   </StoryStep>
   <!-- ######################### STORY STEP 11.1 - Weg zur Lichtung ######################### -->
   <StoryStep Key="11.1">
-    <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+    <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
 			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
 			strange feeling encroaches upon you, as if there is more to it than meets the{br}
 			eye. The Ocarina feels a little warmer in your hands.</Text>
 	<Action Command="LOOK">
-	  <Text>The branches make space for a wider path lined with pretty stones on both sides.{br}
+	  <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
 			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
 			strange feeling encroaches upon you, as if there is more to it than meets the{br}
 			eye. The Ocarina feels a little warmer in your hands.</Text>
@@ -493,10 +493,10 @@
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
     <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the south you can hear water.</Text>
+			In the distance to the southwest you can hear water.</Text>
 	<Action Command="LOOK">
 	  <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the south you can hear water.</Text>
+			In the distance to the southwest you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10">
       <Text>You follow the trail north</Text>
@@ -508,10 +508,10 @@
   <!-- ######################### STORY STEP 13.1 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13.1">
     <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the south you can hear water.</Text>
+			In the distance to the southwest you can hear water.</Text>
 	<Action Command="LOOK">
 	  <Text>You venture deeper into the jungle on a narrow trail.{br}
-			In the distance to the south you can hear water.</Text>
+			In the distance to the southwest you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10.1">
       <Text>You follow the trail north</Text>
@@ -523,10 +523,10 @@
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
   <StoryStep Key="14">
     <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
-			over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
+			over the rock. You feel a strange beckoning from behind the waterfall in the east.</Text>
 	<Action Command="LOOK">
 	  <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
-			over the rock. You feel a strange beckoning from behind the Waterfall.</Text>
+			over the rock. You feel a strange beckoning from behind the waterfall in the east.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="13">
       <Text>You return to the trail northeast.</Text>
@@ -587,7 +587,7 @@
 			curves slightly and focuses the viewer's attention on eight pedestals.{br}
 			The eastern wall opens to a small tunnel.</Text>
     </Action>
-    <Action Command="EAST" NextStep="16">
+    <Action Command="TUNNEL" NextStep="16">
       <Text>You squeeze through the tunnel.</Text>
     </Action>
 	<Action Command="WEST">

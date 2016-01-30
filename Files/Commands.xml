@@ -7,7 +7,7 @@
   </Command>
   <Command Key="LEAVE">
     <Word>leave</Word>
-    <Word>leave hut</Word>
+    <Word>leave room</Word>
     <Word>open door</Word>
   </Command>
   <Command Key="ISLAND">
@@ -20,6 +20,7 @@
   </Command>
   <Command Key="SEQUENCE">
     <Word>4 8 15 16 23 42</Word>
+    <Word>4815162342</Word>
     <Word>sequence</Word>
   </Command>
   <Command Key="NORTH">
@@ -78,6 +79,10 @@
     <Word>take instrument</Word>
     <Word>take ocarina</Word>
     <Word>take flute</Word>
+	<Word>touch</Word>
+    <Word>touch instrument</Word>
+    <Word>touch ocarina</Word>
+    <Word>touch flute</Word>
   </Command>
   <Command Key="SIT">
     <Word>sit</Word>
@@ -90,6 +95,14 @@
     <Word>push button</Word>
     <Word>push</Word>
     <Word>buttons</Word>
-	<Word> button</Word>
+	<Word>button</Word>
+    <Word>press buttons</Word>
+    <Word>press button</Word>
+  </Command>
+  <Command Key="TUNNEL">
+    <Word>tunnel</Word>
+    <Word>take tunnel</Word>
+    <Word>east</Word>
+	<Word>explore tunnel</Word>
   </Command>
 </ArrayOfCommand>
