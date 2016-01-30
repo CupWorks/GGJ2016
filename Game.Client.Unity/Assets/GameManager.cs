@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     private IEnumerable<Command> DefaultCommands { get; set; }
     private ConfigurationContainer<StoryStep> StoryStepContainer { get; set; }
 
+	private string CurrentStoryStepKey { get; set; }
+
     protected void Start()
     {
         var commandsData = Resources.Load("Commands", typeof (TextAsset)) as TextAsset;
@@ -41,6 +43,9 @@ public class GameManager : MonoBehaviour
         }
 
         StartTimer(10000, () => Debug.Log("Foo"));
+
+		GameOutput.GetComponent<Text> ().text = "";
+		UpdateStoryStep("GAME_START");
     }
 
     protected void Update()
@@ -82,7 +87,67 @@ public class GameManager : MonoBehaviour
 
 	protected void ProcessInput(string input)
 	{
-		GameOutput.GetComponent<Text>().text += input + "\n";
+		foreach (var defaultCommand in DefaultCommands)
+		{
+			if (defaultCommand.WordList.Contains(input.Trim().ToLower()))
+			{
+				//PerformDefaultCommand(defaultCommand.Key);
+				return;
+			}
+		}
+
+		//check for action
+		var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
+		foreach (var action in storyStep.ActionList)
+		{
+			var command = CommandContainer.Get(action.Command);
+			if (command.WordList.Contains(input.Trim().ToLower()))
+			{
+				PerformAction(action);
+				return;
+			}
+		}
+	}
+
+	private void PerformAction(Source.Configuration.Action action)
+	{
+		DisplayTextBlocks(action.Text);
+		if (!string.IsNullOrEmpty(action.Sound))
+		{
+			var audioFile = AudioContainer.Get(CleanText(action.Sound));
+			if ("sound" == audioFile.Type)
+			{
+				//SoundManager.PlaySound(audioFile.File);
+			} else
+			{
+				//SoundManager.PlayLoop(audioFile.File);
+			}
+		}
+
+		if (!string.IsNullOrEmpty(action.NextStep))
+		{
+			UpdateStoryStep(action.NextStep);
+		}
+	}
+
+	private void UpdateStoryStep(string key)
+	{
+		var storyStep = StoryStepContainer.Get(key);
+		DisplayTextBlocks(storyStep.Text);
+		CurrentStoryStepKey = key;
+		if (!string.IsNullOrEmpty(storyStep.NextStep))
+		{
+			UpdateStoryStep(storyStep.NextStep);
+		}
+	}
+
+	private void DisplayTextBlocks(IEnumerable<TextBlock> textBlocks)
+	{
+		foreach (var textBlock in textBlocks)
+		{
+			GameOutput.GetComponent<Text> ().text += CleanText(textBlock.Content);
+			GameOutput.GetComponent<Text> ().text += "\n";
+		}
 	}
 
     private string CleanText(string text)
