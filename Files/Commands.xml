@@ -52,5 +52,6 @@
     <Word>look around</Word>
     <Word>look</Word>
     <Word>examine</Word>
+	<Word>see</Word>
   </Command>
 </ArrayOfCommand>

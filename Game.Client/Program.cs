@@ -38,7 +38,7 @@ namespace Game.Client
 		{
 		    if (Console.WindowHeight == WindowHeight && Console.WindowWidth == WindowWidth) return;
 
-            Console.SetBufferSize(WindowWidth, WindowWidth + 200);
+          //  Console.SetBufferSize(WindowWidth, WindowWidth + 200);
             Console.SetWindowSize(WindowWidth, WindowHeight);
 		}
     }
