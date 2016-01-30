@@ -4,7 +4,7 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
     
-
+	public GameObject gameOutput;
 	// Use this for initialization
 	public void Start () {
 	
@@ -21,5 +21,6 @@ public class GameManager : MonoBehaviour {
         string tempLog = historyLog.GetComponent<Text>().text;
         tempLog += Input + "\n";
         historyLog.GetComponent<Text>().text = tempLog;
+		gameOutput.GetComponent<Text>().text = Input + "\n";
 	}
 }
