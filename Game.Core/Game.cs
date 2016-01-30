@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Game.Core.Configuration;
 using Action = Game.Core.Configuration.Action;
@@ -82,10 +81,7 @@ namespace Game.Core
         private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepContainer.Get(key);
-            foreach (var textBlock in storyStep.Text)
-            {
-                Output.WriteLine(CleanText(textBlock.Content), OutputType.Normal);
-            }
+            DisplayTextBlocks(storyStep.Text, OutputType.Normal);
             CurrentStoryStepKey = key;
             if (!string.IsNullOrEmpty(storyStep.NextStep))
             {
@@ -96,8 +92,7 @@ namespace Game.Core
 
         private void PerformAction(Action action)
         {
-            Output.WriteLine(CleanText(action.Text), OutputType.Action);
-
+            DisplayTextBlocks(action.Text, OutputType.Action);
             if (!string.IsNullOrEmpty(action.Sound))
             {
                 var audioFile = AudioContainer.Get(CleanText(action.Sound));
@@ -118,6 +113,18 @@ namespace Game.Core
             {
                 UpdateStoryStep(action.NextStep);
             }
+        }
+
+        private void DisplayTextBlocks(IEnumerable<TextBlock> textBlocks, OutputType type)
+        {
+            Task.Run(async delegate
+            {
+                foreach (var textBlock in textBlocks)
+                {
+                    await Task.Delay(textBlock.Delay);
+                    Output.WriteLine(CleanText(textBlock.Content), type);
+                }
+            }).Wait();
         }
 
         private void PerformDefaultCommand(string key)
