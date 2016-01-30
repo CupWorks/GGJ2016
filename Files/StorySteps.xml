@@ -574,15 +574,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 20.7 - Logfile ######################### -->
   <StoryStep Key="20.7" Delay="2000" NextStep="20.8">
-    <Text>Systems check: Found 14 Errors{br}</Text>
+    <Text>Systems check: Found 46 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.8 - Logfile ######################### -->
   <StoryStep Key="20.8" Delay="2000" NextStep="20.9">
-    <Text>Systems check: Found 46 Errors{br}</Text>
+    <Text>Systems check: Found 367 Errors{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP 20.9 - Logfile ######################### -->
   <StoryStep Key="20.9" Delay="2000" NextStep="GAME_END">
-    <Text>Systems check: Found 138 Errors{br}</Text>
+    <Text>Systems check: CRITICAL!{br}</Text>
   </StoryStep>
   <!-- ######################### STORY STEP GAME END ######################### -->
   <StoryStep Key="GAME_END" Delay="3000">
