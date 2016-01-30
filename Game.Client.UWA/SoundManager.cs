@@ -8,7 +8,15 @@ namespace Game.Client.UWA
         {
         }
 
+        public void StopSound()
+        {
+        }
+
         public void PlayLoop(string soundFile)
+        {
+        }
+
+        public void StopLoop()
         {
         }
     }

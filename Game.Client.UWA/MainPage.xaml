@@ -4,14 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:uwa="using:Game.Client.UWA"
     mc:Ignorable="d">
-
-    <Grid Padding="10" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+               Width="{Binding ActualWidth, ElementName=RootCanvas}"
+               Height="{Binding ActualHeight, ElementName=RootCanvas}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <RichTextBlock Grid.Row="0" Name="RichTextBlock" />
         <TextBox Grid.Row="1" Name="TextBox" />
-    </Grid>
+        <CommandBar Grid.Row="2">
+            
+        </CommandBar>
+   </Grid>
 </Page>
