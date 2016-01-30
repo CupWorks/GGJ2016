@@ -76,17 +76,21 @@ public class GameManager : MonoBehaviour
 
     public void GetInput(string input)
     {
-        string tempLog = HistoryOutput.GetComponent<Text>().text;
-        tempLog += input + "\n";
-        HistoryOutput.GetComponent<Text>().text = tempLog;
+		InputField userInputField = UserInput.GetComponent<InputField>();
 
-        InputField userInputField = UserInput.GetComponent<InputField>();
-        userInputField.text = "";
-        EventSystem.current.SetSelectedGameObject(userInputField.gameObject, null);
-        PointerEventData emptyData = new PointerEventData(EventSystem.current);
-        userInputField.OnPointerClick(emptyData);
+		if (userInputField)
+		{
+	        string tempLog = HistoryOutput.GetComponent<Text>().text;
+	        tempLog += input + "\n";
+	        HistoryOutput.GetComponent<Text>().text = tempLog;
 
-        ProcessInput(input);
+	        userInputField.text = "";
+	        EventSystem.current.SetSelectedGameObject(userInputField.gameObject, null);
+	        PointerEventData emptyData = new PointerEventData(EventSystem.current);
+	        userInputField.OnPointerClick(emptyData);
+
+	        ProcessInput(input);
+		}
 	}
 
 	protected void ProcessInput(string input)
@@ -98,15 +102,6 @@ public class GameManager : MonoBehaviour
 				//PerformDefaultCommand(defaultCommand.Key);
 				return;
 			}
-        }
-
-        if (input == "play")
-        {
-            PlayLoop("blind");
-        }
-        else if (input == "plays")
-        {
-            PlaySound("testsound");
         }
 
         //check for action
@@ -130,10 +125,10 @@ public class GameManager : MonoBehaviour
 			var audioFile = AudioContainer.Get(CleanText(action.Sound));
 			if ("sound" == audioFile.Type)
 			{
-				//SoundManager.PlaySound(audioFile.File);
+				PlaySound(audioFile.File);
 			} else
 			{
-				//SoundManager.PlayLoop(audioFile.File);
+				PlayLoop(audioFile.File);
 			}
         }
 
@@ -157,13 +152,17 @@ public class GameManager : MonoBehaviour
 	private IEnumerator DisplayTextBlocks(IEnumerable<TextBlock> textBlocks)
 	{
         //Block input
+		UserInput.GetComponent<InputField>().enabled = false;
+
         foreach (var textBlock in textBlocks)
         {
             GameOutput.GetComponent<Text>().text += CleanText(textBlock.Content);
             GameOutput.GetComponent<Text>().text += "\n";
-            yield return new WaitForSeconds(1.0f);
+			yield return new WaitForSeconds(textBlock.Delay / 1000);
         }
+
         //unblock input
+		UserInput.GetComponent<InputField>().enabled = true;
     }
 
     private string CleanText(string text)
