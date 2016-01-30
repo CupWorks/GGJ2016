@@ -21,5 +21,8 @@ public class GameManager : MonoBehaviour {
         string tempLog = historyLog.GetComponent<Text>().text;
         tempLog += Input + "\n";
         historyLog.GetComponent<Text>().text = tempLog;
+
+        GameObject userInput = GameObject.FindWithTag("UserInput");
+        userInput.GetComponent<Text>().text = "";
 	}
 }
