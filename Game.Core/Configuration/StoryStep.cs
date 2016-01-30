@@ -10,6 +10,8 @@ namespace Game.Core.Configuration
         public string Key { get; set; } = "";
         [XmlAttribute]
         public int Delay { get; set; }
+        [XmlAttribute]
+        public string NextStep { get; set; } = "";
         public string Text { get; set; } = "";
         [XmlElement("Action")]
         public List<Action> ActionList { get; set; } = new List<Action>();
