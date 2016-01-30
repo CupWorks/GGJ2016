@@ -13,12 +13,14 @@ namespace Game.Client
             CheckWindowSize();
             var commandsFileStream = new FileStream("Files/Commands.xml", FileMode.Open);
             var storyStepsFileStream = new FileStream("Files/StorySteps.xml", FileMode.Open);
+            var audioFileStream = new FileStream("Files/AudioFiles.xml", FileMode.Open);
 
             var input = new ConsoleInput();
             var game = new Core.Game(
                 input,
                 new ConsoleOutput(),
                 new SoundManager(),
+                audioFileStream,
                 commandsFileStream,
                 storyStepsFileStream);
             game.Start();

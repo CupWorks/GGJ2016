@@ -19,6 +19,7 @@ namespace Game.Core
         private IInput Input { get; }
         private IOutput Output { get; }
         private ISoundManager SoundManager { get; }
+        private ConfigurationContainer<Audio> AudioContainer { get; }
         private ConfigurationContainer<Command> CommandContainer { get; }
         private IEnumerable<Command> DefaultCommands { get; } 
         private ConfigurationContainer<StoryStep> StoryStepContainer { get; }
@@ -27,12 +28,14 @@ namespace Game.Core
 
         public bool IsRunning { get; set; } = false;
 
-        public Game(IInput input, IOutput output, ISoundManager soundManager, Stream commandsStream, Stream storyStepsStream)
+        public Game(IInput input, IOutput output, ISoundManager soundManager, Stream audioStream, Stream commandsStream, Stream storyStepsStream)
         {
             Input = input;
             Input.OnTextReceived += InputOnOnTextReceived;
             Output = output;
             SoundManager = soundManager;
+            AudioContainer = new ConfigurationContainer<Audio>(audioStream);
+            AudioContainer.ReadFromStream();
             CommandContainer = new ConfigurationContainer<Command>(commandsStream);
             CommandContainer.ReadFromStream();
             DefaultCommands = CommandContainer.Get(c => c.IsDefault);
@@ -94,7 +97,14 @@ namespace Game.Core
 
             if (!string.IsNullOrEmpty(action.Sound))
             {
-                SoundManager.PlaySound(action.Sound);
+                var audioFile = AudioContainer.Get(CleanText(action.Sound));
+                if ("sound" == audioFile.Type)
+                {
+                    SoundManager.PlaySound(audioFile.File);
+                } else
+                {
+                    SoundManager.PlayLoop(audioFile.File);
+                }
             }
 
             if (string.IsNullOrEmpty(action.NextStep))

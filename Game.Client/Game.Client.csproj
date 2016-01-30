@@ -60,6 +60,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\Files\AudioFiles.xml">
+      <Link>Files\AudioFiles.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\Files\Commands.xml">
       <Link>Files\Commands.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

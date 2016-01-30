@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Configuration\Action.cs" />
+    <Compile Include="Configuration\Audio.cs" />
     <Compile Include="Configuration\Command.cs" />
     <Compile Include="Configuration\ConfigurationContainer.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
