@@ -32,7 +32,7 @@
 			Never before has anything happened after you performed the ritual. You are {br}
 			curious, but at the same time scared, because you have never left your safe {br}
 			environment before.</Text>
-    <Action Command="LOOK" NextStep="20">
+    <Action Command="LOOK" NextStep="19">
 	  <Text>Unsure of yourself, you look around.</Text>
     </Action>
   </StoryStep>
@@ -611,9 +611,13 @@
   </StoryStep>
   <!-- ######################### STORY STEP 18 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18">
-    <Text>STORY STEP 18 n</Text>
+    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+			way, there is no way you can go deeper.{br}
+			You can go back to the path in the north.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 18 n</Text>
+	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+			way, there is no way you can go deeper.{br}
+			You can go back to the path in the north.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17">
       <Text>You go back to the lake.</Text>
@@ -621,9 +625,13 @@
   </StoryStep>
   <!-- ######################### STORY STEP 18.1 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18.1">
-    <Text>STORY STEP 18.1 n</Text>
+    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+			way, there is no way you can go deeper.{br}
+			You can go back to the path in the north.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 18.1 n</Text>
+	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+			way, there is no way you can go deeper.{br}
+			You can go back to the path in the north.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17.1">
       <Text>You go back to the lake.</Text>
@@ -631,27 +639,23 @@
   </StoryStep>
   <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
   <StoryStep Key="19">
-    <Text Delay="1500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
+    <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
 			Standing up almost exhausted you. There are cables attached to you.{br}
-			Confused and disorientated you pull out one cable after the other.{br}{br}
-			This sound.{br}{br}
-			You freeze in your movement.{br}
-			You move your head to get a better look at the source of this familiar sound.{br}{br}
-			There it is. An ancient machine on a desk.{br}
-			Your hand twitches.</Text>
+			Confused and disorientated you pull out one cable after the other.{br}{br}</Text>
+	<Text Delay="4000">This sound.{br}{br}
+			You freeze in your movement.{br}</Text>
+	<Text Delay="2500">You move your head to get a better look at the source of this familiar sound.{br}{br}</Text>
+	<Text Delay="2500">There it is. An ancient machine on a desk.{br}</Text>
+	<Text Delay="1500">Your hand twitches.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 19 leave</Text>
+	  <Text>It’s a small clinical room. There are three pods, like the one you got up from,{br}
+			with cables attached to them. On the other side of the room there is a desk with{br}
+			an ancient machine just like the one in your room on it. The screen is blank,{br}
+			apart from a few words: PLEASE ENTER PASSWORD>{br}
+			Without much thought the ritual pops up in your mind: 4 8 15 16 23 42</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="GAME_END">
-	  <Text>STORY STEP 19 leave</Text>
-    </Action>
-  </StoryStep>
-    <Text>STORY STEP 20 sequence</Text>
-	<Action Command="LOOK">
-	  <Text>STORY STEP 20 sequence</Text>
-    </Action>
-	<Action Command="SEQUENCE" NextStep="GAME_END">
-	  <Text>DESCRIPTION</Text>
+	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP GAME_END - Logfile ######################### -->
