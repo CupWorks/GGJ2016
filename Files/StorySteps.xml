@@ -345,7 +345,7 @@
     <Action Command="SOUTH" NextStep="11.1">
       <Text>You return back on the trail south.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="19.1">
+	<Action Command="SEQUENCE" NextStep="19">
 	  <Text>You wake up.</Text>
     </Action>
   </StoryStep>
@@ -449,8 +449,24 @@
 	<Action Command="LOOK">
 	  <Text>STORY STEP 16 w</Text>
     </Action>
-    <Action Command="WEST" NextStep="15a">
-      <Text>You leave the room.</Text>
+    <Action Command="WEST">
+      <Text>You don't want to leave just yet.</Text>
+    </Action>
+    <Action Command="SEQUENCE" NextStep="16.1">
+      <Text>You take the Ocarina.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 16.1 - Versteckter Raum ######################### -->
+  <StoryStep Key="16.1">
+    <Text>STORY STEP 16.1 w</Text>
+	<Action Command="LOOK">
+	  <Text>STORY STEP 16.1 w</Text>
+    </Action>
+    <Action Command="WEST" NextStep="15.1">
+      <Text>You leave the secret room.</Text>
+    </Action>
+    <Action Command="SEQUENCE">
+      <Text>You have the Ocarina already.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 17 - Unten am See ######################### -->
@@ -515,30 +531,61 @@
 	<Action Command="LOOK">
 	  <Text>STORY STEP 20 sequence</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="GAME_END">
+	<Action Command="SEQUENCE" NextStep="20.1">
 	  <Text>DESCRIPTION</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP GAME END - Logfile ######################### -->
-  <StoryStep Key="GAME_END">
-    <Text>Logfile
-
-It took long to get the Test-Subjects. Finally we can start with this important Experiment.
-[Missing data / corrupted data]
-Half of the Test-Subjects already left the Simulation. We need to find a way to encourage them to stay longer.
-[Missing data / corrupted data]
-With this new Simulation we extended the time spend in the simulated World significantly. Most of the Test-Subject reacted very well to the changed Situation.
-[Missing data / corrupted data]
-Systems check: Found 0 Errors
-[Missing data / corrupted data]
-We started with the second Test Group.
-[Missing data / corrupted data]
-The Experiment is a huge success. We will extend the runtime. Some of the System need adjustments for the new Situation.
-[Missing data / corrupted data]
-Systems check: Found 0 Errors
-
-
-
-You want to wake up again.</Text>
+  <!-- ######################### STORY STEP 20.1 - Logfile ######################### -->
+  <StoryStep Key="20.1" NextStep="20.2">
+    <Text>Logfile{br}{br}
+			It took long to get the Test-Subjects.{br}
+			Finally we can start with this important Experiment.{br}
+			[Missing data / corrupted data]{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.2 - Logfile ######################### -->
+  <StoryStep Key="20.2" Delay="1500" NextStep="20.3">
+    <Text>Half of the Test-Subjects already left the Simulation.{br}
+			We need to find a way to encourage them to stay longer.{br}
+			[Missing data / corrupted data]{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.3 - Logfile ######################### -->
+  <StoryStep Key="20.3" Delay="1500" NextStep="20.4">
+    <Text>With this new Simulation we extended the time spend in the simulated world significantly.{br}
+			Most of the Test-Subject reacted very well to the changed Situation.{br}
+			[Missing data / corrupted data]{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.4 - Logfile ######################### -->
+  <StoryStep Key="20.4" Delay="1500" NextStep="20.5">
+    <Text>Systems check: Found 0 Errors{br}
+			[Missing data / corrupted data]{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.5 - Logfile ######################### -->
+  <StoryStep Key="20.5" Delay="1500" NextStep="20.6">
+    <Text>We started with the second Test Group.{br}
+			[Missing data / corrupted data]{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.6 - Logfile ######################### -->
+  <StoryStep Key="20.6" Delay="1500" NextStep="20.7">
+    <Text>The Experiment is a huge success. {br}
+			We will extend the runtime. {br}
+			Some of the systems need adjustments for the new Situation.{br}
+			[Missing data / corrupted data]{br}
+			Systems check: Found 0 Errors</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.7 - Logfile ######################### -->
+  <StoryStep Key="20.7" Delay="1500" NextStep="20.8">
+    <Text>Systems check: Found 3 Errors{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.8 - Logfile ######################### -->
+  <StoryStep Key="20.8" Delay="1500" NextStep="20.9">
+    <Text>Systems check: Found 46 Errors{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20.9 - Logfile ######################### -->
+  <StoryStep Key="20.9" Delay="1500" NextStep="GAME_END">
+    <Text>Systems check: Found 138 Errors{br}</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP GAME END ######################### -->
+  <StoryStep Key="GAME_END" Delay="2000">
+    <Text>You want to wake up again.</Text>
   </StoryStep>
 </ArrayOfStoryStep>
