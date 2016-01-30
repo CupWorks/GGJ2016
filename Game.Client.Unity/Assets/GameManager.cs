@@ -1,12 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using System.Xml;
 using Source.Configuration;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject GameOutput;
+    public GameObject HistoryOutput;
+    public GameObject UserInput;
+
     private ConfigurationContainer<Audio> AudioContainer { get; set; }
     private ConfigurationContainer<Command> CommandContainer { get; set; }
     private IEnumerable<Command> DefaultCommands { get; set; }
@@ -14,9 +18,9 @@ public class GameManager : MonoBehaviour
 
     protected void Start()
     {
-        var commandsData = Resources.Load("Commands", typeof(TextAsset)) as TextAsset;
-        var audioFilesData = Resources.Load("AudioFiles", typeof(TextAsset)) as TextAsset;
-        var storyStepsData = Resources.Load("StorySteps", typeof(TextAsset)) as TextAsset;
+        var commandsData = Resources.Load("Commands", typeof (TextAsset)) as TextAsset;
+        var audioFilesData = Resources.Load("AudioFiles", typeof (TextAsset)) as TextAsset;
+        var storyStepsData = Resources.Load("StorySteps", typeof (TextAsset)) as TextAsset;
 
         if (audioFilesData != null)
         {
@@ -33,11 +37,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-	public void GetInput(string input)
-	{
-        var historyLog = GameObject.FindWithTag("HistoryLog");
-        var tempLog = historyLog.GetComponent<Text>().text;
+    public void GetInput(string input)
+    {
+        string tempLog = HistoryOutput.GetComponent<Text>().text;
         tempLog += input + "\n";
-        historyLog.GetComponent<Text>().text = tempLog;
-	}
+        HistoryOutput.GetComponent<Text>().text = tempLog;
+
+        InputField userInputField = UserInput.GetComponent<InputField>();
+        userInputField.text = "";
+        EventSystem.current.SetSelectedGameObject(userInputField.gameObject, null);
+        PointerEventData emptyData = new PointerEventData(EventSystem.current);
+        userInputField.OnPointerClick(emptyData);
+
+        GameOutput.GetComponent<Text>().text = input + "\n";
+    }
+
 }
