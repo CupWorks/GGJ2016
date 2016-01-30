@@ -1,43 +1,231 @@
 <?xml version="1.0"?>
 <ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <!-- ----------------------------------------- -->
+  <!-- ######################### GAME START ######################### -->
   <StoryStep Key="GAME_START">
     <Text>You wake up.{br}
-	It's a day like every other day. {br}
-	You'll get up, get ready and perform the ritual, like hundreds of your ancestors before you.{br}
-	You stretch and yawn until you shake your remaining sleepiness and a little while later you sit down in front of the ancient machine. 
-	A little piece of browned parchment above the screen reminds you of your task, as if you could ever forget it.{br}
-	"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
+			It's a day like every other day. {br}
+			You'll get up, get ready and perform the ritual, like hundreds of your ancestors before you.{br}
+			You stretch and yawn until you shake your remaining sleepiness and a little while later you sit down in front of the ancient machine. 
+			A little piece of browned parchment above the screen reminds you of your task, as if you could ever forget it.{br}
+			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
     <Action Command="LEAVE">
       <Text>You have no reason to leave the hut.</Text>
     </Action>
 	<Action Command="LOOK">
 	  <Text>You are in a primitive hut, with an anchient machine on a desk.{br}
-	  Go and do your duty, enter the sequence.</Text>
+			Go and do your duty, enter the sequence.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="0">
       <Text>Nothing happens. {br}
-	  Satisfied you get up from your seat, having performed the ritual like countless times before.</Text>
+			Satisfied you get up from your seat, having performed the ritual like countless times before.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
   <StoryStep> Key="0">
-  
+      <Text>
+	  </Text>
   </StoryStep>
+  <!-- ######################### STORY STEP 1 - Zurückkommen in die Hütte ######################### -->
   <StoryStep Key="1">
     <Text>You are in a primitive hut, with an anchient machine on a desk.</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
     <Action Command="EAST" NextStep="2">
       <Text>You leave the hut.</Text>
     </Action>
   </StoryStep>
-    <StoryStep Key="GAME_START">
-    <Text>In a galaxy far far away ...</Text>
-    <Action Command="NEXT" NextStep="GAME_END">
-      <Text>Darth Vader is Luke's father</Text>
+  <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
+  <StoryStep Key="2">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
     </Action>
-    <Action Command="NUT">
-      <Text>Heil Hörnchen!</Text>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
     </Action>
   </StoryStep>
+  <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
+  <StoryStep Key="3">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 4 - Weg nördlich der Hütte######################### -->
+  <StoryStep Key="4">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
+  <StoryStep Key="5">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten ######################### -->
+  <StoryStep Key="6">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 7 - Weg südlich der Hütte ######################### -->
+  <StoryStep Key="7">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 8 - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="8">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 9 - Weg in den Dschungel 1 ######################### -->
+  <StoryStep Key="9">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 10 - Weg in den Dschungel 2 ######################### -->
+  <StoryStep Key="10">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 11 - Weg in den Dschungel 3 ######################### -->
+  <StoryStep Key="11">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 12 - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="12">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
+  <StoryStep Key="13">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
+  <StoryStep Key="14">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 15 - Höhle ######################### -->
+  <StoryStep Key="15">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
+  <StoryStep Key="16">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 17 - Unten am See ######################### -->
+  <StoryStep Key="17">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 18 - Sackgasse zum Dschungel ######################### -->
+  <StoryStep Key="18">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 19 - VR-Maschine Erde ######################### -->
+  <StoryStep Key="19">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20 - Experimentlabor mit PC ######################### -->
+  <StoryStep Key="20">
+    <Text>DESCRIPTION</Text>
+	<Action Command="LOOK">
+	  <Text>DESCRIPTION</Text>
+    </Action>
+    <Action Command="EAST" NextStep="2">
+      <Text>You leave the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP GAME END - Logfile ######################### -->
   <StoryStep Key="GAME_END">
     <Text>... The END ...</Text>
   </StoryStep>
