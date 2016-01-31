@@ -591,7 +591,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
-  <StoryStep Key="14" HelpText="I think the waterfall is in the east. I should go there.">
+  <StoryStep Key="14" HelpText="I think the waterfall is in the east. I should go there." Sound="OUTDOOR">
     <Text>You gasp in astonishment at the sight of the clear-blue waterfall. It’s spurting{br}
 			over the rock. You feel a strange beckoning from behind the waterfall in the {h}east{h}.{br}
 			The path leads from the {h}northeast{h} to the {h}southwest{h}.</Text>
@@ -614,7 +614,7 @@
     </Action>	
   </StoryStep>
   <!-- ######################### STORY STEP 14.1 - Wasserfall ######################### -->
-  <StoryStep Key="14.1">
+  <StoryStep Key="14.1" Sound="OUTDOOR">
     <Text>An astounding clear-blue waterfall is spurting over the rock in the {h}east{h}.{br}
 			There is a path	leading from {h}the southwest{h} to the {h}northeast{h}.</Text>
 	<Action Command="LOOK">
@@ -632,7 +632,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15 - Höhle ######################### -->
-  <StoryStep Key="15" HelpText="Hmmm, buttons...">
+  <StoryStep Key="15" HelpText="Hmmm, buttons..." Sound="CAVE">
     <Text>You need a second to adjust to the new lighting. Light reflects from the {h}west{h}{br}
 			through the	waterfall on the smooth grayish walls. The cave curves slightly and{br}
 			as you follow this curvature with your eyes you notice something.{br}
@@ -676,7 +676,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15.1* - Höhle ######################### -->
-  <StoryStep Key="15.1">
+  <StoryStep Key="15.1" Sound="CAVE">
     <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
 			curves slightly and focuses the viewer's attention on a pedestal.{br}
 			The {h}eastern{h} wall opens to a small {h}tunnel{h}. You can leave the cave to the {h}west{h}.</Text>
@@ -844,7 +844,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
-  <StoryStep Key="19" HelpText="I remember now, the ritual sequence is 4 8 15 16 23 42!">
+  <StoryStep Key="19" HelpText="I remember now, the ritual sequence is 4 8 15 16 23 42!" Sound="GAMEEND">
 	<Text Delay="1500">You wake up.</Text>
     <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
 			Standing up almost exhausted you. There are cables attached to you.{br}
