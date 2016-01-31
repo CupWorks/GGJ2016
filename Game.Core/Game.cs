@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Game.Core.Configuration;
 using Action = Game.Core.Configuration.Action;
+using System.Text.RegularExpressions;
 
 namespace Game.Core
 {
@@ -106,7 +107,8 @@ namespace Game.Core
                 var audioFile = AudioContainer.Get(CleanText(action.Sound));
                 if ("sound" == audioFile.Type)
                 {
-                    SoundManager.PlaySound(audioFile.File);
+					// Ignore Sounds :(
+                    //SoundManager.PlaySound(audioFile.File);
                 } else
                 {
                     SoundManager.PlayLoop(audioFile.File);
@@ -130,7 +132,7 @@ namespace Game.Core
                 foreach (var textBlock in textBlocks)
                 {
                     await Task.Delay(textBlock.Delay);
-                    Output.WriteLine(CleanText(textBlock.Content), type);
+					WriteLine(textBlock.Content, type);
                 }
             }).Wait();
         }
@@ -154,5 +156,24 @@ namespace Game.Core
                 .Replace("\n", "")
                 .Replace("{br}", "\n");
         }
+
+		// This is not the gratest code in the world ...
+		// This is just a tribute
+		// Gotta remember the greatest code in the world ...
+		private void WriteLine(string text, OutputType type)
+		{
+			string[] parts = Regex.Split(CleanText(text), "{h}");
+			int count = 0;
+			foreach (var part in parts) {
+				if (count % 2 == 0) {
+					Output.Write(part, type);
+				} else {
+					Output.Highlight(part);
+				}
+				count++;
+			}
+
+			Output.Write("\n", type);
+		}
     }
 }

@@ -19,6 +19,14 @@ namespace Game.Client
             Console.ResetColor();
         }
 
+		public void Highlight(string text)
+		{
+			Console.BackgroundColor = ConsoleColor.Blue;
+			Console.ForegroundColor = ConsoleColor.White;
+			Console.Write(text);
+			Console.ResetColor();
+		}
+
         private ConsoleColor GetColor(OutputType type)
         {
             switch (type)

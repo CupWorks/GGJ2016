@@ -33,9 +33,9 @@
 `---._.-----------------------------------------------------------------._.---'{br}
 	</Text>
 	<Text>Basic instructions:{br}
-			Move around using geographic directions like "north" / "n",	"south" / "s",{br}
-			"northeast" / "ne".{br}
-			Use "look" to look around.{br}
+			Move around using geographic directions like {h}north{h} / {h}n{h},	{h}south{h} / {h}s{h},{br}
+			{h}northeast{h} / {h}ne{h}.{br}
+			Use {h}look{h} to look around.{br}
 			Pay attention to your surroundings and try to keep orientated.{br}
 			Other commands should be easy to find.{br}{br}
 			Press "Enter" to start game.</Text> 
@@ -54,14 +54,14 @@
 			while later you sit down in front of the ancient machine. A little piece of{br}
 			browned parchment above the screen reminds you of your task, as if you could{br}
 			ever forget it.{br}
-			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
+			"Type {h}4 8 15 16 23 42{h} and press enter", it commands you.</Text>
     <Action Command="LEAVE">
       <Text>You have no reason to leave the safety of your room.</Text>
     </Action>
 	<Action Command="LOOK">
 	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink and your bed.{br}
-			Go and do your duty, enter the sequence.</Text>
+			Go and do your duty, enter the {h}sequence{h}.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="0">
       <Text>Nothing happens.{br}
@@ -74,20 +74,23 @@
       <Text Delay="1500">Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
 			Never before has anything happened after you performed the ritual. You are{br}
 			curious, wondering whether you are even responsible, but at the same time{br}
-			scared, because you have never left your safe environment before.</Text>
+			scared, because you have never {h}left{h} your safe environment before.</Text>
     <Action Command="LOOK" NextStep="1">
 	  <Text>Unsure of yourself, you look around.</Text>
+    </Action>
+    <Action Command="LEAVE" NextStep="2">
+      <Text>Opening the door, you leave the room.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 1 - Hütte nach Satellitenabsturz ######################### -->
   <StoryStep Key="1">
     <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink	and your bed.{br}
-			You can leave the room to go outside, not knowing what awaits you there.</Text>
+			You can {h}leave{h} the room to go outside, not knowing what awaits you there.</Text>
 	<Action Command="LOOK">
 	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink	and your bed.{br}
-			You can leave the room to go outside not knowing what awaits you there.</Text>
+			You can {h}leave{h} the room to go outside not knowing what awaits you there.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2">
       <Text>Opening the door, you leave the room.</Text>
@@ -97,11 +100,11 @@
   <StoryStep Key="1.1">
     <Text>You are in a simple room, with nothing but an ancient machine on a desk, a little sink{br}
 			and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside.</Text>
 	<Action Command="LOOK">
 	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a little sink{br}
 			and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2.1">
       <Text>You step outside.</Text>
@@ -111,14 +114,14 @@
   <StoryStep Key="2">
     <Text>You are outside of a little hut which has housed you for the past decades.{br}
 			Looking around, you can see a flourishing jungle. A little path from north to{br}
-			southwest leads around your hut, leading to the most likely source of the noise.{br}
-			You can see a trail	into the jungle to the northeast and to the west you can{br}
+			{h}southwest{h} leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the {h}northeast{h} and to the {h}west{h} you can{br}
 			enter your room again.</Text>
 	<Action Command="LOOK">
 	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
 			Looking around, you can see a flourishing jungle. A little path from north to{br}
-			southwest leads around your hut, leading to the most likely source of the noise.{br}
-			You can see a trail	into the jungle to the northeast and to the west you can{br}
+			{h}southwest{h} leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the {h}northeast{h} and to the {h}west{h} you can{br}
 			enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1">
@@ -633,6 +636,9 @@
     <Action Command="TUNNEL" NextStep="16">
       <Text>You squeeze through the tunnel.</Text>
     </Action>
+    <Action Command="EAST" NextStep="16">
+      <Text>You squeeze through the tunnel.</Text>
+    </Action>
 	<Action Command="WEST">
       <Text>Don't you want to explore the tunnel first?</Text>
     </Action>
@@ -648,6 +654,9 @@
 			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
     </Action>
 	<Action Command="WEST" NextStep="14.1">
+	  <Text>You leave the waterfall cave.</Text>
+    </Action>
+	<Action Command="LEAVE" NextStep="14.1">
 	  <Text>You leave the waterfall cave.</Text>
     </Action>
     <Action Command="EAST">
@@ -699,10 +708,12 @@
 			a small island in the center of the cave.</Text>
 	<Action Command="LOOK">
 	  <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+			motionless. You can leave now.</Text>
     </Action>
     <Action Command="WEST" NextStep="15.1">
+      <Text>You leave the secret room.</Text>
+    </Action>
+    <Action Command="LEAVE" NextStep="15.1">
       <Text>You leave the secret room.</Text>
     </Action>
     <Action Command="ISLAND">
