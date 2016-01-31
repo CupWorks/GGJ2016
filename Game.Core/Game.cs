@@ -14,6 +14,7 @@ namespace Game.Core
     public class Game
     {
 		private int InputTryCounter { get; set; } = 0;
+        private string CurrentSoundKey { get; set; } = "";
 
         private IInput Input { get; }
         private IOutput Output { get; }
@@ -95,10 +96,11 @@ namespace Game.Core
         private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepListContainer.Get(key);
-            if (!string.IsNullOrEmpty(storyStep.Sound))
+            if (!string.IsNullOrEmpty(storyStep.Sound) && storyStep.Sound != CurrentSoundKey)
             {
-                var audioFile = AudioListContainer.Get(CleanText(storyStep.Sound));
-                SoundManager.PlayLoop(audioFile.File);
+                var sound = AudioListContainer.Get(CleanText(storyStep.Sound));
+                SoundManager.PlayLoop(sound.File);
+                CurrentSoundKey = sound.Key;
             }
             DisplayTextBlocks(storyStep.Text, OutputType.Normal);
             CurrentStoryStepKey = key;
