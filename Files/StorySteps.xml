@@ -843,12 +843,18 @@
       <Text>You go back to the lake.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
-  <StoryStep Key="19" HelpText="I remember now, the ritual sequence is 4 8 15 16 23 42!" Sound="GAMEEND">
+  <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde Aufwachen ######################### -->
+  <StoryStep Key="19" Mute="true">
 	<Text Delay="1500">You wake up.</Text>
     <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
 			Standing up almost exhausted you. There are cables attached to you.{br}
 			Confused and disorientated you pull out one cable after the other.{br}{br}</Text>
+      <Action Command="LOOK" NextStep="20">
+      <Text>You look around.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20 - VR-Maschine/Labor Erde ######################### -->
+  <StoryStep Key="20" HelpText="I remember now, the ritual sequence is 4 8 15 16 23 42!" Sound="GAMEEND">
 	<Text Delay="4500">This sound.{br}{br}
 			You freeze in your movement.{br}</Text>
 	<Text Delay="2500">You move your head to get a better look at the source of this familiar sound.{br}{br}</Text>
