@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Game.Core.Configuration
 {
-    public class StoryStep : IConfiguration
+    public class StoryStep : IConfigurationList
     {
         [XmlAttribute]
         public string Key { get; set; } = "";
@@ -12,6 +11,8 @@ namespace Game.Core.Configuration
         public string NextStep { get; set; } = "";
 		[XmlAttribute]
 		public string HelpText { get; set; } = "";
+        [XmlAttribute]
+        public string Sound { get; set; } = "";
         [XmlElement("Text")]
         public List<TextBlock> Text { get; set; } = new List<TextBlock>();
         [XmlElement("Action")]

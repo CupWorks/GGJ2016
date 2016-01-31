@@ -34,9 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="irrKlang.NET4">
-      <HintPath>..\irrKlang.NET4.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -63,20 +60,36 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Files\AudioFiles.xml">
-      <Link>Files\AudioFiles.xml</Link>
+    <Content Include="..\Files\Cave.wav">
+      <Link>Files\Cave.wav</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Files\Commands.xml">
       <Link>Files\Commands.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Files\StorySteps.xml">
-      <Link>Files\StorySteps.xml</Link>
+    <Content Include="..\Files\Defaults.xml">
+      <Link>Files\Defaults.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Files\testsound.wav">
-      <Link>Files\testsound.wav</Link>
+    <Content Include="..\Files\GameEnd.wav">
+      <Link>Files\GameEnd.wav</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\Indoor.wav">
+      <Link>Files\Indoor.wav</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\Outddor.wav">
+      <Link>Files\Outddor.wav</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\Sounds.xml">
+      <Link>Files\Sounds.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\StorySteps.xml">
+      <Link>Files\StorySteps.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

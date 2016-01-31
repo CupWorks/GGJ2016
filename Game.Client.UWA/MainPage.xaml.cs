@@ -33,7 +33,7 @@ namespace Game.Client.UWA
             var filesFolder = await Package.Current.InstalledLocation.GetFolderAsync("Files");
             var commandsStream = await filesFolder.OpenStreamForReadAsync("Commands.xml");
             var storyStepsStream = await filesFolder.OpenStreamForReadAsync("StorySteps.xml");
-            var audioFilesStream = await filesFolder.OpenStreamForReadAsync("AudioFiles.xml");
+            var audioFilesStream = await filesFolder.OpenStreamForReadAsync("Sounds.xml");
 
             Game = new Core.Game(
                 Input,

@@ -4,6 +4,5 @@
     {
         void Write(string text, OutputType type);
         void WriteLine(string text, OutputType type);
-		void Highlight(string text);
     }
 }

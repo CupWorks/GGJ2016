@@ -9,10 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Client", "Game.Client\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{3AF07970-5C0F-44BB-89D9-F61FB0BE34A8}"
 	ProjectSection(SolutionItems) = preProject
-		Files\AudioFiles.xml = Files\AudioFiles.xml
+		Files\Cave.wav = Files\Cave.wav
 		Files\Commands.xml = Files\Commands.xml
+		Files\Defaults.xml = Files\Defaults.xml
+		Files\GameEnd.wav = Files\GameEnd.wav
+		Files\Indoor.wav = Files\Indoor.wav
+		Files\Outddor.wav = Files\Outddor.wav
+		Files\Sounds.xml = Files\Sounds.xml
 		Files\StorySteps.xml = Files\StorySteps.xml
-		testsound.wav = testsound.wav
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game.Client.UWA", "Game.Client.UWA\Game.Client.UWA.csproj", "{702B5EF3-A66A-4867-925E-6E2068FBC3A8}"

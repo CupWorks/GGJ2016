@@ -5,6 +5,7 @@ namespace Game.Core
         System,
         Normal,
         Action,
-        Warning
+        Warning,
+        Highlight
     }
 }

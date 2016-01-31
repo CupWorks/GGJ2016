@@ -19,14 +19,6 @@ namespace Game.Client
             Console.ResetColor();
         }
 
-		public void Highlight(string text)
-		{
-			Console.BackgroundColor = ConsoleColor.Blue;
-			Console.ForegroundColor = ConsoleColor.White;
-			Console.Write(text);
-			Console.ResetColor();
-		}
-
         private ConsoleColor GetColor(OutputType type)
         {
             switch (type)
@@ -38,6 +30,8 @@ namespace Game.Client
                 case OutputType.Action:
                     return ConsoleColor.Green;
                 case OutputType.Warning:
+                    return ConsoleColor.Magenta;
+                case OutputType.Highlight:
                     return ConsoleColor.Yellow;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);

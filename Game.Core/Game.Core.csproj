@@ -35,10 +35,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Configuration\Action.cs" />
-    <Compile Include="Configuration\Audio.cs" />
+    <Compile Include="Configuration\Sound.cs" />
     <Compile Include="Configuration\Command.cs" />
     <Compile Include="Configuration\ConfigurationContainer.cs" />
-    <Compile Include="Configuration\IConfiguration.cs" />
+    <Compile Include="Configuration\ConfigurationListContainer.cs" />
+    <Compile Include="Configuration\Defaults.cs" />
+    <Compile Include="Configuration\IConfigurationList.cs" />
     <Compile Include="Configuration\StoryStep.cs" />
     <Compile Include="Configuration\TextBlock.cs" />
     <Compile Include="Extensions.cs" />

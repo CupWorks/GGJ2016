@@ -110,12 +110,12 @@
     <None Include="Game.Client.UWA_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Files\AudioFiles.xml">
-      <Link>Files\AudioFiles.xml</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="..\Files\Commands.xml">
       <Link>Files\Commands.xml</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\Files\Sounds.xml">
+      <Link>Files\Sounds.xml</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Files\StorySteps.xml">

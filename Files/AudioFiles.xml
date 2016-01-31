@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfAudio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Audio Type="sound" Key="testsound">
-    <File>Files/testsound.wav</File>
-  </Audio>
-  <Audio Type="music" Key="blind">
-    <File>Files/testsound.wav</File>
-  </Audio>
-</ArrayOfAudio>

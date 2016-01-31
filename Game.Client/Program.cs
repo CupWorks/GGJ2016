@@ -11,33 +11,33 @@ namespace Game.Client
         private static void Main(string[] args)
         {
             CheckWindowSize();
+            var defaultsFileStream = new FileStream("Files/Defaults.xml", FileMode.Open);
             var commandsFileStream = new FileStream("Files/Commands.xml", FileMode.Open);
             var storyStepsFileStream = new FileStream("Files/StorySteps.xml", FileMode.Open);
-            var audioFileStream = new FileStream("Files/AudioFiles.xml", FileMode.Open);
+            var soundsFileStream = new FileStream("Files/Sounds.xml", FileMode.Open);
 
             var input = new ConsoleInput();
             var game = new Core.Game(
                 input,
                 new ConsoleOutput(),
                 new SoundManager(),
-                audioFileStream,
+                defaultsFileStream,
+                soundsFileStream,
                 commandsFileStream,
                 storyStepsFileStream);
             game.Start();
+
             do
             {
 				CheckWindowSize();
             } while (game.IsRunning);
 
-            commandsFileStream.Close();
-            storyStepsFileStream.Close();
+            game.Stop();
         }
 
 		private static void CheckWindowSize()
 		{
 		    if (Console.WindowHeight == WindowHeight && Console.WindowWidth == WindowWidth) return;
-
-          //  Console.SetBufferSize(WindowWidth, WindowWidth + 200);
             Console.SetWindowSize(WindowWidth, WindowHeight);
 		}
     }

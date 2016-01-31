@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSound xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sound Key="INDOOR">
+    <File>Indoor.wav</File>
+  </Sound>
+  <Sound Key="OUTDOOR">
+    <File>Outdoor.wav</File>
+  </Sound>
+  <Sound Key="CAVE">
+    <File>Cave.wav</File>
+  </Sound>
+  <Sound Key="GAMEEND">
+    <File>GameEnd.wav</File>
+  </Sound>
+</ArrayOfSound>

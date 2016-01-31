@@ -1,32 +1,21 @@
-﻿using System.Media;
+﻿using System.IO;
+using System.Media;
 using Game.Core;
 
 namespace Game.Client
 {
 	public class SoundManager : ISoundManager
 	{
-		private SoundPlayer EffectPlayer { get; } = new SoundPlayer();
 		private SoundPlayer BackgroundPlayer { get; } = new SoundPlayer();
-
-		public SoundManager()
-		{
-		}
-
-		public void PlaySound(string soundFile)
-		{
-			EffectPlayer.SoundLocation = soundFile;
-			EffectPlayer.Play();
-		}
-
-		public void StopSound()
-		{
-			EffectPlayer.Stop();
-		}
+	    private bool IsPlaying { get; set; } = false;
 
 		public void PlayLoop(string soundFile)
 		{
+		    soundFile = Path.Combine("Files", soundFile);
+            if(IsPlaying) StopLoop();
 			BackgroundPlayer.SoundLocation = soundFile;
 			BackgroundPlayer.PlayLooping();
+		    IsPlaying = true;
 		}
 
 		public void StopLoop()
