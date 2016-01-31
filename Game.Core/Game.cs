@@ -15,6 +15,7 @@ namespace Game.Core
                 "Learn to play",
                 "I am your father ... Luke"
         };
+		private int WaringsCounter = 0;
 
         private IInput Input { get; }
         private IOutput Output { get; }
@@ -67,8 +68,14 @@ namespace Game.Core
                 }
             }
 
-            //write waring text
-            Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
+			if (WaringsCounter > 2) {
+				WaringsCounter = 0;
+				Output.WriteLine(storyStep.HelpText, OutputType.Warning);
+			} else {
+				WaringsCounter++;
+				Output.WriteLine(DefaultInputWarnings.GetRandomValue(), OutputType.Warning);
+			}
+
             Input.Request();
         }
 
