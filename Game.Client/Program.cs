@@ -31,8 +31,6 @@ namespace Game.Client
             {
 				CheckWindowSize();
             } while (game.IsRunning);
-
-            game.Stop();
         }
 
 		private static void CheckWindowSize()
