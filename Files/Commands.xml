@@ -108,4 +108,7 @@
   <Command Key="ENTER">
 	<Word></Word>
   </Command>
+  <Command Key="DERP">
+	<Word>derp</Word>
+  </Command>
 </ArrayOfCommand>
