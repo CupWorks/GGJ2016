@@ -66,6 +66,7 @@
     <Word>examine box</Word>
     <Word>examine object</Word>
     <Word>look at object</Word>
+    <Word>box</Word>
   </Command>
   <Command Key="PLAY">
     <Word>play</Word>

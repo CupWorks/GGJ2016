@@ -142,13 +142,13 @@
   <StoryStep Key="2.1">
     <Text>You are outside of a little hut which has housed you for the past decades.{br}
 			Looking around, you can see a flourishing jungle. A little path from north to{br}
-			southwest leads around your hut and you can see a trail into the jungle to the{br}
-			northeast. To the west you can enter your room again.</Text>
+			{h}southwest{h} leads around your hut and you can see a trail into the jungle to the{br}
+			{h}northeast{h}. To the {h}west{h} you can enter your room again.</Text>
 	<Action Command="LOOK">
 	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
 			Looking around, you can see a flourishing jungle. A little path from north to{br}
-			southwest leads around your hut and you can see a trail into the jungle to the{br}
-			northeast. To the west you can enter your room again.</Text>
+			{h}southwest{h} leads around your hut and you can see a trail into the jungle to the{br}
+			{h}northeast{h}. To the {h}west{h} you can enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1.1">
       <Text>You go inside.</Text>
@@ -166,10 +166,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3">
-    <Text>You are on a path  around your little hut leading from south to northwest.{br}
+    <Text>You are on a path  around your little hut leading from south to {h}northwest{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from south to northwest.{br}
+	  <Text>You are on a path  around your little hut leading from south to {h}northwest{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2">
@@ -181,10 +181,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 3.1 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3.1">
-    <Text>You are on a path  around your little hut leading from south to northwest.{br}
+    <Text>You are on a path  around your little hut leading from south to {h}northwest{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from south to northwest.{br}
+	  <Text>You are on a path  around your little hut leading from south to {h}northwest{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2.1">
@@ -196,10 +196,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4">
-    <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+    <Text>You are on a path  around your little hut leading from southeast to {h}southwest{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+	  <Text>You are on a path  around your little hut leading from southeast to {h}southwest{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3">
@@ -211,10 +211,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4.1 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4.1">
-    <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+    <Text>You are on a path  around your little hut leading from southeast to {h}southwest{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+	  <Text>You are on a path  around your little hut leading from southeast to {h}southwest{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3.1">
@@ -226,10 +226,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5">
-    <Text>You are on a path  around your little hut leading from northeast to south.{br}
+    <Text>You are on a path  around your little hut leading from northeast to {h}south{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from northeast to south.{br}
+	  <Text>You are on a path  around your little hut leading from northeast to {h}south{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4">
@@ -241,10 +241,10 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5.1 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5.1">
-    <Text>You are on a path  around your little hut leading from northeast to south.{br}
+    <Text>You are on a path  around your little hut leading from northeast to {h}south{h}.{br}
 			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from northeast to south.{br}
+	  <Text>You are on a path  around your little hut leading from northeast to {h}south{h}.{br}
 			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4.1">
@@ -256,16 +256,16 @@
   </StoryStep>
   <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
   <StoryStep Key="6">
-    <Text>You are on a path  around your little hut leading from north to southeast.{br}
+    <Text>You are on a path  around your little hut leading from north to {h}southeast{h}.{br}
 			Deep jungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from north to southeast.{br}
+	  <Text>You are on a path  around your little hut leading from north to {h}southeast{h}.{br}
 			Deep jungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
@@ -278,21 +278,21 @@
     </Action>
     <Action Command="EXAMINE_BOX">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: "Find it. Use it. Free yourself." You put the parchment back.</Text>
+			on it: {h}"Find it. Use it. Free yourself."{h} You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
   <StoryStep Key="6.1">
-    <Text>You are on a path  around your little hut leading from north to southeast.{br}
+    <Text>You are on a path  around your little hut leading from north to {h}southeast{h}.{br}
 			Deep jungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from north to southeast.{br}
+	  <Text>You are on a path  around your little hut leading from north to {h}southeast{h}.{br}
 			Deep jungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
@@ -305,18 +305,18 @@
     </Action>
     <Action Command="EXAMINE_BOX">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: "Find it. Use it. Free yourself." You put the parchment back.</Text>
+			on it: {h}"Find it. Use it. Free yourself."{h} You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 7 - Weg südlich der Hütte ######################### -->
   <StoryStep Key="7">
-    <Text>You are on a path  around your little hut leading from northeast to northwest.{br}
+    <Text>You are on a path  around your little hut leading from northeast to {h}northwest{h}.{br}
 			Deep jungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the jungle.</Text>
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path  around your little hut leading from northeast to northwest.{br}
+	  <Text>You are on a path  around your little hut leading from northeast to {h}northwest{h}.{br}
 			Deep jungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the jungle.</Text>
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="8">
       <Text>Adamant in your decision, you walk into the jungle.</Text>
