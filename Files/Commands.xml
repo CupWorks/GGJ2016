@@ -3,6 +3,9 @@
   <Command Key="DEFAULT_EXIT" IsDefault="true">
     <Word>exit</Word>
     <Word>quit</Word>
+  </Command>
+  <Command Key="DEFAULT_HELP" IsDefault="true">
+    <Word>help</Word>
     <Word>flip table</Word>
   </Command>
   <Command Key="LEAVE">

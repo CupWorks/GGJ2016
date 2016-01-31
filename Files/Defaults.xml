@@ -1,5 +1,18 @@
 <Defaults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <InputTries>8</InputTries>
-  <InputWarning>Hello there</InputWarning>
-  <InstructionText>HEEEEELP ...</InstructionText>
+  <InputWarning>I don't want to do that now.</InputWarning>
+  <InputWarning>No, thank you.</InputWarning>
+  <InputWarning>I don't know what you mean?</InputWarning>
+  <InputWarning>Is this really the right spot for that?</InputWarning>
+  <InputWarning>Try something else.</InputWarning>
+  <InputWarning>Have I looked around enough?</InputWarning>
+  <InputWarning>You're insane!</InputWarning>
+  <InputWarning>Stop that, now.</InputWarning>
+  <InputWarning>Nope. Just nope.</InputWarning>
+  <InstructionText>Basic instructions:{br}
+Move around using geographic directions like {h}north{h} / {h}n{h},	{h}south{h} / {h}s{h},{br}
+{h}northeast{h} / {h}ne{h}.{br}
+Use {h}look{h} to look around.{br}
+Pay attention to your surroundings and try to keep orientated.{br}
+Other commands should be easy to find.</InstructionText>
 </Defaults>

@@ -553,12 +553,17 @@
       <Text>Climbing onto the stone, you feel a sense of serenity. You feel like raising the{br}
 			Ocarina to your lips and playing it.</Text>
     </Action>
-	<Action Command="PLAY" NextStep="19">
+	<Action Command="PLAY" NextStep="12.2">
 	  <Text>Calmly you raise the Ocarina to your mouth and start playing it. The melody{br}
 			sounds strange and familiar at the same time. Your eyelids are getting heavier{br}
 			with each note leaving your beautiful instrument, until you finally close your{br}
 			eyes...</Text>
     </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 12.2 - nach dem Spielen der Ocarina ######################### -->
+  <StoryStep Key="12.2">
+    <Action Command="ENTER" NextStep="19">
+    </Action>  
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
