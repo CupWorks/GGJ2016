@@ -278,7 +278,19 @@
     </Action>
     <Action Command="EXAMINE_BOX">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: {h}"Find it. Use it. Free yourself."{h} You put the parchment back.</Text>
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|    Find it.    |{br}
+|    Use it.     |{br}
+| Free yourself. |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
@@ -305,7 +317,19 @@
     </Action>
     <Action Command="EXAMINE_BOX">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: {h}"Find it. Use it. Free yourself."{h} You put the parchment back.</Text>
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|    Find it.    |{br}
+|    Use it.     |{br}
+| Free yourself. |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 7 - Weg südlich der Hütte ######################### -->
@@ -698,7 +722,23 @@
       <Text>You don't want to leave just yet.</Text>
     </Action>
     <Action Command="TAKE" NextStep="16.1">
-      <Text>You take the Ocarina and carefully walk back.</Text>
+	  <Text>         #####{br}
+      ###!!!!!###{br}
+      ###!!!!!###{br}
+      ###!!!!!!!!##{br}
+      ###!!   !!!#####{br}
+      ###     !!!!!!!!########{br}
+   ###   1111111      !!!!!!!!######{br}
+   ###   1111111	      !!!!!!!!######{br}
+###!!!!!!!!###!!!!!!!!!!!!!###!!!!!!###{br}
+###!!!###!!###!!!!!!!!!!!!!###!!!###!!!###{br}
+###!!!###!!!!!###!!!!!###!!!!!!!!###!!!###{br}
+   ###!!!!!!!!###!!!!!###!!!!!!!!!!!!!!###{br}
+   ###!!!!!!!!!!!!!!!!!!!!!!!!!!!######{br}
+      #####!!!!!!!!!!!!!!########{br}
+           ##############{br}
+           ##############{br}{br}
+      You take the Ocarina and carefully walk back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16.1 - Versteckter Raum ######################### -->
@@ -977,7 +1017,19 @@
     </Action>
     <Action Command="ENTER" NextStep="DERP_6.1">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: "Find it. Use it. Free yourself." You put the parchment back.</Text>
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|      DERP      |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP DERP_6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
@@ -1001,7 +1053,19 @@
     </Action>
     <Action Command="EXAMINE_BOX">
       <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
-			on it: "Find it. Use it. Free yourself." You put the parchment back.</Text>
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|      DERP      |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP DERP_7 - Weg südlich der Hütte ######################### -->
@@ -1258,7 +1322,23 @@
       <Text>You don't want to leave just yet.</Text>
     </Action>
     <Action Command="ENTER" NextStep="DERP_16.1">
-      <Text>You take the Ocarina and carefully walk back.</Text>
+	  <Text>         #####{br}
+      ###!!!!!###{br}
+      ###!!!!!###{br}
+      ###!!!!!!!!##{br}
+      ###!!   !!!#####{br}
+      ###     !!!!!!!!########{br}
+   ###   1111111      !!!!!!!!######{br}
+   ###   1111111	      !!!!!!!!######{br}
+###!!!!!!!!###!!!!!!!!!!!!!###!!!!!!###{br}
+###!!!###!!###!!!!!!!!!!!!!###!!!###!!!###{br}
+###!!!###!!!!!###!!!!!###!!!!!!!!###!!!###{br}
+   ###!!!!!!!!###!!!!!###!!!!!!!!!!!!!!###{br}
+   ###!!!!!!!!!!!!!!!!!!!!!!!!!!!######{br}
+      #####!!!!!!!!!!!!!!########{br}
+           ##############{br}
+           ##############{br}{br}
+      You take the Ocarina and carefully walk back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP DERP_16.1 - Versteckter Raum ######################### -->
