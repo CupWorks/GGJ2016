@@ -112,4 +112,10 @@
   <Command Key="DERP">
 	<Word>derp</Word>
   </Command>
+  <Command Key="WATERFALL">
+	<Word>waterfall</Word>
+	<Word>go through waterfall</Word>
+	<Word>go behind waterfall</Word>
+	<Word>see waterfall</Word>
+  </Command>
 </ArrayOfCommand>
