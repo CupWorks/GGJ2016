@@ -633,34 +633,34 @@
   </StoryStep>
   <!-- ######################### STORY STEP 15 - Höhle ######################### -->
   <StoryStep Key="15" HelpText="Hmmm, buttons...">
-    <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
-			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
-			follow this curvature with your eyes you notice something.{br}
-			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
-			feel drawn to those “buttons”. Your hand twitches.</Text>
+    <Text>You need a second to adjust to the new lighting. Light reflects from the {h}west{h}{br}
+			through the	waterfall on the smooth grayish walls. The cave curves slightly and{br}
+			as you follow this curvature with your eyes you notice something.{br}
+			A pedestal catches your attention. On top of it is a {h}button{h}. You feel drawn to{br}
+			this button. Your hand twitches.</Text>
 	<Action Command="LOOK">
-	  <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
-			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
-			follow this curvature with your eyes you notice something.{br}
-			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
-			feel drawn to those “buttons”. Your hand twitches.</Text>
+	  <Text>You need a second to adjust to the new lighting. Light reflects from the {h}west{h}{br}
+			through the	waterfall on the smooth grayish walls. The cave curves slightly and{br}
+			as you follow this curvature with your eyes you notice something.{br}
+			A pedestal catches your attention. On top of it is a {h}button{h}. You feel drawn to{br}
+			this button. Your hand twitches.</Text>
     </Action>
     <Action Command="WEST">
-      <Text>You are too intrigued by the buttons on the podium to leave just yet.</Text>
+      <Text>You are too intrigued by the button on the podium to leave just yet.</Text>
     </Action>
 	<Action Command="PUSH" NextStep="15a">
-	  <Text>You push the buttons that make sounds.</Text>
+	  <Text>You push the button and a tunnel opens in the {h}east{h}.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15a - Höhle mit geöffneter Tür. ######################### -->
   <StoryStep Key="15a">
-    <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel.</Text>
+    <Text>Light reflects through the waterfall from the {h}west{h} on the smooth grayish walls.{br}
+			The cave curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel.</Text>
+	  <Text>Light reflects through the waterfall from the {h}west{h} on the smooth grayish walls.{br}
+			The cave curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}.</Text>
     </Action>
     <Action Command="TUNNEL" NextStep="16">
       <Text>You squeeze through the tunnel.</Text>
@@ -671,16 +671,19 @@
 	<Action Command="WEST">
       <Text>Don't you want to explore the tunnel first?</Text>
     </Action>
+	<Action Command="PUSH">
+	  <Text>You have already done that.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15.1* - Höhle ######################### -->
   <StoryStep Key="15.1">
     <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+			curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}. You can leave the cave to the {h}west{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+			curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}. You can leave the cave to the {h}west{h}.</Text>
     </Action>
 	<Action Command="WEST" NextStep="14.1">
 	  <Text>You leave the waterfall cave.</Text>
@@ -691,18 +694,24 @@
     <Action Command="EAST">
       <Text>You don't feel like squeezing through the narrow tunnel again.</Text>
     </Action>
+	<Action Command="PUSH">
+	  <Text>You have already done that.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
   <StoryStep Key="16" HelpText="I should go east, to the island.">
-    <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
+    <Text>After a while the {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
 			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+			a small {h}island{h} in the center of the cave.</Text>
 	<Action Command="LOOK">
-	  <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
+	  <Text>After a while the {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
 			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+			a small {h}island{h} in the center of the cave.</Text>
     </Action>
     <Action Command="WEST">
+      <Text>You don't want to leave just yet.</Text>
+    </Action>
+    <Action Command="TUNNEL">
       <Text>You don't want to leave just yet.</Text>
     </Action>
     <Action Command="ISLAND" NextStep="16a">
@@ -715,13 +724,13 @@
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
 			You breathe out, only now realizing you’ve been holding your breath. Some{br}
 			writing beneath the object catches your eye. On closer examination you can read{br}
-			it: "Ocarina".</Text>
+			it: {h}"Ocarina"{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>On a small podium lies an object you have never seen before.{br}
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
 			You breathe out, only now realizing you’ve been holding your breath. Some{br}
 			writing beneath the object catches your eye. On closer examination you can read{br}
-			it: "Ocarina".</Text>
+			it: {h}"Ocarina"{h}.</Text>
     </Action>
     <Action Command="LEAVE">
       <Text>You don't want to leave just yet.</Text>
@@ -748,15 +757,18 @@
   </StoryStep>
   <!-- ######################### STORY STEP 16.1 - Versteckter Raum ######################### -->
   <StoryStep Key="16.1">
-    <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
+    <Text>A {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
 			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+			a small {h}island{h} in the center of the cave.</Text>
 	<Action Command="LOOK">
-	  <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. You can leave now.</Text>
+	  <Text>A {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
+			motionless. You can {h}leave{h} now.</Text>
     </Action>
     <Action Command="WEST" NextStep="15.1">
-      <Text>You leave the secret room.</Text>
+      <Text>You crouch back through the narrow tunnel.</Text>
+    </Action>
+    <Action Command="TUNNEL" NextStep="15.1">
+      <Text>You crouch back through the narrow tunnel.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="15.1">
       <Text>You leave the secret room.</Text>
@@ -769,13 +781,13 @@
   <StoryStep Key="17">
     <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
 			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
-			It's a magical place. In the northeast you can head back up to the top of the{br}
-			waterfall or you can explore the path in the south.</Text>
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
 			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
-			It's a magical place. In the northeast you can head back up to the top of the{br}
-			waterfall or you can explore the path in the south.</Text>
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18">
       <Text>You walk deeper into the jungle.</Text>
@@ -788,13 +800,13 @@
   <StoryStep Key="17.1">
     <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
 			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
-			It's a magical place. In the northeast you can head back up to the top of the{br}
-			waterfall or you can explore the path in the south.</Text>
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
 			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
-			It's a magical place. In the northeast you can head back up to the top of the{br}
-			waterfall or you can explore the path in the south.</Text>
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18.1">
       <Text>You walk deeper into the jungle.</Text>
@@ -807,11 +819,11 @@
   <StoryStep Key="18">
     <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17">
       <Text>You go back to the lake.</Text>
@@ -821,11 +833,11 @@
   <StoryStep Key="18.1">
     <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17.1">
       <Text>You go back to the lake.</Text>
@@ -847,7 +859,7 @@
 			with cables attached to them. On the other side of the room there is a desk with{br}
 			an ancient machine just like the one in your room on it. The screen is blank,{br}
 			apart from a few words: PLEASE ENTER PASSWORD>{br}
-			Without much thought the ritual pops up in your mind.</Text>
+			Without much thought the {h}ritual{h} pops up in your mind.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="GAME_END">
 	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.{br}
