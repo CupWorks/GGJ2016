@@ -45,7 +45,7 @@
 	</Action>
   </StoryStep>
   <!-- ######################### STORY STEP 00 - Spielbeginn ######################### -->
-  <StoryStep Key="00">
+  <StoryStep Key="00" HelpText="Hey try: leave or sequence">
     <Text>You wake up.{br}
 			It's a day like every other day. {br}
 			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
