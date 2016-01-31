@@ -152,7 +152,7 @@ namespace Game.Core
                     IsRunning = false;
                     break;
                 case "DEFAULT_HELP":
-                    Output.WriteLine(DefaultsContainer.Object.InstructionText, OutputType.Warning);
+                    WriteLine(DefaultsContainer.Object.InstructionText, OutputType.Normal);
                     Input.Request();
                     break;
                 default:
