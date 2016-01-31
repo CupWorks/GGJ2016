@@ -158,7 +158,9 @@ public class GameManager : MonoBehaviour
 	private IEnumerator DisplayTextBlocks(IEnumerable<TextBlock> textBlocks)
 	{
         //Block input
-		UserInput.GetComponent<InputField>().enabled = false;
+        //UserInput.GetComponent<InputField>().enabled = false;
+        UserInput.GetComponent<InputField>().interactable = false;
+        EventSystem.current.SetSelectedGameObject(null, null);
 
         foreach (var textBlock in textBlocks)
         {
@@ -168,7 +170,7 @@ public class GameManager : MonoBehaviour
         }
 
         //unblock input
-		UserInput.GetComponent<InputField>().enabled = true;
+        //UserInput.GetComponent<InputField>().interactable = true;
     }
 
     private string CleanText(string text)
