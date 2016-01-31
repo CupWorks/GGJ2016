@@ -63,6 +63,7 @@ namespace Game.Core
                 var command = CommandContainer.Get(action.Command);
                 if (command.WordList.Contains(text.Trim().ToLower()))
                 {
+					WaringsCounter = 0;
                     PerformAction(action);
                     return;
                 }
