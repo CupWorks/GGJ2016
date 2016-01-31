@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
 
     protected void Start()
     {
+        HistoryOutput.GetComponent<RectTransform>().anchoredPosition = new Vector2(4, 4);
+        GameOutput.GetComponent<RectTransform>().anchoredPosition = new Vector2(4, 4);
+
         var commandsData = Resources.Load("Commands", typeof (TextAsset)) as TextAsset;
         var audioFilesData = Resources.Load("AudioFiles", typeof (TextAsset)) as TextAsset;
         var storyStepsData = Resources.Load("StorySteps", typeof (TextAsset)) as TextAsset;
