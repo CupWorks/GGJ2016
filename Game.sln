@@ -14,7 +14,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{3AF07970
 		Files\Defaults.xml = Files\Defaults.xml
 		Files\GameEnd.wav = Files\GameEnd.wav
 		Files\Indoor.wav = Files\Indoor.wav
-		Files\Outddor.wav = Files\Outddor.wav
+		Files\Outdoor.wav = Files\Outdoor.wav
 		Files\Sounds.xml = Files\Sounds.xml
 		Files\StorySteps.xml = Files\StorySteps.xml
 	EndProjectSection

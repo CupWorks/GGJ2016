@@ -45,7 +45,7 @@
 	</Action>
   </StoryStep>
   <!-- ######################### STORY STEP 00 - Spielbeginn ######################### -->
-  <StoryStep Key="00" HelpText="Why don't I look around again?">
+  <StoryStep Key="00" HelpText="Why don't I look around again?" Sound="INDOOR">
     <Text>You wake up.{br}
 			It's a day like every other day. {br}
 			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
@@ -111,7 +111,7 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
-  <StoryStep Key="2">
+  <StoryStep Key="2" Sound="OUTDOOR">
     <Text>You are outside of a little hut which has housed you for the past decades.{br}
 			Looking around, you can see a flourishing jungle. A little path from {h}north{h} to{br}
 			{h}southwest{h} leads around your hut, leading to the most likely source of the noise.{br}

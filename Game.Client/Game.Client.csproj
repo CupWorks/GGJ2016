@@ -80,8 +80,8 @@
       <Link>Files\Indoor.wav</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="..\Files\Outddor.wav">
-      <Link>Files\Outddor.wav</Link>
+    <Content Include="..\Files\Outdoor.wav">
+      <Link>Files\Outdoor.wav</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="..\Files\Sounds.xml">
