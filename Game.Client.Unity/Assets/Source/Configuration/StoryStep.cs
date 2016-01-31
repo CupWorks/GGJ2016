@@ -13,6 +13,8 @@ namespace Source.Configuration
         public List<TextBlock> Text { get; set; }
         [XmlElement("Action")]
         public List<Action> ActionList { get; set; }
+        [XmlAttribute]
+        public string Sound { get; set; }
 
         public StoryStep()
         {
@@ -20,6 +22,7 @@ namespace Source.Configuration
             NextStep = "";
             Text = new List<TextBlock>();
             ActionList = new List<Action>();
+            Sound = "";
         }
     }
 }

@@ -106,9 +106,15 @@ public class GameManager : MonoBehaviour
 				return;
 			}
         }
+        
 
         //check for action
         var storyStep = StoryStepContainer.Get(CurrentStoryStepKey);
+        Debug.Log(storyStep.Sound);
+        if ("" != storyStep.Sound)
+        {
+            PlayLoop(storyStep.Sound);
+        }
 		foreach (var action in storyStep.ActionList)
 		{
 			var command = CommandContainer.Get(action.Command);
@@ -122,7 +128,12 @@ public class GameManager : MonoBehaviour
 
 	private void PerformAction(Source.Configuration.Action action)
 	{
+
+     //   UserInput.GetComponent<InputField>().interactable = false;
+     //   EventSystem.current.SetSelectedGameObject(null, null);
+
         StartCoroutine("DisplayTextBlocks", action.Text);
+        
         if (!string.IsNullOrEmpty(action.Sound))
 		{
 			var audioFile = AudioContainer.Get(CleanText(action.Sound));
@@ -140,18 +151,24 @@ public class GameManager : MonoBehaviour
 
 		if (!string.IsNullOrEmpty(action.NextStep))
 		{
-			UpdateStoryStep(action.NextStep);
+     //       UserInput.GetComponent<InputField>().interactable = true;
+            UpdateStoryStep(action.NextStep);
 		}
 	}
 
 	private void UpdateStoryStep(string key)
 	{
 		var storyStep = StoryStepContainer.Get(key);
+
+       // UserInput.GetComponent<InputField>().interactable = false;
+       // EventSystem.current.SetSelectedGameObject(null, null);
+
         StartCoroutine("DisplayTextBlocks", storyStep.Text);
         CurrentStoryStepKey = key;
 		if (!string.IsNullOrEmpty(storyStep.NextStep))
 		{
-			UpdateStoryStep(storyStep.NextStep);
+       //     UserInput.GetComponent<InputField>().interactable = true;
+            UpdateStoryStep(storyStep.NextStep);
 		}
 	}
 
@@ -159,18 +176,24 @@ public class GameManager : MonoBehaviour
 	{
         //Block input
         //UserInput.GetComponent<InputField>().enabled = false;
-        UserInput.GetComponent<InputField>().interactable = false;
-        EventSystem.current.SetSelectedGameObject(null, null);
-
-        foreach (var textBlock in textBlocks)
-        {
-            GameOutput.GetComponent<Text>().text += CleanText(textBlock.Content);
-            GameOutput.GetComponent<Text>().text += "\n";
-			yield return new WaitForSeconds(textBlock.Delay / 1000);
-        }
-
-        //unblock input
-        //UserInput.GetComponent<InputField>().interactable = true;
+//        UserInput.GetComponent<InputField>().interactable = false;
+ //       EventSystem.current.SetSelectedGameObject(null, null);
+        //Debug.Log("vorher");
+       // try
+       // {
+            foreach (var textBlock in textBlocks)
+            {
+                GameOutput.GetComponent<Text>().text += CleanText(textBlock.Content);
+                GameOutput.GetComponent<Text>().text += "\n";
+                yield return new WaitForSeconds(textBlock.Delay / 1000);
+            }
+        //}
+        //finally
+        //{
+          //  Debug.Log("after");
+            //unblock input
+            //UserInput.GetComponent<InputField>().interactable = true;
+        //}
     }
 
     private string CleanText(string text)

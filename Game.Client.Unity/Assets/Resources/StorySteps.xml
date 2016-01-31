@@ -1,8 +1,51 @@
 <?xml version="1.0"?>
-  <!-- Version .1 jeweils nach Fund der Ocarina, * Raum ändert sich durch Fund der Ocarina-->
+  <!-- Version .1 jeweils nach Fund der Ocarina, * Raum ändert sich durch Fund der Ocarina, DERP -> Enter führt im Spielfortschritt voran-->
 <ArrayOfStoryStep xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <!-- ######################### GAME START ######################### -->
   <StoryStep Key="GAME_START">
+	<Text>             ____________________________________________________{br}
+            /                                                    \{br}
+           |    _____________________________________________     |{br}
+           |   |                                             |    |{br}
+           |   |  \> _                                       |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |              D E T A C H E D                |    |{br}
+           |   |                                             |    |{br}
+           |   |            - a NaN NUTS game -              |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |                                             |    |{br}
+           |   |_____________________________________________|    |{br}
+           |                                                      |{br}
+            \_____________________________________________________/{br}
+                   \_______________________________________/{br}
+                _______________________________________________{br}
+             _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_{br}
+          _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_{br}
+       _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_{br}
+    _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_{br}
+ _-'.-.-.-.-.-. .---.-. .-----------------------------. .-.---. .---.-.-.-.`-_{br}
+:-----------------------------------------------------------------------------:{br}
+`---._.-----------------------------------------------------------------._.---'{br}
+	</Text>
+	<Text>Basic instructions:{br}
+			Move around using geographic directions like {h}north{h} / {h}n{h},	{h}south{h} / {h}s{h},{br}
+			{h}northeast{h} / {h}ne{h}.{br}
+			Use {h}look{h} to look around.{br}
+			Pay attention to your surroundings and try to keep orientated.{br}
+			Other commands should be easy to find.{br}{br}
+			Press {h}"Enter"{h} to start game.</Text> 
+	<Action Command="ENTER" NextStep="00">
+	</Action>
+	<Action Command="DERP" NextStep="DERP_00">
+	</Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 00 - Spielbeginn ######################### -->
+  <StoryStep Key="00" HelpText="Why don't I look around again?" Sound="INDOOR">
     <Text>You wake up.{br}
 			It's a day like every other day. {br}
 			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
@@ -11,174 +54,123 @@
 			while later you sit down in front of the ancient machine. A little piece of{br}
 			browned parchment above the screen reminds you of your task, as if you could{br}
 			ever forget it.{br}
-			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
+			"Type {h}4 8 15 16 23 42{h} and press enter", it commands you.</Text>
     <Action Command="LEAVE">
-      <Text>You have no reason to leave the room.</Text>
+      <Text>You have no reason to leave the safety of your room.</Text>
     </Action>
 	<Action Command="LOOK">
-	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink and your bed.{br}
-			Go and do your duty, enter the sequence.</Text>
+			Go and do your duty, enter the {h}sequence{h}.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="0">
-      <Text>Nothing happens. {br}
+      <Text>Nothing happens.{br}
 			Satisfied you get up from your seat, having performed the ritual like countless{br}
 			times before.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 0 - Der Satellit stürzt ab ######################### -->
-  <StoryStep Key="0">
+  <StoryStep Key="0" HelpText="Why don't I look around again?">
       <Text Delay="1500">Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-			Never before has anything happened after you performed the ritual. You are {br}
-			curious, but at the same time scared, because you have never left your safe {br}
-			environment before.</Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Text Delay="1500">
-      Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
-      Never before has anything happened after you performed the ritual. You are {br}
-      curious, but at the same time scared, because you have never left your safe {br}
-      environment before.
-    </Text>
-    <Action Command="LOOK" NextStep="19">
+			Never before has anything happened after you performed the ritual. You are{br}
+			curious, wondering whether you are even responsible, but at the same time{br}
+			scared, because you have never {h}left{h} your safe environment before.</Text>
+    <Action Command="LOOK" NextStep="1">
 	  <Text>Unsure of yourself, you look around.</Text>
+    </Action>
+    <Action Command="LEAVE" NextStep="2">
+      <Text>Opening the door, you leave the room.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 1 - Hütte nach Satellitenabsturz ######################### -->
-  <StoryStep Key="1">
-    <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+  <StoryStep Key="1" HelpText="I really should check on the crash. Should I leave?">
+    <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink	and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside, not knowing what awaits you there.</Text>
 	<Action Command="LOOK">
-	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a {br}
+	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
 			little sink	and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside not knowing what awaits you there.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2">
-      <Text>You leave the room.</Text>
+      <Text>Opening the door, you leave the room.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 1.1 - Hütte nach Satellitenabsturz ######################### -->
   <StoryStep Key="1.1">
-    <Text>You are in a simple room, with nothing but an anchient machine on a desk, a little sink{br}
+    <Text>You are in a simple room, with nothing but an ancient machine on a desk, a little sink{br}
 			and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside.</Text>
 	<Action Command="LOOK">
-	  <Text>You are in a simple room, with nothing but an anchient machine on a desk, a little sink{br}
+	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a little sink{br}
 			and your bed.{br}
-			You can leave the room to go outside.</Text>
+			You can {h}leave{h} the room to go outside.</Text>
     </Action>
     <Action Command="LEAVE" NextStep="2.1">
-      <Text>You leave the room.</Text>
+      <Text>You step outside.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 2 - Vor der Hütte ######################### -->
-  <StoryStep Key="2">
+  <StoryStep Key="2" Sound="OUTDOOR">
     <Text>You are outside of a little hut which has housed you for the past decades.{br}
-			Looking around, you can see a flourishing djungle. A little path leads around {br}
-			your hut and you can see a trail into the djungle to the northeast. To the west{br}
-			you can enter your room again.</Text>
+			Looking around, you can see a flourishing jungle. A little path from {h}north{h} to{br}
+			{h}southwest{h} leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the {h}northeast{h} and to the {h}west{h} you can{br}
+			enter your room again.</Text>
 	<Action Command="LOOK">
 	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
-			Looking around, you can see a flourishing djungle. A little path leads around {br}
-			your hut and you can see a trail into the djungle to the northeast. To the west{br}
-			you can enter your room again.</Text>
+			Looking around, you can see a flourishing jungle. A little path from {h}north{h} to{br}
+			{h}southwest{h} leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the {h}northeast{h} and to the {h}west{h} you can{br}
+			enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1">
-      <Text>You return to the hut.</Text>
+      <Text>You go back inside.</Text>
     </Action>
     <Action Command="NORTH" NextStep="3">
-      <Text>You follow the narrow path north.</Text>
+      <Text>You follow the little path north.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="9">
-      <Text>You follow the narrow trail into the djungle.</Text>
+      <Text>Feeling more adventurous than ever before, you follow the narrow trail into the{br}
+			jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="7">
-      <Text>You follow the narrow path southwest.</Text>
+      <Text>You follow the little path southwest.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 2.1 - Vor der Hütte ######################### -->
   <StoryStep Key="2.1">
     <Text>You are outside of a little hut which has housed you for the past decades.{br}
-			Looking around, you can see a flourishing djungle. A little path leads around {br}
-			your hut and you can see a trail into the djungle to the northeast. To the west{br}
-			you can enter your room again.</Text>
+			Looking around, you can see a flourishing jungle. A little path from {h}north{h} to{br}
+			{h}southwest{h} leads around your hut and you can see a trail into the jungle to the{br}
+			{h}northeast{h}. To the {h}west{h} you can enter your room again.</Text>
 	<Action Command="LOOK">
 	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
-			Looking around, you can see a flourishing djungle. A little path leads around {br}
-			your hut and you can see a trail into the djungle to the northeast. To the west{br}
-			you can enter your room again.</Text>
+			Looking around, you can see a flourishing jungle. A little path from {h}north{h} to{br}
+			{h}southwest{h} leads around your hut and you can see a trail into the jungle to the{br}
+			{h}northeast{h}. To the {h}west{h} you can enter your room again.</Text>
     </Action>
     <Action Command="WEST" NextStep="1.1">
-      <Text>You return to the hut.</Text>
+      <Text>You go inside.</Text>
     </Action>
     <Action Command="NORTH" NextStep="3.1">
-      <Text>You follow the narrow path north.</Text>
+      <Text>You follow the little path north.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="9.1">
-      <Text>You follow the narrow trail into the djungle.</Text>
+      <Text>Feeling there is nothing else to find here, you follow the narrow trail into the{br}
+			jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="7.1">
-      <Text>You follow the narrow path southwest.</Text>
+      <Text>You follow the little path southwest.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 3 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}south{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}south{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2">
       <Text>You follow the narrow path south.</Text>
@@ -189,9 +181,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 3.1 - Weg nordöstlich der Hütte ######################### -->
   <StoryStep Key="3.1">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}south{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}south{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="2.1">
       <Text>You follow the narrow path south.</Text>
@@ -202,9 +196,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}southeast{h} to {h}southwest{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}southeast{h} to {h}southwest{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3">
       <Text>You follow the narrow past southeast.</Text>
@@ -215,9 +211,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 4.1 - Weg nördlich der Hütte######################### -->
   <StoryStep Key="4.1">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}southeast{h} to {h}southwest{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}southeast{h} to {h}southwest{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="3.1">
       <Text>You follow the narrow past southeast.</Text>
@@ -228,9 +226,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}south{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}south{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4">
       <Text>You follow the narrow path northeast.</Text>
@@ -241,9 +241,11 @@
   </StoryStep>
   <!-- ######################### STORY STEP 5.1 - Weg nordwestlich der Hütte ######################### -->
   <StoryStep Key="5.1">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+    <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}south{h}.{br}
+			Deep jungle surrounds you.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}south{h}.{br}
+			Deep jungle surrounds you.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="4.1">
       <Text>You follow the narrow path northeast.</Text>
@@ -253,15 +255,17 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
-  <StoryStep Key="6">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+  <StoryStep Key="6" HelpText="There's something about that box... I should examine it.">
+    <Text>You are on a path  around your little hut leading from {h}north{h} to {h}southeast{h}.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+	  <Text>You are on a path  around your little hut leading from {h}north{h} to {h}southeast{h}.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
@@ -272,17 +276,35 @@
     <Action Command="SOUTHEAST" NextStep="7">
       <Text>You follow the narrow path southeast.</Text>
     </Action>
+    <Action Command="EXAMINE_BOX">
+      <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|    Find it.    |{br}
+|    Use it.     |{br}
+| Free yourself. |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
-  <StoryStep Key="6.1">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+  <StoryStep Key="6.1" HelpText="There's something about that box... I should examine it.">
+    <Text>You are on a path  around your little hut leading from {h}north{h} to {h}southeast{h}.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A large object seems to have crashed into the ground here. It looks like a box{br}
+	  <Text>You are on a path  around your little hut leading from {h}north{h} to {h}southeast{h}.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a {h}box{h}{br}
 			with flat appendages made of metal and plastic. The whole ground is covered with{br}
 			debris.{br}
 			You can follow the path around your hut.</Text>
@@ -293,35 +315,55 @@
     <Action Command="SOUTHEAST" NextStep="7.1">
       <Text>You follow the narrow path southeast.</Text>
     </Action>
+    <Action Command="EXAMINE_BOX">
+      <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|    Find it.    |{br}
+|    Use it.     |{br}
+| Free yourself. |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 7 - Weg südlich der Hütte ######################### -->
   <StoryStep Key="7">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the djungle.</Text>
+    <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the djungle.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="8">
-      <Text>You walk into the djungle.</Text>
+      <Text>Adamant in your decision, you walk into the jungle.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="6">
-      <Text>You follow the narrow path northwest behind the hut.</Text>
+      <Text>You follow the little path northwest behind the hut.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="2">
-      <Text>You follow the narrow path northeast in front of the hut.</Text>
+      <Text>You follow the little path northeast in front of the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 7.1 - Weg südlich der Hütte ######################### -->
   <StoryStep Key="7.1">
-    <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the djungle.</Text>
+    <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
 	<Action Command="LOOK">
-	  <Text>You are on a path around your little hut. Deep djungle surrounds you.{br}
-			A little dirt trail in the south leads deeper into the djungle.</Text>
+	  <Text>You are on a path  around your little hut leading from {h}northeast{h} to {h}northwest{h}.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the {h}south{h} leads deeper into the jungle.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="8.1">
-      <Text>You walk into the djungle.</Text>
+      <Text>Adamant in your decision, you walk into the jungle.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="6.1">
       <Text>You follow the narrow path northwest behind the hut.</Text>
@@ -332,107 +374,117 @@
   </StoryStep>
   <!-- ######################### STORY STEP 8 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="8">
-    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+    <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path around your hut.</Text>
+			You can go back {h}north{h} to the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path around your hut.</Text>
+			You can go back {h}north{h} to the path around your hut.</Text>
     </Action>
     <Action Command="NORTH" NextStep="7">
-      <Text>You go back north to the path around the hut.</Text>
+      <Text>You return to the path around the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 8.1 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="8.1">
-    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+    <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path around your hut.</Text>
+			You can go back {h}north{h} to the path around your hut.</Text>
 	<Action Command="LOOK">
-	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path around your hut.</Text>
+			You can go back {h}north{h} to the path around your hut.</Text>
     </Action>
     <Action Command="NORTH" NextStep="7.1">
-      <Text>You go back north to the path around the hut.</Text>
+      <Text>You return to the path around the hut.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 9 - Weg in den Dschungel 1 ######################### -->
   <StoryStep Key="9">
-    <Text>You venture deeper into the djungle on a narrow trail. To the southwest you can{br}
-			still see your hut and to the southeast you can go even deeper into the djungle.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail. In the {h}southwest{h} you can{br}
+			still see your hut and in the {h}southeast{h} you can make your way even deeper into{br}
+			the jungle.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail. To the southwest you can{br}
-			still see your hut and to the southeast you can go even deeper into the djungle.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail. In the {h}southwest{h} you can{br}
+			still see your hut and in the {h}southeast{h} you can make your way even deeper into{br}
+			the jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="2">
-      <Text>You go back to the narrow path in front of your hut.</Text>
+      <Text>You return to your hut.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="10">
-      <Text>You follow the trail deeper into the djungle.</Text>
+      <Text>You follow the trail deeper into the jungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 9.1 - Weg in den Dschungel 1 ######################### -->
   <StoryStep Key="9.1">
-    <Text>You venture deeper into the djungle on a narrow trail. To the southwest you can{br}
-			still see your hut and to the southeast you can go even deeper into the djungle.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail. In the {h}southwest{h} you can{br}
+			still see your hut and in the {h}southeast{h} you can make your way even deeper into{br}
+			the jungle.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail. To the southwest you can{br}
-			still see your hut and to the southeast you can go even deeper into the djungle.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail. In the {h}southwest{h} you can{br}
+			still see your hut and in the {h}southeast{h} you can make your way even deeper into{br}
+			the jungle.</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="2.1">
-      <Text>You go back to the narrow path in front of your hut.</Text>
+      <Text>You return to your hut.</Text>
     </Action>
     <Action Command="SOUTHEAST" NextStep="10.1">
-      <Text>You follow the trail deeper into the djungle.</Text>
+      <Text>You follow the trail deeper into the jungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 10 - Weg in den Dschungel 2 ######################### -->
   <StoryStep Key="10">
-    <Text>You venture deeper into the djungle on a narrow trail.{br}
-			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			In the {h}east{h} you make out stones which seem to mark a path. In the {h}south{h} you can{br}
+			follow the trail or go back to the {h}northwest{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail.{br}
-			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			In the {h}east{h} you make out stones which seem to mark a path. In the {h}south{h} you can{br}
+			follow the trail or go back to the {h}northwest{h}.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="9">
       <Text>You follow the trail northwest.</Text>
     </Action>
     <Action Command="EAST" NextStep="11">
-      <Text>You follow the marked path into the djungle.</Text>
+      <Text>You follow the marked path into the jungle.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="13">
-      <Text>You follow the trail deeper into the djungle.</Text>
+      <Text>You follow the trail deeper into the jungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 10.1 - Weg in den Dschungel 2 ######################### -->
   <StoryStep Key="10.1">
-    <Text>You venture deeper into the djungle on a narrow trail.{br}
-			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			In the {h}east{h} you make out stones which seem to mark a path. In the {h}south{h} you can{br}
+			follow the trail or go back to the {h}northwest{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail.{br}
-			To the east you make out stones which seem to mark a path. To the south you can{br}
-			follow the trail.</Text>
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			In the {h}east{h} you make out stones which seem to mark a path. In the {h}south{h} you can{br}
+			follow the trail or go back to the {h}northwest{h}.</Text>
     </Action>
     <Action Command="NORTHWEST" NextStep="9.1">
       <Text>You follow the trail northwest.</Text>
     </Action>
     <Action Command="EAST" NextStep="11.1">
-      <Text>You follow the marked path into the djungle.</Text>
+      <Text>You follow the marked path into the jungle.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="13.1">
-      <Text>You follow the trail deeper into the djungle.</Text>
+      <Text>You follow the trail deeper into the jungle.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 11 - Weg zur Lichtung######################### -->
   <StoryStep Key="11">
-    <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+    <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from the {h}west{h}, it leads onto a clearing in the {h}north{h}. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye.</Text>
 	<Action Command="LOOK">
-	  <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+	  <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from {h}the{h} west, it leads onto a clearing in the {h}north{h}. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye.</Text>
     </Action>
     <Action Command="WEST" NextStep="10">
       <Text>You follow the path back to the trail in the west.</Text>
@@ -443,9 +495,15 @@
   </StoryStep>
   <!-- ######################### STORY STEP 11.1 - Weg zur Lichtung ######################### -->
   <StoryStep Key="11.1">
-    <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+    <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from the {h}west{h}, it leads onto a clearing in the {h}north{h}. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
 	<Action Command="LOOK">
-	  <Text>The path gets a little wider and leads onto a clearing to the north.</Text>
+	  <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from the {h}west{h}, it leads onto a clearing in the {h}north{h}. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
     </Action>
     <Action Command="WEST" NextStep="10.1">
       <Text>You follow the path back to the trail in the west.</Text>
@@ -456,78 +514,117 @@
   </StoryStep>
   <!-- ######################### STORY STEP 12 - Lichtung im Dschungel ######################### -->
   <StoryStep Key="12">
-    <Text>STORY STEP 12 s</Text>
+    <Text>As you step out onto the clearing from the {h}south{h}, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 12 s</Text>
+	  <Text>As you step out onto the clearing from the {h}south{h}, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="11">
       <Text>You return back on the trail south.</Text>
     </Action>
+    <Action Command="SIT">
+      <Text>Climbing onto the stone, you feel a sense of serenity. But something is not yet{br}
+			right, so you get up again, anxious that you might have disturbed the holiness{br}
+			of the place. But you promise yourself to come back.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 12.1* - Lichtung im Dschungel ######################### -->
-  <StoryStep Key="12.1">
-    <Text>STORY STEP 12.1 s</Text>
+  <StoryStep Key="12.1" HelpText="I really feel like playing the Ocarina.">
+    <Text>As you step out onto the clearing from the {h}south{h}, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 12.1 s</Text>
+	  <Text>As you step out onto the clearing from the {h}south{h}, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
     </Action>
-    <Action Command="SOUTH" NextStep="11.1">
-      <Text>You return back on the trail south.</Text>
+    <Action Command="SOUTH">
+      <Text>You want to leave the clearing, but an unexplicable urge to sit down prevents{br}
+			you from stepping away.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="19">
-	  <Text>You wake up.</Text>
+    <Action Command="SIT">
+      <Text>Climbing onto the stone, you feel a sense of serenity. You feel like raising the{br}
+			Ocarina to your lips and playing it.</Text>
     </Action>
+	<Action Command="PLAY" NextStep="12.2">
+	  <Text>Calmly you raise the Ocarina to your mouth and start playing it. The melody{br}
+			sounds strange and familiar at the same time. Your eyelids are getting heavier{br}
+			with each note leaving your beautiful instrument, until you finally close your{br}
+			eyes...</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 12.2 - nach dem Spielen der Ocarina ######################### -->
+  <StoryStep Key="12.2">
+    <Action Command="ENTER" NextStep="19">
+    </Action>  
   </StoryStep>
   <!-- ######################### STORY STEP 13 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13">
-    <Text>You venture deeper into the djungle on a narrow trail.{br}
-			You can hear water in the distance to the south.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail leading {h}north{h} and{br}
+			 {h}southwest{h}. In the distance to the south you can hear water.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail.{br}
-			You can hear water in the distance to the south.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail leading {h}north{h} and{br}
+			{h}southwest{h}. In the distance to the south you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10">
       <Text>You follow the trail north</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="14">
-      <Text>You follow sound of water.</Text>
+      <Text>You follow the sound of water.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 13.1 - Weg zum Wasserfall ######################### -->
   <StoryStep Key="13.1">
-    <Text>You venture deeper into the djungle on a narrow trail.{br}
-			You can hear water in the distance to the south.</Text>
+    <Text>You venture deeper into the jungle on a narrow trail leading {h}north{h} and{br}
+			 {h}southwest{h}. In the distance to the south you can hear water.</Text>
 	<Action Command="LOOK">
-	  <Text>You venture deeper into the djungle on a narrow trail.{br}
-			In the distance you can hear water to the south.</Text>
+	  <Text>You venture deeper into the jungle on a narrow trail leading {h}north{h} and{br}
+			 {h}southwest{h}. In the distance to the south you can hear water.</Text>
     </Action>
     <Action Command="NORTH" NextStep="10.1">
       <Text>You follow the trail north</Text>
     </Action>
     <Action Command="SOUTHWEST" NextStep="14.1">
-      <Text>You follow sound of water.</Text>
+      <Text>You follow the sound of water.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 14 - Wasserfall ######################### -->
-  <StoryStep Key="14">
-    <Text>STORY STEP 14 ne sw e</Text>
+  <StoryStep Key="14" HelpText="I think the waterfall is in the east. I should go there." Sound="OUTDOOR">
+    <Text>You gasp in astonishment at the sight of the clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the waterfall in the {h}east{h}.{br}
+			The path leads from the {h}northeast{h} to the {h}southwest{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 14 ne sw e</Text>
+	  <Text>You gasp in astonishment at the sight of the clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the waterfall in the {h}east{h}.{br}
+			The path leads from the {h}northeast{h} to the {h}southwest{h}.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="13">
       <Text>You return to the trail northeast.</Text>
     </Action>
-	    <Action Command="SOUTHWEST" NextStep="17">
+	<Action Command="SOUTHWEST" NextStep="17">
       <Text>You go down to the lake.</Text>
     </Action>
-	    <Action Command="EAST" NextStep="15">
+	<Action Command="EAST" NextStep="15">
       <Text>You sneak behind the waterfall.</Text>
     </Action>
+	<Action Command="WATERFALL" NextStep="15">
+      <Text>You sneak behind the waterfall.</Text>
+    </Action>	
   </StoryStep>
   <!-- ######################### STORY STEP 14.1 - Wasserfall ######################### -->
-  <StoryStep Key="14.1">
-    <Text>STORY STEP 14.1 ne sw e</Text>
+  <StoryStep Key="14.1" Sound="OUTDOOR">
+    <Text>An astounding clear-blue waterfall is spurting over the rock in the {h}east{h}.{br}
+			There is a path	leading from {h}the southwest{h} to the {h}northeast{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 14.1 ne sw e</Text>
+	  <Text>An astounding clear-blue waterfall is spurting over the rock in the {h}east{h}.{br}
+			There is a path	leading from {h}the southwest{h} to the {h}northeast{h}.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="13.1">
       <Text>You return to the trail northeast.</Text>
@@ -540,35 +637,38 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15 - Höhle ######################### -->
-  <StoryStep Key="15">
-    <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
-			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
-			follow this curvature with your eyes you notice something.{br}
-			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
-			feel drawn to those “buttons”. Your hand twitches.</Text>
+  <StoryStep Key="15" HelpText="Hmmm, buttons..." Sound="CAVE">
+    <Text>You need a second to adjust to the new lighting. Light reflects from the {h}west{h}{br}
+			through the	waterfall on the smooth grayish walls. The cave curves slightly and{br}
+			as you follow this curvature with your eyes you notice something.{br}
+			A pedestal catches your attention. On top of it is a {h}button{h}. You feel drawn to{br}
+			this button. Your hand twitches.</Text>
 	<Action Command="LOOK">
-	  <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
-			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
-			follow this curvature with your eyes you notice something.{br}
-			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
-			feel drawn to those “buttons”. Your hand twitches.</Text>
+	  <Text>You need a second to adjust to the new lighting. Light reflects from the {h}west{h}{br}
+			through the	waterfall on the smooth grayish walls. The cave curves slightly and{br}
+			as you follow this curvature with your eyes you notice something.{br}
+			A pedestal catches your attention. On top of it is a {h}button{h}. You feel drawn to{br}
+			this button. Your hand twitches.</Text>
     </Action>
     <Action Command="WEST">
-      <Text>You are too intrigued by the buttons on the podium to leave just yet.</Text>
+      <Text>You are too intrigued by the button on the podium to leave just yet.</Text>
     </Action>
-	<Action Command="SEQUENCE" NextStep="15a">
-	  <Text>A formerly hidden tunnel opens to the east.</Text>
+	<Action Command="PUSH" NextStep="15a">
+	  <Text>You push the button and a tunnel opens in the {h}east{h}.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15a - Höhle mit geöffneter Tür. ######################### -->
   <StoryStep Key="15a">
-    <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel.</Text>
+    <Text>Light reflects through the waterfall from the {h}west{h} on the smooth grayish walls.{br}
+			The cave curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel.</Text>
+	  <Text>Light reflects through the waterfall from the {h}west{h} on the smooth grayish walls.{br}
+			The cave curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}.</Text>
+    </Action>
+    <Action Command="TUNNEL" NextStep="16">
+      <Text>You squeeze through the tunnel.</Text>
     </Action>
     <Action Command="EAST" NextStep="16">
       <Text>You squeeze through the tunnel.</Text>
@@ -576,35 +676,47 @@
 	<Action Command="WEST">
       <Text>Don't you want to explore the tunnel first?</Text>
     </Action>
+	<Action Command="PUSH">
+	  <Text>You have already done that.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 15.1* - Höhle ######################### -->
-  <StoryStep Key="15.1">
+  <StoryStep Key="15.1" Sound="CAVE">
     <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+			curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}. You can leave the cave to the {h}west{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
-			curves slightly and focuses the viewer's attention on eight pedestals.{br}
-			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+			curves slightly and focuses the viewer's attention on a pedestal.{br}
+			The {h}eastern{h} wall opens to a small {h}tunnel{h}. You can leave the cave to the {h}west{h}.</Text>
     </Action>
 	<Action Command="WEST" NextStep="14.1">
+	  <Text>You leave the waterfall cave.</Text>
+    </Action>
+	<Action Command="LEAVE" NextStep="14.1">
 	  <Text>You leave the waterfall cave.</Text>
     </Action>
     <Action Command="EAST">
       <Text>You don't feel like squeezing through the narrow tunnel again.</Text>
     </Action>
+	<Action Command="PUSH">
+	  <Text>You have already done that.</Text>
+    </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16 - Versteckter Raum ######################### -->
-  <StoryStep Key="16">
-    <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+  <StoryStep Key="16" HelpText="I should go east, to the island.">
+    <Text>After a while the {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
+			a small {h}island{h} in the center of the cave.</Text>
 	<Action Command="LOOK">
-	  <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+	  <Text>After a while the {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
+			a small {h}island{h} in the center of the cave.</Text>
     </Action>
     <Action Command="WEST">
+      <Text>You don't want to leave just yet.</Text>
+    </Action>
+    <Action Command="TUNNEL">
       <Text>You don't want to leave just yet.</Text>
     </Action>
     <Action Command="ISLAND" NextStep="16a">
@@ -612,37 +724,58 @@
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16a - Versteckter Raum / Insel ######################### -->
-  <StoryStep Key="16a">
+  <StoryStep Key="16a" HelpText="I really want to take that instrument...">
     <Text>On a small podium lies an object you have never seen before.{br}
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
 			You breathe out, only now realizing you’ve been holding your breath. Some{br}
 			writing beneath the object catches your eye. On closer examination you can read{br}
-			it: "Ocarina".</Text>
+			it: {h}"Ocarina"{h}.</Text>
 	<Action Command="LOOK">
 	  <Text>On a small podium lies an object you have never seen before.{br}
 			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
 			You breathe out, only now realizing you’ve been holding your breath. Some{br}
 			writing beneath the object catches your eye. On closer examination you can read{br}
-			it: "Ocarina".</Text>
+			it: {h}"Ocarina"{h}.</Text>
     </Action>
     <Action Command="LEAVE">
       <Text>You don't want to leave just yet.</Text>
     </Action>
-    <Action Command="SEQUENCE" NextStep="16.1">
-      <Text>You take the Ocarina and carefully walk back.</Text>
+    <Action Command="TAKE" NextStep="16.1">
+	  <Text>         #####{br}
+      ###!!!!!###{br}
+      ###!!!!!###{br}
+      ###!!!!!!!!##{br}
+      ###!!   !!!#####{br}
+      ###     !!!!!!!!########{br}
+   ###   1111111      !!!!!!!!######{br}
+   ###   1111111	      !!!!!!!!######{br}
+###!!!!!!!!###!!!!!!!!!!!!!###!!!!!!###{br}
+###!!!###!!###!!!!!!!!!!!!!###!!!###!!!###{br}
+###!!!###!!!!!###!!!!!###!!!!!!!!###!!!###{br}
+   ###!!!!!!!!###!!!!!###!!!!!!!!!!!!!!###{br}
+   ###!!!!!!!!!!!!!!!!!!!!!!!!!!!######{br}
+      #####!!!!!!!!!!!!!!########{br}
+           ##############{br}
+           ##############{br}{br}
+      You take the Ocarina and carefully walk back.</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP 16.1 - Versteckter Raum ######################### -->
   <StoryStep Key="16.1">
-    <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
+    <Text>A {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
 			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+			a small {h}island{h} in the center of the cave.</Text>
 	<Action Command="LOOK">
-	  <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
-			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
-			a small island in the center of the cave.</Text>
+	  <Text>A {h}tunnel{h} opens up to a large cave lake. The water lies still and{br}
+			motionless. You can {h}leave{h} now.</Text>
     </Action>
     <Action Command="WEST" NextStep="15.1">
+      <Text>You crouch back through the narrow tunnel.</Text>
+    </Action>
+    <Action Command="TUNNEL" NextStep="15.1">
+      <Text>You crouch back through the narrow tunnel.</Text>
+    </Action>
+    <Action Command="LEAVE" NextStep="15.1">
       <Text>You leave the secret room.</Text>
     </Action>
     <Action Command="ISLAND">
@@ -651,12 +784,18 @@
   </StoryStep>
   <!-- ######################### STORY STEP 17 - Unten am See ######################### -->
   <StoryStep Key="17">
-    <Text>STORY STEP 17 s ne</Text>
+    <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 17 s ne</Text>
+	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18">
-      <Text>You walk deeper into the djungle.</Text>
+      <Text>You walk deeper into the jungle.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="14">
       <Text>You go back to the waterfall.</Text>
@@ -664,12 +803,18 @@
   </StoryStep>
   <!-- ######################### STORY STEP 17.1 - Unten am See ######################### -->
   <StoryStep Key="17.1">
-    <Text>STORY STEP 17.1 s ne</Text>
+    <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>STORY STEP 17.1 s ne</Text>
+	  <Text>Down here the waterfall cascades magically into a clear blue lake. A school of{br}
+			fish is swimming close to the shore, where reeds are sticking out of the water.{br}
+			It's a magical place. In the {h}northeast{h} you can head back up to the top of the{br}
+			waterfall or you can explore the path in the {h}south{h}.</Text>
     </Action>
     <Action Command="SOUTH" NextStep="18.1">
-      <Text>You walk deeper into the djungle.</Text>
+      <Text>You walk deeper into the jungle.</Text>
     </Action>
     <Action Command="NORTHEAST" NextStep="14.1">
       <Text>You go back to the waterfall.</Text>
@@ -677,13 +822,13 @@
   </StoryStep>
   <!-- ######################### STORY STEP 18 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18">
-    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+    <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17">
       <Text>You go back to the lake.</Text>
@@ -691,24 +836,31 @@
   </StoryStep>
   <!-- ######################### STORY STEP 18.1 - Sackgasse zum Dschungel ######################### -->
   <StoryStep Key="18.1">
-    <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+    <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
 	<Action Command="LOOK">
-	  <Text>You find yourself in a dead end surrounded by djungle. The plants block your{br}
+	  <Text>You find yourself in a dead end surrounded by jungle. The plants block your{br}
 			way, there is no way you can go deeper.{br}
-			You can go back to the path in the north.</Text>
+			You can go back to the path in the {h}north{h}.</Text>
     </Action>
     <Action Command="NORTH" NextStep="17.1">
       <Text>You go back to the lake.</Text>
     </Action>
   </StoryStep>
-  <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde ######################### -->
-  <StoryStep Key="19">
+  <!-- ######################### STORY STEP 19 - VR-Maschine/Labor Erde Aufwachen ######################### -->
+  <StoryStep Key="19" Mute="true">
+	<Text Delay="1500">You wake up.</Text>
     <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
 			Standing up almost exhausted you. There are cables attached to you.{br}
 			Confused and disorientated you pull out one cable after the other.{br}{br}</Text>
-	<Text Delay="4000">This sound.{br}{br}
+      <Action Command="LOOK" NextStep="20">
+      <Text>You look around.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP 20 - VR-Maschine/Labor Erde ######################### -->
+  <StoryStep Key="20" HelpText="I remember now, the ritual sequence is 4 8 15 16 23 42!" Sound="GAMEEND">
+	<Text Delay="4500">This sound.{br}{br}
 			You freeze in your movement.{br}</Text>
 	<Text Delay="2500">You move your head to get a better look at the source of this familiar sound.{br}{br}</Text>
 	<Text Delay="2500">There it is. An ancient machine on a desk.{br}</Text>
@@ -718,16 +870,17 @@
 			with cables attached to them. On the other side of the room there is a desk with{br}
 			an ancient machine just like the one in your room on it. The screen is blank,{br}
 			apart from a few words: PLEASE ENTER PASSWORD>{br}
-			Without much thought the ritual pops up in your mind: 4 8 15 16 23 42</Text>
+			Without much thought the {h}ritual{h} pops up in your mind.</Text>
     </Action>
 	<Action Command="SEQUENCE" NextStep="GAME_END">
-	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.</Text>
+	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.{br}
+			The screen goes blank and then you read the words:</Text>
     </Action>
   </StoryStep>
   <!-- ######################### STORY STEP GAME_END - Logfile ######################### -->
-  <StoryStep Key="GAME_END">
-    <Text Delay="1500">Logfile{br}{br}
-			It took long to get the test subjects.{br}
+  <StoryStep Key="GAME_END" HelpText="Wake up. Wake up. Wake up...">
+	<Text>Logfile{br}{br}</Text>
+    <Text Delay="1500">It took long to get the test subjects.{br}
 			Finally, we can start with this important experiment.{br}
 			[Missing data / corrupted data]{br}</Text>
     <Text Delay="3500">Half of the test subjects already left the simulation.{br}
@@ -753,5 +906,537 @@
     <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
     <Text Delay="3500">Systems check: CRITICAL!{br}</Text>	
     <Text Delay="4000">You want to wake up again...</Text>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_00 - Spielbeginn ######################### -->
+  <StoryStep Key="DERP_00">
+    <Text>You wake up.{br}
+			It's a day like every other day. {br}
+			You'll get up, get ready and perform the ritual, like hundreds of your ancestors{br}
+			before you.{br}
+			You stretch and yawn until you shake your remaining sleepiness and a little{br}
+			while later you sit down in front of the ancient machine. A little piece of{br}
+			browned parchment above the screen reminds you of your task, as if you could{br}
+			ever forget it.{br}
+			"Type 4 8 15 16 23 42 and press enter", it commands you.</Text>
+    <Action Command="LEAVE">
+      <Text>You have no reason to leave the safety of your room.</Text>
+    </Action>
+	<Action Command="LOOK">
+	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
+			little sink and your bed.{br}
+			Go and do your duty, enter the sequence.</Text>
+    </Action>
+	<Action Command="ENTER" NextStep="DERP_0">
+      <Text>Nothing happens.{br}
+			Satisfied you get up from your seat, having performed the ritual like countless{br}
+			times before.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_0 - Der Satellit stürzt ab ######################### -->
+  <StoryStep Key="DERP_0">
+      <Text Delay="1500">Suddenly, you hear a loud crashing sound from somewhere outside your room.{br}
+			Never before has anything happened after you performed the ritual. You are{br}
+			curious, wondering whether you are even responsible, but at the same time{br}
+			scared, because you have never left your safe environment before.</Text>
+    <Action Command="ENTER" NextStep="DERP_1">
+	  <Text>Unsure of yourself, you look around.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_1 - Hütte nach Satellitenabsturz ######################### -->
+  <StoryStep Key="DERP_1">
+    <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
+			little sink	and your bed.{br}
+			You can leave the room to go outside, not knowing what awaits you there.</Text>
+	<Action Command="LOOK">
+	  <Text>You are in a simple room, with nothing but an ancient machine on a desk, a{br}
+			little sink	and your bed.{br}
+			You can leave the room to go outside not knowing what awaits you there.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_2">
+      <Text>Opening the door, you leave the room.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_2 - Vor der Hütte ######################### -->
+  <StoryStep Key="DERP_2">
+    <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing jungle. A little path from north to{br}
+			southwest leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the northeast and to the west you can{br}
+			enter your room again.</Text>
+	<Action Command="LOOK">
+	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing jungle. A little path from north to{br}
+			southwest leads around your hut, leading to the most likely source of the noise.{br}
+			You can see a trail	into the jungle to the northeast and to the west you can{br}
+			enter your room again.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_3">
+      <Text>You follow the little path north.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_2.1 - Vor der Hütte ######################### -->
+  <StoryStep Key="DERP_2.1">
+    <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing jungle. A little path from north to{br}
+			southwest leads around your hut and you can see a trail into the jungle to the{br}
+			northeast. To the west you can enter your room again.</Text>
+	<Action Command="LOOK">
+	  <Text>You are outside of a little hut which has housed you for the past decades.{br}
+			Looking around, you can see a flourishing jungle. A little path from north to{br}
+			southwest leads around your hut and you can see a trail into the jungle to the{br}
+			northeast. To the west you can enter your room again.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_9">
+      <Text>Feeling there is nothing else to find here, you follow the narrow trail into the{br}
+			jungle.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_3 - Weg nordöstlich der Hütte ######################### -->
+  <StoryStep Key="DERP_3">
+    <Text>You are on a path  around your little hut leading from south to northwest.{br}
+			Deep jungle surrounds you.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from south to northwest.{br}
+			Deep jungle surrounds you.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_4">
+      <Text>You follow the narrow path northwest.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_4 - Weg nördlich der Hütte######################### -->
+  <StoryStep Key="DERP_4">
+    <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+			Deep jungle surrounds you.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from southeast to southwest.{br}
+			Deep jungle surrounds you.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_5">
+      <Text>You follow the narrow path southwest.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_5 - Weg nordwestlich der Hütte ######################### -->
+  <StoryStep Key="DERP_5">
+    <Text>You are on a path  around your little hut leading from northeast to south.{br}
+			Deep jungle surrounds you.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from northeast to south.{br}
+			Deep jungle surrounds you.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_6">
+      <Text>You follow the narrow path south behind the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_6 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
+  <StoryStep Key="DERP_6">
+    <Text>You are on a path  around your little hut leading from north to southeast.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a box{br}
+			with flat appendages made of metal and plastic. The whole ground is covered with{br}
+			debris.{br}
+			You can follow the path around your hut.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from north to southeast.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a box{br}
+			with flat appendages made of metal and plastic. The whole ground is covered with{br}
+			debris.{br}
+			You can follow the path around your hut.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_6.1">
+      <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|      DERP      |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_6.1 - Absturzstelle des Satelliten / Hinter der Hütte ######################### -->
+  <StoryStep Key="DERP_6.1">
+    <Text>You are on a path  around your little hut leading from north to southeast.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a box{br}
+			with flat appendages made of metal and plastic. The whole ground is covered with{br}
+			debris.{br}
+			You can follow the path around your hut.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from north to southeast.{br}
+			Deep jungle surrounds you.{br}
+			A large object seems to have crashed into the ground here. It looks like a box{br}
+			with flat appendages made of metal and plastic. The whole ground is covered with{br}
+			debris.{br}
+			You can follow the path around your hut.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_7">
+      <Text>You follow the narrow path southeast.</Text>
+    </Action>
+    <Action Command="EXAMINE_BOX">
+      <Text>Inside the mysterious box, you find a piece of parchment with some scribbling{br}
+			on it:{br}{br}
+,----------------,{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|      DERP      |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+|                |{br}
+`----------------´{br}{br}
+			You put the parchment back.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_7 - Weg südlich der Hütte ######################### -->
+  <StoryStep Key="DERP_7">
+    <Text>You are on a path  around your little hut leading from northeast to northwest.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the south leads deeper into the jungle.</Text>
+	<Action Command="LOOK">
+	  <Text>You are on a path  around your little hut leading from northeast to northwest.{br}
+			Deep jungle surrounds you.{br}
+			A little dirt trail in the south leads deeper into the jungle.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_2.1">
+      <Text>You follow the little path northeast in front of the hut.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_9 - Weg in den Dschungel 1 ######################### -->
+  <StoryStep Key="DERP_9">
+    <Text>You venture deeper into the jungle on a narrow trail. To the southwest you can{br}
+			still see your hut and to the southeast you can make your way even deeper into{br}
+			the jungle.</Text>
+	<Action Command="LOOK">
+	  <Text>You venture deeper into the jungle on a narrow trail. To the southwest you can{br}
+			still see your hut and to the southeast you can make your way even deeper into{br}
+			the jungle.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_10">
+      <Text>You follow the trail deeper into the jungle.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_10 - Weg in den Dschungel 2 ######################### -->
+  <StoryStep Key="DERP_10">
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			To the east you make out stones which seem to mark a path. To the south you can{br}
+			follow the trail or go back to the northwest.</Text>
+	<Action Command="LOOK">
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			To the east you make out stones which seem to mark a path. To the south you can{br}
+			follow the trail or go back to the northwest.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_13">
+      <Text>You follow the trail deeper into the jungle.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_10.1 - Weg in den Dschungel 2 ######################### -->
+  <StoryStep Key="DERP_10.1">
+    <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			To the east you make out stones which seem to mark a path. To the south you can{br}
+			follow the trail or go back to the northwest.</Text>
+	<Action Command="LOOK">
+	  <Text>The jungle gets ever more thick which makes every one of your steps harder.{br}
+			To the east you make out stones which seem to mark a path. To the south you can{br}
+			follow the trail or go back to the northwest.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_11.1">
+      <Text>You follow the marked path into the jungle.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_11.1 - Weg zur Lichtung ######################### -->
+  <StoryStep Key="DERP_11.1">
+    <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
+	<Action Command="LOOK">
+	  <Text>The branches make space for a wider path lined with mossy stones on both sides.{br}
+			Coming around the bend from the west, it leads onto a clearing to the north. A{br}
+			strange feeling encroaches upon you, as if there is more to it than meets the{br}
+			eye. The Ocarina feels a little warmer in your hands.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_12">
+      <Text>You head out onto the clearing.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_12* - Lichtung im Dschungel ######################### -->
+  <StoryStep Key="DERP_12">
+    <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
+	<Action Command="LOOK">
+	  <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
+    </Action>
+    <Action Command="SOUTH">
+      <Text>You want to leave the clearing, but an unexplicable urge to sit down prevents{br}
+			you from stepping away.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_12.1">
+      <Text>Climbing onto the stone, you feel a sense of serenity. You feel like raising the{br}
+			Ocarina to your lips and playing it.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_12.1* - Lichtung im Dschungel ######################### -->
+  <StoryStep Key="DERP_12.1">
+    <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
+	<Action Command="LOOK">
+	  <Text>As you step out onto the clearing, you feel calm and serene.{br}
+			You feel the wind in your hair and the sun on your skin. Some invisible power{br}
+			draws you to the center of the clearing, where a massive stone seems to invite{br}
+			you to sit down.</Text>
+    </Action>
+    <Action Command="SOUTH">
+      <Text>You want to leave the clearing, but an unexplicable urge to sit down prevents{br}
+			you from stepping away.</Text>
+    </Action>
+	<Action Command="ENTER" NextStep="DERP_19">
+	  <Text>Calmly you raise the Ocarina to your mouth and start playing it. The melody{br}
+			sounds strange and familiar at the same time. Your eyelids are getting heavier{br}
+			with each note leaving your beautiful instrument, until you finally close your{br}
+			eyes...</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_13 - Weg zum Wasserfall ######################### -->
+  <StoryStep Key="DERP_13">
+    <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
+	<Action Command="LOOK">
+	  <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			southwest. In the distance to the southwest you can hear water.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_14">
+      <Text>You follow the sound of water.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_13.1 - Weg zum Wasserfall ######################### -->
+  <StoryStep Key="DERP_13.1">
+    <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
+	<Action Command="LOOK">
+	  <Text>You venture deeper into the jungle on a narrow trail leading north and{br}
+			 southwest. In the distance to the southwest you can hear water.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_10.1">
+      <Text>You follow the trail north</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_14 - Wasserfall ######################### -->
+  <StoryStep Key="DERP_14">
+    <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the waterfall in the east.</Text>
+	<Action Command="LOOK">
+	  <Text>You gasp in astonishment at the sight of the Clear-blue waterfall. It’s spurting{br}
+			over the rock. You feel a strange beckoning from behind the waterfall in the east.</Text>
+    </Action>
+	    <Action Command="ENTER" NextStep="DERP_15">
+      <Text>You sneak behind the waterfall.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_14.1 - Wasserfall ######################### -->
+  <StoryStep Key="DERP_14.1">
+    <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path{br}
+			leading from the southwest to the northeast.</Text>
+	<Action Command="LOOK">
+	  <Text>An astounding Clear-blue waterfall spurting over the rock. There is a path{br}
+			leading from the southwest to the northeast.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_13.1">
+      <Text>You return to the trail northeast.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_15 - Höhle ######################### -->
+  <StoryStep Key="DERP_15">
+    <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
+			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
+			follow this curvature with your eyes you notice something.{br}
+			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
+			feel drawn to those “buttons”. Your hand twitches.</Text>
+	<Action Command="LOOK">
+	  <Text>You need a second to adjust to the new lighting. Light reflects through the{br}
+			waterfall on the smooth grayish walls. The cave curves slightly and as you{br}
+			follow this curvature with your eyes you notice something.{br}
+			Eight pedestals catch your attention. On top of each of them is a “button”. You{br}
+			feel drawn to those “buttons”. Your hand twitches.</Text>
+    </Action>
+    <Action Command="WEST">
+      <Text>You are too intrigued by the buttons on the podium to leave just yet.</Text>
+    </Action>
+	<Action Command="ENTER" NextStep="DERP_15a">
+	  <Text>You push the buttons that make sounds.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_15a - Höhle mit geöffneter Tür. ######################### -->
+  <StoryStep Key="DERP_15a">
+    <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
+			curves slightly and focuses the viewer's attention on eight pedestals.{br}
+			The eastern wall opens to a small tunnel.</Text>
+	<Action Command="LOOK">
+	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
+			curves slightly and focuses the viewer's attention on eight pedestals.{br}
+			The eastern wall opens to a small tunnel.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_16">
+      <Text>You squeeze through the tunnel.</Text>
+    </Action>
+	<Action Command="WEST">
+      <Text>Don't you want to explore the tunnel first?</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_15.1* - Höhle ######################### -->
+  <StoryStep Key="DERP_15.1">
+    <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
+			curves slightly and focuses the viewer's attention on eight pedestals.{br}
+			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+	<Action Command="LOOK">
+	  <Text>Light reflects through the waterfall on the smooth grayish walls. The cave{br}
+			curves slightly and focuses the viewer's attention on eight pedestals.{br}
+			The eastern wall opens to a small tunnel. You can leave the cave to the west.</Text>
+    </Action>
+	<Action Command="ENTER" NextStep="DERP_14.1">
+	  <Text>You leave the waterfall cave.</Text>
+    </Action>
+    <Action Command="EAST">
+      <Text>You don't feel like squeezing through the narrow tunnel again.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_16 - Versteckter Raum ######################### -->
+  <StoryStep Key="DERP_16">
+    <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
+			a small island in the center of the cave.</Text>
+	<Action Command="LOOK">
+	  <Text>After a while the tunnel opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerge from the lake depths to form a path to{br}
+			a small island in the center of the cave.</Text>
+    </Action>
+    <Action Command="WEST">
+      <Text>You don't want to leave just yet.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_16a">
+      <Text>Slowly, carefully, step-by-step you move forward.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_16a - Versteckter Raum / Insel ######################### -->
+  <StoryStep Key="DERP_16a">
+    <Text>On a small podium lies an object you have never seen before.{br}
+			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
+			You breathe out, only now realizing you’ve been holding your breath. Some{br}
+			writing beneath the object catches your eye. On closer examination you can read{br}
+			it: "Ocarina".</Text>
+	<Action Command="LOOK">
+	  <Text>On a small podium lies an object you have never seen before.{br}
+			Never could you imagine such a beautiful thing. What is this feeling? Yearning?{br}
+			You breathe out, only now realizing you’ve been holding your breath. Some{br}
+			writing beneath the object catches your eye. On closer examination you can read{br}
+			it: "Ocarina".</Text>
+    </Action>
+    <Action Command="LEAVE">
+      <Text>You don't want to leave just yet.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_16.1">
+	  <Text>         #####{br}
+      ###!!!!!###{br}
+      ###!!!!!###{br}
+      ###!!!!!!!!##{br}
+      ###!!   !!!#####{br}
+      ###     !!!!!!!!########{br}
+   ###   1111111      !!!!!!!!######{br}
+   ###   1111111	      !!!!!!!!######{br}
+###!!!!!!!!###!!!!!!!!!!!!!###!!!!!!###{br}
+###!!!###!!###!!!!!!!!!!!!!###!!!###!!!###{br}
+###!!!###!!!!!###!!!!!###!!!!!!!!###!!!###{br}
+   ###!!!!!!!!###!!!!!###!!!!!!!!!!!!!!###{br}
+   ###!!!!!!!!!!!!!!!!!!!!!!!!!!!######{br}
+      #####!!!!!!!!!!!!!!########{br}
+           ##############{br}
+           ##############{br}{br}
+      You take the Ocarina and carefully walk back.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_16.1 - Versteckter Raum ######################### -->
+  <StoryStep Key="DERP_16.1">
+    <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
+			a small island in the center of the cave.</Text>
+	<Action Command="LOOK">
+	  <Text>A tunnel opens up to a large cave lake. The water lies still and{br}
+			motionless. Before thyself stones emerges from the lake depths to form a path to{br}
+			a small island in the center of the cave.</Text>
+    </Action>
+    <Action Command="ENTER" NextStep="DERP_15.1">
+      <Text>You leave the secret room.</Text>
+    </Action>
+    <Action Command="ISLAND">
+      <Text>There is nothing of interest left on the island.</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_19 - VR-Maschine/Labor Erde ######################### -->
+  <StoryStep Key="DERP_19">
+	<Text Delay="1500">You wake up.</Text>
+    <Text Delay="2500">Opening your eyes seems so difficult, like you’ve never done it before.{br}
+			Standing up almost exhausted you. There are cables attached to you.{br}
+			Confused and disorientated you pull out one cable after the other.{br}{br}</Text>
+	<Text Delay="4500">This sound.{br}{br}
+			You freeze in your movement.{br}</Text>
+	<Text Delay="2500">You move your head to get a better look at the source of this familiar sound.{br}{br}</Text>
+	<Text Delay="2500">There it is. An ancient machine on a desk.{br}</Text>
+	<Text Delay="1500">Your hand twitches.</Text>
+	<Action Command="LOOK">
+	  <Text>It’s a small clinical room. There are three pods, like the one you got up from,{br}
+			with cables attached to them. On the other side of the room there is a desk with{br}
+			an ancient machine just like the one in your room on it. The screen is blank,{br}
+			apart from a few words: PLEASE ENTER PASSWORD>{br}
+			Without much thought the ritual pops up in your mind: 4 8 15 16 23 42</Text>
+    </Action>
+	<Action Command="ENTER" NextStep="DERP_GAME_END">
+	  <Text>Out of habit, and because nothing else comes to mind, you enter your sequence.{br}
+			The screen goes blank and then you read the words:</Text>
+    </Action>
+  </StoryStep>
+  <!-- ######################### STORY STEP DERP_GAME_END - Logfile ######################### -->
+  <StoryStep Key="DERP_GAME_END">
+	<Text>Logfile{br}{br}</Text>
+    <Text Delay="1500">It took long to get the test subjects.{br}
+			Finally, we can start with this important experiment.{br}
+			[Missing data / corrupted data]{br}</Text>
+    <Text Delay="3500">Half of the test subjects already left the simulation.{br}
+			We need to find a way to encourage them to stay longer.{br}
+			[Missing data / corrupted data]{br}</Text>
+    <Text Delay="3500">With this new simulation we extended the time spent in the simulated world significantly.{br}
+			Most of the test subjects reacted very well to the changed situation.{br}
+			[Missing data / corrupted data]{br}</Text>
+    <Text Delay="3500">Systems check: Found 0 Errors{br}
+			[Missing data / corrupted data]{br}</Text>
+    <Text Delay="3500">We started with the second test group.{br}
+			[Missing data / corrupted data]{br}</Text>
+    <Text Delay="3500">The experiment is a huge success. {br}
+			We will extend the runtime. {br}
+			Some of the systems need adjustments for the new situation.{br}
+			[Missing data / corrupted data]{br}
+			Systems check: Found 3 Errors{br}</Text>
+    <Text Delay="3500">Systems check: Found 46 Errors{br}</Text>
+    <Text Delay="3500">Systems check: Found 367 Errors{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>
+    <Text Delay="3500">Systems check: CRITICAL!{br}</Text>	
+    <Text Delay="4000">You want to DERP again...</Text>
   </StoryStep>
 </ArrayOfStoryStep>
