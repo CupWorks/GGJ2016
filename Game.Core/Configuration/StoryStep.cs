@@ -13,6 +13,8 @@ namespace Game.Core.Configuration
 		public string HelpText { get; set; } = "";
         [XmlAttribute]
         public string Sound { get; set; } = "";
+        [XmlAttribute]
+        public bool Mute { get; set; } = false;
         [XmlElement("Text")]
         public List<TextBlock> Text { get; set; } = new List<TextBlock>();
         [XmlElement("Action")]

@@ -96,11 +96,18 @@ namespace Game.Core
         private void UpdateStoryStep(string key)
         {
             var storyStep = StoryStepListContainer.Get(key);
-            if (!string.IsNullOrEmpty(storyStep.Sound) && storyStep.Sound != CurrentSoundKey)
+            if (storyStep.Mute)
             {
-                var sound = AudioListContainer.Get(CleanText(storyStep.Sound));
-                SoundManager.PlayLoop(sound.File);
-                CurrentSoundKey = sound.Key;
+                SoundManager.StopLoop();
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(storyStep.Sound) && storyStep.Sound != CurrentSoundKey)
+                {
+                    var sound = AudioListContainer.Get(CleanText(storyStep.Sound));
+                    SoundManager.PlayLoop(sound.File);
+                    CurrentSoundKey = sound.Key;
+                }
             }
             DisplayTextBlocks(storyStep.Text, OutputType.Normal);
             CurrentStoryStepKey = key;
